@@ -25,6 +25,10 @@ body {
   height: auto;
   min-height: 100%;
 }
+.primary-container {
+  padding: 0 $column * 2;
+  margin-top: -$baseline-height * 5.25;
+}
 .main {
   margin: 0 auto;
 }

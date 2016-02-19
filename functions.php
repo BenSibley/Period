@@ -485,15 +485,14 @@ function ct_period_svg_output( $type ) {
 
 	if ( $type == 'toggle-navigation' ) {
 
-		$svg = '<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		$svg = '<svg width="36px" height="23px" viewBox="0 0 36 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <desc>mobile menu toggle button</desc>
 				    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-				        <g transform="translate(-148.000000, -36.000000)" fill="#6B6B6B">
-				            <g transform="translate(123.000000, 25.000000)">
-				                <g transform="translate(25.000000, 11.000000)">
-				                    <rect x="0" y="16" width="24" height="2"></rect>
-				                    <rect x="0" y="8" width="24" height="2"></rect>
-				                    <rect x="0" y="0" width="24" height="2"></rect>
-				                </g>
+				        <g transform="translate(-142.000000, -104.000000)" fill="#FFFFFF">
+				            <g transform="translate(142.000000, 104.000000)">
+				                <rect x="0" y="20" width="36" height="3"></rect>
+				                <rect x="0" y="10" width="36" height="3"></rect>
+				                <rect x="0" y="0" width="36" height="3"></rect>
 				            </g>
 				        </g>
 				    </g>

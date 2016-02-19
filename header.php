@@ -30,8 +30,9 @@
 			</button>
 		</header>
 		<?php do_action( 'after_header' ); ?>
-		<section id="main" class="main" role="main">
-			<?php do_action( 'main_top' );
-			if ( function_exists( 'yoast_breadcrumb' ) ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
-			}
+		<div id="primary-container" class="primary-container">
+			<section id="main" class="main" role="main">
+				<?php do_action( 'main_top' );
+				if ( function_exists( 'yoast_breadcrumb' ) ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
+				}

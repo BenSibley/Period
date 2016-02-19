@@ -2,7 +2,7 @@
   background: $color-gray-20;
   color: white;
   text-align: center;
-  padding: 36px $column * 2 0;
+  padding: 36px $column * 2 $baseline-height * 5.25;
 }
 .site-title {
   @extend %twenty-one-pixels;
