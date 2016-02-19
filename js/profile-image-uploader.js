@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 // Uploading files
     var file_frame;
 
-    $('#ct_theme_name-user-profile-upload').on('click', function( event ){
+    $('#period-user-profile-upload').on('click', function( event ){
 
         event.preventDefault();
 

@@ -8,7 +8,7 @@
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 <?php do_action( 'body_top' ); ?>
-<a class="skip-content" href="#main"><?php _e( 'Skip to content', 'ct_theme_name' ); ?></a>
+<a class="skip-content" href="#main"><?php _e( 'Skip to content', 'period' ); ?></a>
 <div id="overflow-container" class="overflow-container">
 	<div id="max-width" class="max-width">
 		<?php do_action( 'before_header' ); ?>
@@ -16,11 +16,11 @@
 			<div id="menu-primary-container" class="menu-primary-container">
 				<?php get_template_part( 'menu', 'primary' ); ?>
 				<?php get_template_part( 'content/search-bar' ); ?>
-				<?php ct_ct_theme_name_social_icons_output(); ?>
+				<?php ct_period_social_icons_output(); ?>
 			</div>
 			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
-				<span class="screen-reader-text"><?php _e( 'open menu', 'ct_theme_name' ); ?></span>
-				<?php echo ct_ct_theme_name_svg_output( 'toggle-navigation' ); ?>
+				<span class="screen-reader-text"><?php _e( 'open menu', 'period' ); ?></span>
+				<?php echo ct_period_svg_output( 'toggle-navigation' ); ?>
 			</button>
 			<div id="title-container" class="title-container">
 				<?php get_template_part( 'logo' ) ?>

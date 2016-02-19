@@ -1,22 +1,22 @@
 -------------------------------------------------------
-    Thank you for downloading Ct_theme_name!
+    Thank you for downloading Period!
 -------------------------------------------------------
 If you need help getting setup, you can find
 documentation here:
-https://www.competethemes.com/documentation/ct_theme_name-support-center/
+https://www.competethemes.com/documentation/period-support-center/
 
 
 -------------------------------------------------------
     Licenses:
 -------------------------------------------------------
 
-Ct_theme_name WordPress Theme, Copyright 2015 Compete Themes
-Ct_theme_name is distributed under the terms of the GNU GPL
+Period WordPress Theme, Copyright 2015 Compete Themes
+Period is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Ct_theme_name also uses:
+Period also uses:
 
 * Hybrid Core by Justin Tadlock, http://themehybrid.com/hybrid-core, licensed under the GPL license.
 * Fitvids, by Chris Coyier & Dave Rupert, https://github.com/davatron5000/FitVids.js/, licensed under the WTFPL license.

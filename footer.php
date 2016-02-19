@@ -8,8 +8,8 @@
     <div class="design-credit">
         <span>
             <?php
-            $footer_text = sprintf( __( '<a href="%s">Ct_theme_name WordPress Theme</a> by Compete Themes.', 'ct_theme_name' ), 'https://www.competethemes.com/ct_theme_name/' );
-            $footer_text = apply_filters( 'ct_ct_theme_name_footer_text', $footer_text );
+            $footer_text = sprintf( __( '<a href="%s">Period WordPress Theme</a> by Compete Themes.', 'period' ), 'https://www.competethemes.com/period/' );
+            $footer_text = apply_filters( 'ct_period_footer_text', $footer_text );
             echo wp_kses_post( $footer_text );
             ?>
         </span>

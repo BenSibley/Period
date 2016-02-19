@@ -7,6 +7,6 @@
             'menu_class'      => 'menu-primary-items',
             'menu_id'         => 'menu-primary-items',
             'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            'fallback_cb'     => 'ct_ct_theme_name_wp_page_menu'
+            'fallback_cb'     => 'ct_period_wp_page_menu'
         ) ); ?>
 </div>

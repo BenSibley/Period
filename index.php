@@ -7,7 +7,7 @@ get_template_part( 'content/archive-header' ); ?>
         if ( have_posts() ) :
             while ( have_posts() ) :
                 the_post();
-                ct_ct_theme_name_get_content_template();
+                ct_period_get_content_template();
             endwhile;
         endif;
         ?>

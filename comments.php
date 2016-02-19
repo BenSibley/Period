@@ -9,11 +9,11 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h3>
-                <?php comments_number( __( 'Be First to Comment', 'ct_theme_name' ), __( 'One Comment', 'ct_theme_name' ), __( '% Comments', 'ct_theme_name' ) ); ?>
+                <?php comments_number( __( 'Be First to Comment', 'period' ), __( 'One Comment', 'period' ), __( '% Comments', 'period' ) ); ?>
             </h3>
         </div>
         <ol class="comment-list">
-            <?php wp_list_comments( array( 'callback' => 'ct_ct_theme_name_customize_comments', 'max_depth' => '3' ) ); ?>
+            <?php wp_list_comments( array( 'callback' => 'ct_period_customize_comments', 'max_depth' => '3' ) ); ?>
         </ol>
         <?php
         if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
@@ -29,11 +29,11 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h3>
-                <?php comments_number( __( 'Be First to Comment', 'ct_theme_name' ), __( 'One Comment', 'ct_theme_name' ), __( '% Comments', 'ct_theme_name' ) ); ?>
+                <?php comments_number( __( 'Be First to Comment', 'period' ), __( 'One Comment', 'period' ), __( '% Comments', 'period' ) ); ?>
             </h3>
         </div>
         <ol class="comment-list">
-            <?php wp_list_comments( array( 'callback' => 'ct_ct_theme_name_customize_comments', 'max_depth' => '3' ) ); ?>
+            <?php wp_list_comments( array( 'callback' => 'ct_period_customize_comments', 'max_depth' => '3' ) ); ?>
         </ol>
         <?php
         if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
@@ -43,7 +43,7 @@ if ( comments_open() ) { ?>
             </nav>
         <?php } ?>
         <p class="comments-closed pings-open">
-            <?php printf( __( 'Comments are closed, but <a href="%s" title="Trackback URL for this post">trackbacks</a> and pingbacks are open.', 'ct_theme_name' ), esc_url( get_trackback_url() ) ); ?>
+            <?php printf( __( 'Comments are closed, but <a href="%s" title="Trackback URL for this post">trackbacks</a> and pingbacks are open.', 'period' ), esc_url( get_trackback_url() ) ); ?>
         </p>
     </section>
     <?php
@@ -51,11 +51,11 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h3>
-                <?php comments_number( __( 'Be First to Comment', 'ct_theme_name' ), __( 'One Comment', 'ct_theme_name' ), __( '% Comments', 'ct_theme_name' ) ); ?>
+                <?php comments_number( __( 'Be First to Comment', 'period' ), __( 'One Comment', 'period' ), __( '% Comments', 'period' ) ); ?>
             </h3>
         </div>
         <ol class="comment-list">
-            <?php wp_list_comments( array( 'callback' => 'ct_ct_theme_name_customize_comments', 'max_depth' => '3' ) ); ?>
+            <?php wp_list_comments( array( 'callback' => 'ct_period_customize_comments', 'max_depth' => '3' ) ); ?>
         </ol>
         <?php
         if ( ( get_option( 'page_comments' ) == 1 ) && ( get_comment_pages_count() > 1 ) ) { ?>
@@ -65,14 +65,14 @@ if ( comments_open() ) { ?>
             </nav>
         <?php } ?>
         <p class="comments-closed">
-            <?php _e( 'Comments are closed.', 'ct_theme_name' ); ?>
+            <?php _e( 'Comments are closed.', 'period' ); ?>
         </p>
     </section>
     <?php
 } else { ?>
     <section id="comments" class="comments">
         <p class="comments-closed">
-            <?php _e( 'Comments are closed.', 'ct_theme_name' ); ?>
+            <?php _e( 'Comments are closed.', 'period' ); ?>
         </p>
     </section>
 <?php }

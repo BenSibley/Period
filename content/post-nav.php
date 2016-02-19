@@ -8,18 +8,18 @@ $previous_post = get_adjacent_post(false,'',true);
 // if there is a previous post
 if( $previous_post ) {
 	// text above the link
-	$previous_text = __('Previous Post', 'ct_theme_name');
+	$previous_text = __('Previous Post', 'period');
 	// if there is a title use it, else call it "The Previous Post"
-	$previous_title = get_the_title( $previous_post ) ? get_the_title( $previous_post ) : __("The Previous Post", 'ct_theme_name');
+	$previous_title = get_the_title( $previous_post ) ? get_the_title( $previous_post ) : __("The Previous Post", 'period');
 	// get the post link
 	$previous_link = get_permalink( $previous_post );
 }
 // if there isn't a previous post
 else {
 	// text above the link
-	$previous_text = __('No Older Posts', 'ct_theme_name');
+	$previous_text = __('No Older Posts', 'period');
 	// set the title to return to the blog
-	$previous_title = __('Return to Blog', 'ct_theme_name');
+	$previous_title = __('Return to Blog', 'period');
 	// link to blog
 	$previous_link = home_url();
 }
@@ -30,18 +30,18 @@ $next_post = get_adjacent_post(false,'',false);
 // if there is a next post
 if( $next_post ) {
 	// text above the link
-	$next_text = __('Next Post', 'ct_theme_name');
+	$next_text = __('Next Post', 'period');
 	// if there is a title use it, else call it "The next Post"
-	$next_title = get_the_title( $next_post ) ? get_the_title( $next_post ) : __("The Next Post", 'ct_theme_name');
+	$next_title = get_the_title( $next_post ) ? get_the_title( $next_post ) : __("The Next Post", 'period');
 	// get the post link
 	$next_link = get_permalink( $next_post );
 }
 // if there isn't a next post
 else {
 	// text above the link
-	$next_text = __('No Newer Posts', 'ct_theme_name');
+	$next_text = __('No Newer Posts', 'period');
 	// set the title to return to the blog
-	$next_title = __('Return to Blog', 'ct_theme_name');
+	$next_title = __('Return to Blog', 'period');
 	// link to blog
 	$next_link = home_url();
 }
