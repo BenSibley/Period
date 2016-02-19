@@ -1,0 +1,154 @@
+/*===== Variables =====*/
+
+$primary-font-stack: 'Open Sans', sans-serif;
+$baseline-height: 1.5em;
+$column: 3.125%;
+
+/* Theme Colors */
+
+$color-gray-93: #EDEDED;
+$color-gray-87: #DEDEDE;
+$color-gray-85: #D9D9D9;
+$color-gray-70: #B3B3B3;
+$color-gray-67: #ABABAB;
+$color-gray-40: #666666;
+$color-gray-33: #545454;
+$color-gray-23: #3a3a3a;
+$color-gray-17: #2B2B2B;
+
+/* Media Query widths */
+
+$four-hundred: 25em;
+$five-hundred: 31.25em;
+$six-hundred: 37.5em;
+$seven-hundred: 43.75em;
+$eight-hundred: 50em;
+$nine-hundred: 56.25em;
+$one-thousand: 62.5em;
+$eleven-hundred: 68.75em;
+$twelve-hundred: 75em;
+$thirteen-hundred: 81.25em;
+$fourteen-hundred: 87.5em;
+
+/* Social Media Brand Colors */
+
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$vimeo: #aad450;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$flickr: #ff0084;
+$dribbble: #ea4c89;
+$quora: #a82400;
+$foursquare: #0072b1;
+$forrst: #5B9A68;
+$vk: #45668e;
+$wordpress: #21759b;
+$stumbleupon: #EB4823;
+$yahoo: #7B0099;
+$blogger: #fb8f3d;
+$soundcloud: #ff3a00;
+$rss: #fa9b39;
+$reddit: #cee3f8;
+$spotify: #81b71a;
+$vine: #00b489;
+$behance: #000;
+$codepen: #000;
+$delicious: #2a96ff;
+$deviantart: #bfce00;
+$digg: #000;
+$github: #171515;
+$hacker-news: #ff6600;
+$steam: #145f90;
+$vk: #45668e;
+$weibo: #e6162d;
+$tencent-weibo: #20b8e5;
+
+
+/*===== Mixins =====*/
+
+@mixin clearfix {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/***** Silent Classes *****/
+
+// 67px font
+%sixty-seven-pixels {
+  font-size: 4.188em; /* 67px / 16px */
+  line-height: 1.343; /* 90px */
+}
+// 51px font
+%fifty-one-pixels {
+  font-size: 3.188em; /* 51px / 16px */
+  line-height: 1.314; /* 67px */
+}
+// 38px font
+%thirty-eight-pixels {
+  font-size: 2.375em; /* 38px / 16px */
+  line-height: 1.342; /* 51px */
+}
+// 28px font
+%twenty-eight-pixels {
+  font-size: 1.75em; /* 28px / 16px */
+  line-height: 1.357; /* 38px */
+}
+// 21px font
+%twenty-one-pixels {
+  font-size: 1.3125em; /* 21px / 16px */
+  line-height: 1.143; /* 24px */
+}
+// 12px font
+%twelve-pixels {
+  font-size: 0.75em; /* 12px / 16px */
+  line-height: 1.5; /* 18px */
+}
+// uppercase
+%uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+%dark-link {
+  color: $color-gray-23;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-gray-23;
+  }
+}
+%light-link {
+  color: white;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+  }
+}
+%gray-link {
+  color: $color-gray-85;
+
+  &:link,
+  &:visited {
+    color: $color-gray-85;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+  }
+}

@@ -1,0 +1,40 @@
+// have to load first
+@import "info";
+
+// have to load second
+@import "variables";
+
+// the rest
+@import "base";
+
+@import "404";
+
+@import "archive_header";
+
+@import "archives";
+
+@import "comment_form";
+
+@import "comments";
+
+@import "footer";
+
+@import "gallery";
+
+@import "header";
+
+@import "loop_pagination";
+
+@import "main";
+
+@import "menu";
+
+@import "post";
+
+@import "search_form";
+
+@import "search_results";
+
+@import "sidebar";
+
+@import "widgets";
