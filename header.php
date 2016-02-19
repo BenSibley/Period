@@ -13,21 +13,21 @@
 	<div id="max-width" class="max-width">
 		<?php do_action( 'before_header' ); ?>
 		<header class="site-header" id="site-header" role="banner">
-			<div id="menu-primary-container" class="menu-primary-container">
-				<?php get_template_part( 'menu', 'primary' ); ?>
-				<?php get_template_part( 'content/search-bar' ); ?>
-				<?php ct_period_social_icons_output(); ?>
-			</div>
-			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
-				<span class="screen-reader-text"><?php _e( 'open menu', 'period' ); ?></span>
-				<?php echo ct_period_svg_output( 'toggle-navigation' ); ?>
-			</button>
 			<div id="title-container" class="title-container">
 				<?php get_template_part( 'logo' ) ?>
 				<?php if ( get_bloginfo( 'description' ) ) {
 					echo '<p class="tagline">' . get_bloginfo( 'description' ) . '</p>';
 				} ?>
 			</div>
+			<div id="menu-primary-container" class="menu-primary-container">
+				<?php ct_period_social_icons_output(); ?>
+				<?php get_template_part( 'content/search-bar' ); ?>
+				<?php get_template_part( 'menu', 'primary' ); ?>
+			</div>
+			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
+				<span class="screen-reader-text"><?php _e( 'open menu', 'period' ); ?></span>
+				<?php echo ct_period_svg_output( 'toggle-navigation' ); ?>
+			</button>
 		</header>
 		<?php do_action( 'after_header' ); ?>
 		<section id="main" class="main" role="main">
