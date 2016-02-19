@@ -1,20 +1,15 @@
 /*===== Variables =====*/
 
-$primary-font-stack: 'Open Sans', sans-serif;
+$primary-font-stack: 'Roboto', 'Open Sans', sans-serif;
 $baseline-height: 1.5em;
-$column: 3.125%;
+$column: 2.7778%; // 36
 
 /* Theme Colors */
 
 $color-gray-93: #EDEDED;
-$color-gray-87: #DEDEDE;
-$color-gray-85: #D9D9D9;
-$color-gray-70: #B3B3B3;
-$color-gray-67: #ABABAB;
-$color-gray-40: #666666;
-$color-gray-33: #545454;
-$color-gray-23: #3a3a3a;
-$color-gray-17: #2B2B2B;
+$color-gray-83: #D4D4D4;
+$color-gray-20: #333333;
+$color-gray-16: #292929;
 
 /* Media Query widths */
 
@@ -82,21 +77,6 @@ $tencent-weibo: #20b8e5;
 
 /***** Silent Classes *****/
 
-// 67px font
-%sixty-seven-pixels {
-  font-size: 4.188em; /* 67px / 16px */
-  line-height: 1.343; /* 90px */
-}
-// 51px font
-%fifty-one-pixels {
-  font-size: 3.188em; /* 51px / 16px */
-  line-height: 1.314; /* 67px */
-}
-// 38px font
-%thirty-eight-pixels {
-  font-size: 2.375em; /* 38px / 16px */
-  line-height: 1.342; /* 51px */
-}
 // 28px font
 %twenty-eight-pixels {
   font-size: 1.75em; /* 28px / 16px */
@@ -107,48 +87,18 @@ $tencent-weibo: #20b8e5;
   font-size: 1.3125em; /* 21px / 16px */
   line-height: 1.143; /* 24px */
 }
+// 18px font
+%eighteen-pixels {
+  font-size: 1.125em; /* 18px / 16px */
+  line-height: 1.333; /* 24px */
+}
+// 14px font
+%fourteen-pixels {
+  font-size: 0.875em; /* 14px / 16px */
+  line-height: 1.714; /* 24px */
+}
 // 12px font
 %twelve-pixels {
   font-size: 0.75em; /* 12px / 16px */
   line-height: 1.5; /* 18px */
-}
-// uppercase
-%uppercase {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-%dark-link {
-  color: $color-gray-23;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active,
-  &:focus {
-    color: $color-gray-23;
-  }
-}
-%light-link {
-  color: white;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active,
-  &:focus {
-    color: white;
-  }
-}
-%gray-link {
-  color: $color-gray-85;
-
-  &:link,
-  &:visited {
-    color: $color-gray-85;
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    color: white;
-  }
 }
