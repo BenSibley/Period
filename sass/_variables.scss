@@ -104,3 +104,17 @@ $tencent-weibo: #20b8e5;
   font-size: 0.75em; /* 12px / 16px */
   line-height: 1.5; /* 18px */
 }
+
+%white-link {
+  color: white;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-gray-83;
+  }
+}

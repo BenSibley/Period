@@ -1,7 +1,19 @@
 .site-header {
   background: $color-gray-20;
   color: white;
+  text-align: center;
+  padding: 36px $column * 2 0;
 }
 .site-title {
+  @extend %twenty-one-pixels;
   font-weight: 700;
+
+  a {
+    @extend %white-link;
+  }
+}
+.tagline {
+  @extend %fourteen-pixels;
+  color: $color-gray-83;
+  margin: 0;
 }
