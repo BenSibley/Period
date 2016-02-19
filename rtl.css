@@ -121,12 +121,12 @@ code {
 }
 
 blockquote {
-  margin: 1.5em 1.5em 1.5em 0;
-  padding-left: 1.5em;
+  margin: 1.5em 0 1.5em 1.5em;
+  padding-right: 1.5em;
 }
 blockquote cite {
   display: block;
-  text-align: right;
+  text-align: left;
 }
 
 hr {
@@ -148,13 +148,13 @@ th {
 
 /* Images */
 .alignleft {
-  float: left;
-  margin: 0 1.5em 1.5em 0;
+  float: right;
+  margin: 0 0 1.5em 1.5em;
 }
 
 .alignright {
-  float: right;
-  margin: 0 0 1.5em 1.5em;
+  float: left;
+  margin: 0 1.5em 1.5em 0;
 }
 
 .aligncenter {
@@ -245,7 +245,7 @@ a img {
   position: absolute;
   top: -100%;
   width: 100%;
-  left: 0;
+  right: 0;
   display: block;
   text-align: center;
   color: white !important;
