@@ -20,16 +20,9 @@ Period is distributed under the terms of the GNU GPL
 /*===== Mixins =====*/
 /***** Silent Classes *****/
 h1 {
-  font-size: 1.75em;
-  /* 28px / 16px */
-  line-height: 1.357;
-  /* 38px */
-}
-
-h2 {
-  font-size: 1.3125em;
-  /* 21px / 16px */
-  line-height: 1.143;
+  font-size: 1.125em;
+  /* 18px / 16px */
+  line-height: 1.333;
   /* 24px */
 }
 
@@ -48,16 +41,15 @@ textarea, input[type="submit"] {
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   height: 100%;
   font-size: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", "Open Sans", sans-serif;
   line-height: 1.5;
+  background: #EDEDED;
+  color: #333333;
   -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
   -ms-word-wrap: break-word;
@@ -74,17 +66,38 @@ body {
   margin: 0 auto;
 }
 
+.loop-container:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
 p {
   margin: 1.5em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
+a {
+  color: #333333;
+  text-decoration: none;
+}
+a:link, a:visited {
+  color: #333333;
+}
+a:hover, a:active, a:focus {
+  color: #333333;
 }
 
-h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
   font-size: 1em;
   line-height: 1.5;
 }
@@ -113,16 +126,20 @@ li li {
 pre {
   word-wrap: break-word;
   white-space: pre-wrap;
+  background: #F7F7F7;
+  border: solid 1px #EDEDED;
   padding: 0.75em;
 }
 
 code {
+  background: #F7F7F7;
   padding: 0 0.375em;
 }
 
 blockquote {
   margin: 1.5em 1.5em 1.5em 0;
   padding-left: 1.5em;
+  border-left: solid 3px #333333;
 }
 blockquote cite {
   display: block;
@@ -143,6 +160,7 @@ table {
 td,
 th {
   padding: 0.75em;
+  border: solid 1px #333333;
 }
 
 /* Images */
@@ -180,17 +198,23 @@ img,
   height: auto;
 }
 
+.wp-caption-text,
+.gallery-caption {
+  margin: 0 0 1.84502em;
+}
+
 /* Form styles */
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea {
   width: 100%;
+  font-family: "Roboto", "Open Sans", sans-serif;
   padding: 10px 12px;
   max-width: 27.75em;
-  border: none;
+  background: #F7F7F7;
+  color: #333333;
+  border: solid 1px #D4D4D4;
   border-radius: 0;
   -webkit-appearance: none;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
 }
 
 textarea {
@@ -200,17 +224,37 @@ textarea {
 }
 
 input[type="submit"] {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-weight: 400;
   padding: 10px 12px;
-  color: white;
-  outline: none;
-  border: none;
+  color: #333333;
+  border: solid 1px #333333;
   border-radius: 0;
   -webkit-appearance: none;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
 }
 input[type="submit"]:hover {
   cursor: pointer;
+}
+
+input[type="search"] {
+  padding-right: 0.375em;
+  /* so safari 'x' doesn't get cut off */
+}
+
+::-webkit-input-placeholder {
+  color: #666666;
+}
+
+:-moz-placeholder {
+  color: #666666;
+}
+
+::-moz-placeholder {
+  color: #666666;
+}
+
+:-ms-input-placeholder {
+  color: #666666;
 }
 
 /* ie image border fix */
@@ -250,6 +294,7 @@ a img {
   color: white !important;
   z-index: 99;
   padding: 1.5em;
+  background: #333333;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
 }
@@ -346,4 +391,13 @@ a img {
 }
 .tiled-gallery .gallery-row {
   margin: 0 auto;
+}
+
+.site-header {
+  background: #333333;
+  color: white;
+}
+
+.site-title {
+  font-weight: 700;
 }
