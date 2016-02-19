@@ -1,3 +1,63 @@
 .entry {
   background: white;
+  box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
+}
+.post-container {
+  padding: 0 $column * 1.5;
+}
+.featured-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+
+  > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
+    }
+    &:focus {
+
+      &:after {
+        opacity: 0.2;
+      }
+    }
+  }
+  > img,
+  > a > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &.no-object-fit {
+      min-width: 0;
+      min-height: 0;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+
+      // positioning
+      top: 50%;
+      right: 50%;
+      left: auto;
+      transform: translateX(50%) translateY(-50%);
+    }
+  }
 }

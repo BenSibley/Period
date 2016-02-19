@@ -1,11 +1,43 @@
-.menu-primary-container {
-  max-height: 0;
-  overflow: hidden;
-}
 .toggle-navigation {
   font-size: 1em;
   background: 0;
   padding: 0;
   border: none;
   margin: $baseline-height 0 $baseline-height * 1.25 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.menu-primary-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease-in-out;
+
+  &.open {
+    max-height: none;
+  }
+}
+.menu-primary {
+  color: white;
+  margin: $baseline-height 0;
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+  li {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    @extend %white-link;
+    @extend %fourteen-pixels;
+  }
 }

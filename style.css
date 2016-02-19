@@ -33,7 +33,7 @@ h1 {
   /* 24px */
 }
 
-.tagline {
+.tagline, .menu-primary a {
   font-size: 0.875em;
   /* 14px / 16px */
   line-height: 1.714;
@@ -49,13 +49,13 @@ textarea, input[type="submit"] {
   /* 18px */
 }
 
-.site-title a {
+.site-title a, .menu-primary a {
   color: white;
 }
-.site-title a:link, .site-title a:visited {
+.site-title a:link, .menu-primary a:link, .site-title a:visited, .menu-primary a:visited {
   color: white;
 }
-.site-title a:hover, .site-title a:active, .site-title a:focus {
+.site-title a:hover, .menu-primary a:hover, .site-title a:active, .menu-primary a:active, .site-title a:focus, .menu-primary a:focus {
   color: #D4D4D4;
 }
 
@@ -441,11 +441,6 @@ a img {
   margin: 0;
 }
 
-.menu-primary-container {
-  max-height: 0;
-  overflow: hidden;
-}
-
 .toggle-navigation {
   font-size: 1em;
   background: 0;
@@ -453,7 +448,96 @@ a img {
   border: none;
   margin: 1.5em 0 1.875em 0;
 }
+.toggle-navigation:hover {
+  cursor: pointer;
+}
+.toggle-navigation:focus {
+  outline: none;
+}
+
+.menu-primary-container {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.1s ease-in-out;
+  transition: max-height 0.1s ease-in-out;
+}
+.menu-primary-container.open {
+  max-height: none;
+}
+
+.menu-primary {
+  color: white;
+  margin: 1.5em 0;
+}
+.menu-primary ul {
+  margin: 0;
+  list-style: none;
+}
+.menu-primary li {
+  margin-bottom: 6px;
+}
+.menu-primary li:last-child {
+  margin-bottom: 0;
+}
 
 .entry {
   background: white;
+  box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
+}
+
+.post-container {
+  padding: 0 4.1667%;
+}
+
+.featured-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+.featured-image > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 0;
+}
+.featured-image > a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.featured-image > a:focus:after {
+  opacity: 0.2;
+}
+.featured-image > img,
+.featured-image > a > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.featured-image > img.no-object-fit,
+.featured-image > a > img.no-object-fit {
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  top: 50%;
+  right: 50%;
+  left: auto;
+  -webkit-transform: translateX(50%) translateY(-50%);
+  -ms-transform: translateX(50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%);
 }
