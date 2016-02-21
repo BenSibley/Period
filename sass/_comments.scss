@@ -1,0 +1,12 @@
+.comments-number,
+li.comment,
+li.pingback,
+.comment-respond {
+  @extend %white-box;
+}
+.comments-number {
+  padding: 18px $column * 1.5;
+}
+.comment-list {
+  margin: $baseline-height / 2 0;
+}

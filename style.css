@@ -26,7 +26,7 @@ Period is distributed under the terms of the GNU GPL
   /* 24px */
 }
 
-h1 {
+h1, .post-title {
   font-size: 1.125em;
   /* 18px / 16px */
   line-height: 1.333;
@@ -42,7 +42,7 @@ h1 {
 
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"] {
+textarea, input[type="submit"], .post-byline {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -57,6 +57,15 @@ textarea, input[type="submit"] {
 }
 .site-title a:hover, .menu-primary a:hover, .site-title a:active, .menu-primary a:active, .site-title a:focus, .menu-primary a:focus {
   color: #D4D4D4;
+}
+
+.comments-number,
+li.comment,
+li.pingback,
+.comment-respond {
+  background: white;
+  box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
+  padding: 1.5em 4.1667%;
 }
 
 /*===== Basic Styles =====*/
@@ -261,6 +270,7 @@ input[type="submit"] {
   padding: 10px 12px;
   color: #333333;
   border: solid 1px #333333;
+  background: none;
   border-radius: 0;
   -webkit-appearance: none;
 }
@@ -342,6 +352,14 @@ a img {
 .max-width {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.comments-number {
+  padding: 18px 4.1667%;
+}
+
+.comment-list {
+  margin: 0.75em 0;
 }
 
 /**
@@ -477,13 +495,18 @@ a img {
   margin-bottom: 0;
 }
 
-.entry {
+.sticky-status {
+  display: none;
+}
+
+.entry article {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
 }
 
 .post-container {
-  padding: 0 4.1667%;
+  padding: 1.5em 4.1667%;
+  margin-bottom: 0.75em;
 }
 
 .featured-image {
@@ -540,5 +563,5 @@ a img {
 }
 
 .post-header {
-  margin: 1.5em 0;
+  margin: 0 0 1.5em 0;
 }
