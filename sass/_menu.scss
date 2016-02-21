@@ -37,3 +37,43 @@
     @extend %fourteen-pixels;
   }
 }
+
+@media all and (min-width: $nine-hundred) {
+
+  .toggle-navigation {
+    display: none;
+  }
+  .menu-primary-container {
+    max-height: none;
+    margin-bottom: $baseline-height * 1.25;
+    overflow: visible;
+  }
+  .menu-primary {
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 26px 0 0;
+
+      &.current-menu-item,
+      &.current_page_item {
+        position: relative;
+
+        a {
+          position: relative;
+          z-index: 9;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -8px;
+          bottom: -3px;
+          left: -8px;
+          background: $color-gray-14;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

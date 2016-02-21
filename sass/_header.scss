@@ -2,7 +2,7 @@
   background: $color-gray-20;
   color: white;
   text-align: center;
-  padding: 36px $column * 2 $baseline-height * 5.25;
+  padding: 36px $column * 2 $baseline-height * 3.5;
 }
 .site-title {
   @extend %twenty-one-pixels;
@@ -16,4 +16,21 @@
   @extend %fourteen-pixels;
   color: $color-gray-83;
   margin: 0;
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .site-header {
+    text-align: left;
+  }
+  .title-container {
+    margin-bottom: $baseline-height * 1.5;
+  }
+  .site-title,
+  .tagline {
+    display: inline-block;
+  }
+  .tagline {
+    margin-left: 6px;
+  }
 }

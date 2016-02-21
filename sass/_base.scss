@@ -27,7 +27,11 @@ body {
 }
 .primary-container {
   padding: 0 $column * 2;
-  margin-top: -$baseline-height * 5.25;
+  margin-top: -$baseline-height * 3.5;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .main {
   margin: 0 auto;
@@ -277,4 +281,16 @@ a img {
 .max-width {
   max-width: 1400px;
   margin: 0 auto;
+}
+.site-footer {
+  clear: both;
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .main {
+    width: $column * 20 * 1.125;
+    float: left;
+    margin-right: $column * 1.125;
+  }
 }

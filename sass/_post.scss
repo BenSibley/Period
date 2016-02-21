@@ -10,7 +10,7 @@
   }
 }
 .post-container {
-  padding: $baseline-height $column * 1.5;
+  padding: $baseline-height $column * 1.5 * 1.125;
   margin-bottom: $baseline-height / 2;
 }
 .featured-image {
@@ -82,5 +82,12 @@
   .author {
     font-weight: 700;
     text-decoration: underline;
+  }
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  .post-container {
+    padding: $baseline-height $column * 1.5 * 1.8;
   }
 }
