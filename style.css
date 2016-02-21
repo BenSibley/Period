@@ -679,9 +679,28 @@ a img {
     display: inline-block;
     margin: 0 26px 0 0;
   }
+  .menu-primary li.current-menu-item, .menu-primary li.current_page_item {
+    position: relative;
+  }
   .menu-primary li.current-menu-item a, .menu-primary li.current_page_item a {
-    padding: 4px 10px;
+    position: relative;
+    z-index: 9;
+  }
+  .menu-primary li.current-menu-item:after, .menu-primary li.current_page_item:after {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
     background: #242424;
+    z-index: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 .sticky-status {
