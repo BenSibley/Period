@@ -10,9 +10,5 @@
     width: $column * 11 * 1.125;
     float: left;
     margin-top: $baseline-height * 2;
-
-    .widget {
-      padding: $baseline-height $column * 3.273;
-    }
   }
 }

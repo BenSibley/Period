@@ -60,7 +60,6 @@ a {
     color: $color-gray-40;
   }
 }
-
 h1,h2,h3,h4,h5,h6 {
   font-family: $primary-font-stack;
   margin: 0;
@@ -286,11 +285,39 @@ a img {
   clear: both;
 }
 
+@media all and (min-width: $six-hundred) {
+
+  h1 {
+    font-size: 1.3125em; /* 21px / 16px */
+    line-height: 1.333; /* 28px */
+  }
+  h2 {
+    font-size: 1.125em; /* 18px / 16px */
+    line-height: 1.333; /* 24px */
+  }
+}
+
 @media all and (min-width: $nine-hundred) {
 
   .main {
     width: $column * 20 * 1.125;
     float: left;
     margin-right: $column * 1.125;
+  }
+}
+
+@media all and (min-width: $eleven-hundred) {
+
+  h1 {
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.357; /* 38px */
+  }
+  h2 {
+    font-size: 1.3125em; /* 21px / 16px */
+    line-height: 1.333; /* 28px */
+  }
+  h3 {
+    font-size: 1.125em; /* 18px / 16px */
+    line-height: 1.333; /* 24px */
   }
 }

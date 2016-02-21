@@ -57,22 +57,27 @@
 
       &.current-menu-item,
       &.current_page_item {
-        position: relative;
 
         a {
-          position: relative;
-          z-index: 9;
-        }
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: -8px;
-          bottom: -3px;
-          left: -8px;
+          padding: 4px 10px;
           background: $color-gray-14;
-          z-index: 0;
         }
+
+        //
+        //a {
+        //  position: relative;
+        //  z-index: 9;
+        //}
+        //&:after {
+        //  content: '';
+        //  position: absolute;
+        //  top: 0;
+        //  right: -8px;
+        //  bottom: -3px;
+        //  left: -8px;
+        //  background: $color-gray-14;
+        //  z-index: 0;
+        //}
       }
     }
   }

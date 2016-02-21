@@ -22,8 +22,8 @@ Period is distributed under the terms of the GNU GPL
 .site-title {
   font-size: 1.3125em;
   /* 21px / 16px */
-  line-height: 1.143;
-  /* 24px */
+  line-height: 1.333;
+  /* 28px */
 }
 
 h1, .post-title {
@@ -43,24 +43,24 @@ h1, .post-title {
 
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .post-byline {
+textarea, input[type="submit"], .design-credit, .post-byline {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
   /* 18px */
 }
 
-.site-title a, .menu-primary a {
+.site-footer a, .site-title a, .menu-primary a {
   color: white;
 }
-.site-title a:link, .menu-primary a:link, .site-title a:visited, .menu-primary a:visited {
+.site-footer a:link, .site-title a:link, .menu-primary a:link, .site-footer a:visited, .site-title a:visited, .menu-primary a:visited {
   color: white;
 }
-.site-title a:hover, .menu-primary a:hover, .site-title a:active, .menu-primary a:active, .site-title a:focus, .menu-primary a:focus {
+.site-footer a:hover, .site-title a:hover, .menu-primary a:hover, .site-footer a:active, .site-title a:active, .menu-primary a:active, .site-footer a:focus, .site-title a:focus, .menu-primary a:focus {
   color: #D4D4D4;
 }
 
-.comments-number,
+.pagination, .comments-number,
 li.comment,
 li.pingback,
 .comment-respond, .sidebar-primary .widget {
@@ -69,6 +69,16 @@ li.pingback,
   padding: 1.5em 4.68754%;
 }
 
+@media all and (min-width: 56.25em) {
+  .pagination, .comments-number,
+  li.comment,
+  li.pingback,
+  .comment-respond, .sidebar-primary .widget {
+    background: white;
+    box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
+    padding: 1.5em 7.50006%;
+  }
+}
 /*===== Basic Styles =====*/
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -367,11 +377,48 @@ a img {
   clear: both;
 }
 
+@media all and (min-width: 37.5em) {
+  h1 {
+    font-size: 1.3125em;
+    /* 21px / 16px */
+    line-height: 1.333;
+    /* 28px */
+  }
+
+  h2 {
+    font-size: 1.125em;
+    /* 18px / 16px */
+    line-height: 1.333;
+    /* 24px */
+  }
+}
 @media all and (min-width: 56.25em) {
   .main {
     width: 62.5005%;
     float: left;
     margin-right: 3.12503%;
+  }
+}
+@media all and (min-width: 68.75em) {
+  h1 {
+    font-size: 1.75em;
+    /* 28px / 16px */
+    line-height: 1.357;
+    /* 38px */
+  }
+
+  h2 {
+    font-size: 1.3125em;
+    /* 21px / 16px */
+    line-height: 1.333;
+    /* 28px */
+  }
+
+  h3 {
+    font-size: 1.125em;
+    /* 18px / 16px */
+    line-height: 1.333;
+    /* 24px */
   }
 }
 .more-link,
@@ -386,7 +433,7 @@ a img {
 }
 
 .comments-link i {
-  margin-right: 2px;
+  margin-right: 1px;
 }
 
 .archive:not(.full-post).archive .post-content p:last-of-type, .archive:not(.full-post).blog .post-content p:last-of-type, .archive:not(.full-post).search .post-content p:last-of-type,
@@ -397,9 +444,49 @@ a img {
 .search:not(.full-post).blog .post-content p:last-of-type,
 .search:not(.full-post).search .post-content p:last-of-type {
   display: inline-block;
-  margin: 0 0 0.75em;
+  margin: 0.375em 0 0.75em;
 }
 
+.pagination {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.pagination .prev,
+.pagination .next {
+  font-weight: 700;
+}
+.pagination .prev {
+  float: left;
+  margin-left: 0;
+}
+.pagination .next {
+  float: right;
+  margin-right: 0;
+}
+.pagination a,
+.pagination span {
+  margin: 0 0.75em;
+}
+.pagination a.current,
+.pagination span.current {
+  padding: 2px 8px;
+  background: #EDEDED;
+}
+
+@media all and (min-width: 37.5em) {
+  .pagination {
+    position: relative;
+  }
+  .pagination.prev, .pagination.next {
+    position: absolute;
+  }
+  .pagination.prev {
+    left: 0;
+  }
+  .pagination.next {
+    right: 0;
+  }
+}
 .comments-number {
   padding: 18px 4.1667%;
 }
@@ -408,14 +495,21 @@ a img {
   margin: 0.75em 0;
 }
 
-@media all and (min-width: 56.25em) {
-  .comments-number,
-  li.comment,
-  li.pingback,
-  .comment-respond {
-    padding: 1.5em 7.50006%;
-  }
+.site-footer {
+  text-align: center;
+  background: #333333;
+  margin-top: 3.75em;
+  color: #D4D4D4;
 }
+.site-footer a {
+  font-weight: 700;
+}
+
+.design-credit {
+  background: #242424;
+  padding: 9px 5.5556%;
+}
+
 /**
  * 14.2 Galleries
  */
@@ -585,28 +679,18 @@ a img {
     display: inline-block;
     margin: 0 26px 0 0;
   }
-  .menu-primary li.current-menu-item, .menu-primary li.current_page_item {
-    position: relative;
-  }
   .menu-primary li.current-menu-item a, .menu-primary li.current_page_item a {
-    position: relative;
-    z-index: 9;
-  }
-  .menu-primary li.current-menu-item:after, .menu-primary li.current_page_item:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -8px;
-    bottom: -3px;
-    left: -8px;
+    padding: 4px 10px;
     background: #242424;
-    z-index: 0;
   }
 }
 .sticky-status {
   display: none;
 }
 
+.entry {
+  margin-bottom: 1.5em;
+}
 .entry article {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
@@ -680,9 +764,29 @@ a img {
   text-decoration: underline;
 }
 
+@media all and (min-width: 37.5em) {
+  .post-title {
+    font-size: 1.3125em;
+    /* 21px / 16px */
+    line-height: 1.333;
+    /* 28px */
+  }
+}
 @media all and (min-width: 56.25em) {
   .post-container {
     padding: 1.5em 7.50006%;
+  }
+}
+@media all and (min-width: 68.75em) {
+  .post-container {
+    padding: 1.875em 7.50006% 2.25em;
+  }
+
+  .post-title {
+    font-size: 1.75em;
+    /* 28px / 16px */
+    line-height: 1.357;
+    /* 38px */
   }
 }
 @media all and (min-width: 56.25em) {
@@ -690,8 +794,5 @@ a img {
     width: 34.37528%;
     float: left;
     margin-top: 3em;
-  }
-  .sidebar-primary .widget {
-    padding: 1.5em 9.09174%;
   }
 }

@@ -1,0 +1,16 @@
+.site-footer {
+  text-align: center;
+  background: $color-gray-20;
+  margin-top: $baseline-height * 2.5;
+  color: $color-gray-83;
+
+  a {
+    @extend %white-link;
+    font-weight: 700;
+  }
+}
+.design-credit {
+  background: $color-gray-14;
+  @extend %twelve-pixels;
+  padding: 9px $column * 2;
+}

@@ -3,6 +3,7 @@
   display: none;
 }
 .entry {
+  margin-bottom: $baseline-height;
 
   article {
     background: white;
@@ -85,9 +86,28 @@
   }
 }
 
+@media all and (min-width: $six-hundred) {
+
+  .post-title {
+    font-size: 1.3125em; /* 21px / 16px */
+    line-height: 1.333; /* 28px */
+  }
+}
+
 @media all and (min-width: $nine-hundred) {
 
   .post-container {
     padding: $baseline-height $column * 1.5 * 1.8;
+  }
+}
+
+@media all and (min-width: $eleven-hundred) {
+
+  .post-container {
+    padding: $baseline-height * 1.25 $column * 1.5 * 1.8 $baseline-height * 1.5;
+  }
+  .post-title {
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.357; /* 38px */
   }
 }

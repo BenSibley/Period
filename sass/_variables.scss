@@ -87,7 +87,7 @@ $tencent-weibo: #20b8e5;
 // 21px font
 %twenty-one-pixels {
   font-size: 1.3125em; /* 21px / 16px */
-  line-height: 1.143; /* 24px */
+  line-height: 1.333; /* 28px */
 }
 // 18px font
 %eighteen-pixels {
@@ -123,4 +123,13 @@ $tencent-weibo: #20b8e5;
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
   padding: $baseline-height $column * 1.5 * 1.125;
+}
+
+@media all and (min-width: $nine-hundred) {
+
+  %white-box {
+    background: white;
+    box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
+    padding: $baseline-height $column * 1.5 * 1.8;
+  }
 }
