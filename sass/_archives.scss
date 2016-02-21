@@ -1,0 +1,36 @@
+.more-link,
+.comments-link {
+  display: inline-block;
+  @extend %fourteen-pixels;
+}
+.more-link {
+  border: solid 1px $color-gray-20;
+  padding: 6px 12px;
+  margin-right: 12px;
+}
+.comments-link {
+
+  i {
+    margin-right: 2px;
+  }
+}
+.archive,
+.blog,
+.search {
+
+  &:not(.full-post) {
+
+    &.archive,
+    &.blog,
+    &.search {
+
+      .post-content {
+
+        p:last-of-type {
+          display: inline-block;
+          margin: 0 0 $baseline-height / 2;
+        }
+      }
+    }
+  }
+}
