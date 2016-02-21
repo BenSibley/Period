@@ -1,6 +1,6 @@
 <div <?php post_class(); ?>>
-	<?php do_action( 'archive_post_before' ); ?>
 	<article>
+		<?php do_action( 'archive_post_before' ); ?>
 		<?php ct_period_featured_image(); ?>
 		<div class="post-container">
 			<div class='post-header'>

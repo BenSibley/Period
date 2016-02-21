@@ -461,13 +461,10 @@ a img {
   -webkit-transition: max-height 0.1s ease-in-out;
   transition: max-height 0.1s ease-in-out;
 }
-.menu-primary-container.open {
-  max-height: none;
-}
 
 .menu-primary {
   color: white;
-  margin: 1.5em 0;
+  margin: 1.5em 0 0.75em;
 }
 .menu-primary ul {
   margin: 0;
@@ -540,4 +537,8 @@ a img {
   -webkit-transform: translateX(50%) translateY(-50%);
   -ms-transform: translateX(50%) translateY(-50%);
   transform: translateX(50%) translateY(-50%);
+}
+
+.post-header {
+  margin: 1.5em 0;
 }

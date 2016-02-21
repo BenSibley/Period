@@ -23,6 +23,8 @@ jQuery(document).ready(function($){
             menuPrimaryContainer.removeClass('open');
             $(this).removeClass('open');
 
+            menuPrimaryContainer.css('max-height', '0');
+
             // change screen reader text
             //$(this).children('span').text(objectL10n.openMenu);
 
@@ -32,6 +34,8 @@ jQuery(document).ready(function($){
         } else {
             menuPrimaryContainer.addClass('open');
             $(this).addClass('open');
+
+            menuPrimaryContainer.css('max-height', menuPrimary.outerHeight(true) + 'px');
 
             // change screen reader text
             //$(this).children('span').text(objectL10n.closeMenu);

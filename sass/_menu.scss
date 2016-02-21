@@ -16,14 +16,10 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.1s ease-in-out;
-
-  &.open {
-    max-height: none;
-  }
 }
 .menu-primary {
   color: white;
-  margin: $baseline-height 0;
+  margin: $baseline-height 0 $baseline-height / 2;
 
   ul {
     margin: 0;

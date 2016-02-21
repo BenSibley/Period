@@ -1,6 +1,6 @@
 <div <?php post_class(); ?>>
-	<?php do_action( 'page_before' ); ?>
 	<article>
+		<?php do_action( 'page_before' ); ?>
 		<?php ct_period_featured_image(); ?>
 		<div class="post-container">
 			<div class='post-header'>
@@ -16,5 +16,7 @@
 			</div>
 		</div>
 	</article>
-	<?php comments_template(); ?>
+	<div class="comments-container">
+		<?php comments_template(); ?>
+	</div>
 </div>
