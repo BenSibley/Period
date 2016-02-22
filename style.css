@@ -756,14 +756,44 @@ a img {
 
   .menu-primary {
     margin: 0;
+    /***** Tier 2 *****/
   }
   .menu-primary .toggle-dropdown {
     display: none;
   }
+  .menu-primary ul ul {
+    position: absolute;
+    z-index: 19;
+    top: 100%;
+    top: calc(100% + 4px);
+    max-height: none;
+    overflow: visible;
+    background: white;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .menu-primary ul ul:hover, .menu-primary ul ul.focused {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
+  .menu-primary ul ul li {
+    white-space: nowrap;
+    margin: 0 10px 6px 0;
+  }
+  .menu-primary ul ul a {
+    color: #333333;
+    width: 100%;
+  }
+  .menu-primary ul ul a:link, .menu-primary ul ul a:visited {
+    color: #333333;
+  }
   .menu-primary li {
     display: inline-block;
     margin: 0 10px 0 0;
-    /***** Tier 2 *****/
   }
   .menu-primary li.menu-item-has-children {
     position: relative;
@@ -786,51 +816,67 @@ a img {
     font-family: FontAwesome;
     content: '\f107';
     margin-left: 4px;
-    -webkit-transition: top 0.2s;
-    transition: top 0.2s;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
-  .menu-primary li.menu-item-has-children ul a:hover ~ ul, .menu-primary li.menu-item-has-children ul a:active ~ ul, .menu-primary li.menu-item-has-children ul a:focus ~ ul {
+  .menu-primary li.menu-item-has-children ul li {
+    display: list-item;
+  }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children:hover a:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children:active a:after {
+    right: -2px;
+    top: 0;
+  }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children a:after {
+    content: '\f105';
+    -webkit-transition: right 0.2s ease;
+    transition: right 0.2s ease;
+  }
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children a:hover ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:active ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:focus ~ ul {
     opacity: 1;
     visibility: visible;
-    top: 0;
+    top: -5px;
     left: 100%;
   }
-  .menu-primary li.menu-item-has-children ul ul {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children a:hover:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:active:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:focus:after {
     top: 0;
+    right: -2px;
+  }
+  .menu-primary li.menu-item-has-children ul ul {
+    top: -5px;
     left: 100%;
     left: calc(100% + 4px);
   }
-  .menu-primary li.menu-item-has-children ul ul:hover, .menu-primary li.menu-item-has-children ul ul.focus {
-    top: 0;
+  .menu-primary li.menu-item-has-children ul ul:hover, .menu-primary li.menu-item-has-children ul ul.focused {
+    top: -5px;
     left: 100%;
   }
-  .menu-primary ul ul {
-    position: absolute;
-    z-index: 19;
-    top: 100%;
-    top: calc(100% + 4px);
-    max-height: none;
-    overflow: visible;
-    background: white;
+
+  .rtl .menu-primary ul li.menu-item-has-children > a:after {
+    display: none;
+  }
+  .rtl .menu-primary ul li.menu-item-has-children > a:before {
+    position: relative;
+    top: 0;
+    font-family: FontAwesome;
+    content: '\f107';
+    margin-left: 4px;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
+  }
+  .rtl .menu-primary ul ul {
+    right: auto;
     left: 0;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
   }
-  .menu-primary ul ul:hover, .menu-primary ul ul.focus {
-    opacity: 1;
-    visibility: visible;
-    top: 100%;
+  .rtl .menu-primary ul ul li.menu-item-has-children a:before {
+    content: '\f104';
   }
-  .menu-primary ul ul li {
-    white-space: nowrap;
+  .rtl .menu-primary ul ul li.menu-item-has-children a:hover ~ ul, .rtl .menu-primary ul ul li.menu-item-has-children a:active ~ ul, .rtl .menu-primary ul ul li.menu-item-has-children a:focus ~ ul {
+    right: auto;
+    left: 100%;
   }
-  .menu-primary ul ul a {
-    color: #333333;
-  }
-  .menu-primary ul ul a:link, .menu-primary ul ul a:visited {
-    color: #333333;
+  .rtl .menu-primary ul ul ul:hover, .rtl .menu-primary ul ul ul.focused {
+    right: auto;
+    left: 100%;
   }
 }
 .sticky-status {

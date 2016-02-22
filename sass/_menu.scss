@@ -143,11 +143,43 @@
     .toggle-dropdown {
       display: none;
     }
+    /***** Tier 2 *****/
+    ul ul {
+      position: absolute;
+      z-index: 19;
+      top: 100%;
+      top: calc(100% + 4px);
+      max-height: none;
+      overflow: visible;
+      background: white;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+
+      &:hover,
+      &.focused {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+      }
+      li {
+        white-space: nowrap;
+        margin: 0 10px 6px 0;
+      }
+      a {
+        color: $color-gray-20;
+        width: 100%;
+
+        &:link,
+        &:visited {
+          color: $color-gray-20;
+        }
+      }
+    }
     li {
       display: inline-block;
       margin: 0 10px 0 0;
-
-      /***** Tier 2 *****/
 
       &.menu-item-has-children {
         position: relative;
@@ -182,67 +214,122 @@
             font-family: FontAwesome;
             content: '\f107';
             margin-left: 4px;
-            transition: top 0.2s;
+            transition: top 0.2s ease;
           }
         }
         /***** Tier 3+ *****/
         ul {
 
-          a {
-            &:hover,
-            &:active,
-            &:focus {
+          li {
+            display: list-item;
+          }
+          .menu-item-has-children {
 
-              ~ ul {
-                opacity: 1;
-                visibility: visible;
-                top: 0;
-                left: 100%;
+            &:hover,
+            &:active {
+
+              a {
+
+                &:after {
+                  right: -2px;
+                  top: 0;
+                }
+              }
+            }
+            a {
+
+              &:after {
+                content: '\f105';
+                transition: right 0.2s ease;
+              }
+              &:hover,
+              &:active,
+              &:focus {
+
+                ~ ul {
+                  opacity: 1;
+                  visibility: visible;
+                  top: -5px;
+                  left: 100%;
+                }
+                &:after {
+                  top: 0;
+                  right: -2px;
+                }
               }
             }
           }
           ul {
-            top: 0;
+            top: -5px;
             left: 100%;
             left: calc(100% + 4px);
 
             &:hover,
-            &.focus {
-              top: 0;
+            &.focused {
+              top: -5px;
               left: 100%;
             }
           }
         }
       }
     }
-    ul ul {
-      position: absolute;
-      z-index: 19;
-      top: 100%;
-      top: calc(100% + 4px);
-      max-height: none;
-      overflow: visible;
-      background: white;
-      left: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.2s;
+  }
+  .rtl {
 
-      &:hover,
-      &.focus {
-        opacity: 1;
-        visibility: visible;
-        top: 100%;
-      }
-      li {
-        white-space: nowrap;
-      }
-      a {
-        color: $color-gray-20;
+    .menu-primary {
 
-        &:link,
-        &:visited {
-          color: $color-gray-20;
+      ul li {
+
+        &.menu-item-has-children {
+
+          > a {
+
+            &:after {
+              display: none;
+            }
+            &:before {
+              position: relative;
+              top: 0;
+              font-family: FontAwesome;
+              content: '\f107';
+              margin-left: 4px;
+              transition: top 0.2s ease;
+            }
+          }
+        }
+      }
+      ul ul {
+        right: auto;
+        left: 0;
+
+        li {
+
+          &.menu-item-has-children {
+
+            a {
+
+              &:before {
+                content: '\f104';
+              }
+              &:hover,
+              &:active,
+              &:focus {
+
+                ~ ul {
+                  right: auto;
+                  left: 100%;
+                }
+              }
+            }
+          }
+        }
+        ul {
+
+          &:hover,
+          &.focused {
+            right: auto;
+            left: 100%;
+          }
         }
       }
     }
