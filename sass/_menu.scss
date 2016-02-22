@@ -134,6 +134,7 @@
       display: none;
     }
     li {
+      transition: all 0.2s;
 
       // for when hovering over child submenus
       &:hover,

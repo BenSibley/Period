@@ -1,6 +1,4 @@
-<?php get_header();
-
-get_template_part( 'content/archive-header' ); ?>
+<?php get_header(); ?>
 
     <div id="loop-container" class="loop-container">
         <?php

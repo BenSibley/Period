@@ -85,7 +85,49 @@
     text-decoration: underline;
   }
 }
+.post-categories {
+  @extend %fourteen-pixels;
 
+  a {
+    font-weight: 700;
+  }
+}
+.post-tags {
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    @extend %fourteen-pixels;
+    display: inline-block;
+    padding: 0 12px;
+    border: solid 1px $color-gray-20;
+    margin-right: 6px;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $color-gray-20;
+      color: white;
+    }
+  }
+}
+.further-reading {
+
+  span {
+    @extend %twelve-pixels;
+  }
+  a {
+    @extend %fourteen-pixels;
+    font-weight: 700;
+    display: block;
+  }
+}
 @media all and (min-width: $six-hundred) {
 
   .post-title {

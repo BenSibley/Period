@@ -2,6 +2,14 @@
 
   .widget {
     @extend %white-box;
+
+    > * {
+      @extend %fourteen-pixels;
+    }
+  }
+  .widget-title {
+    font-size: 1em;
+    line-height: 1.5;
   }
 }
 @media all and (min-width: $nine-hundred) {

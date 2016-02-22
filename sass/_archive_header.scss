@@ -1,0 +1,15 @@
+.archive-header {
+  margin-bottom: $baseline-height / 2;
+  color: white;
+
+  h2 {
+    @extend %fourteen-pixels;
+    display: inline-block;
+    font-weight: 300;
+    background: $color-gray-14;
+    padding: 6px 14px 6px 14px;
+  }
+  i {
+    margin-right: 4px;
+  }
+}

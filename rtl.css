@@ -33,8 +33,8 @@ h1, .post-title {
   /* 24px */
 }
 
-.more-link,
-.comments-link, .tagline, .menu-primary a {
+.archive-header h2, .more-link,
+.comments-link, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
   font-size: 0.875em;
   /* 14px / 16px */
   line-height: 1.714;
@@ -43,7 +43,7 @@ h1, .post-title {
 
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .design-credit span, .post-byline {
+textarea, input[type="submit"], .design-credit span, .post-byline, .further-reading span {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -421,6 +421,20 @@ a img {
     /* 24px */
   }
 }
+.archive-header {
+  margin-bottom: 0.75em;
+  color: white;
+}
+.archive-header h2 {
+  display: inline-block;
+  font-weight: 300;
+  background: #242424;
+  padding: 6px 14px 6px 14px;
+}
+.archive-header i {
+  margin-left: 4px;
+}
+
 .more-link,
 .comments-link {
   display: inline-block;
@@ -754,6 +768,10 @@ a img {
   .menu-primary .toggle-dropdown {
     display: none;
   }
+  .menu-primary li {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
   .menu-primary li:hover, .menu-primary li:active {
     color: #333333;
     background: white;
@@ -959,6 +977,35 @@ a img {
   text-decoration: underline;
 }
 
+.post-categories a {
+  font-weight: 700;
+}
+
+.post-tags ul {
+  list-style: none;
+  margin: 0;
+}
+.post-tags li {
+  display: inline-block;
+}
+.post-tags a {
+  display: inline-block;
+  padding: 0 12px;
+  border: solid 1px #333333;
+  margin-left: 6px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.post-tags a:hover, .post-tags a:active, .post-tags a:focus {
+  background: #333333;
+  color: white;
+}
+
+.further-reading a {
+  font-weight: 700;
+  display: block;
+}
+
 @media all and (min-width: 37.5em) {
   .post-title {
     font-size: 1.3125em;
@@ -984,6 +1031,11 @@ a img {
     /* 38px */
   }
 }
+.sidebar-primary .widget-title {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
 @media all and (min-width: 56.25em) {
   .sidebar-primary {
     width: 34.37528%;
