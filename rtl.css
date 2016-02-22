@@ -43,7 +43,7 @@ h1, .post-title {
 
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .design-credit, .post-byline {
+textarea, input[type="submit"], .design-credit span, .post-byline {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -499,6 +499,7 @@ a img {
   text-align: center;
   background: #333333;
   margin-top: 3.75em;
+  padding-top: 1.875em;
   color: #D4D4D4;
 }
 .site-footer a {
@@ -508,6 +509,7 @@ a img {
 .design-credit {
   background: #242424;
   padding: 9px 5.5556%;
+  margin-top: 1.875em;
 }
 
 /**

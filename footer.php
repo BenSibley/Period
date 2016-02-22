@@ -5,6 +5,16 @@
 </div><!-- .primary-container -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
+    <div id="footer-title-container" class="footer-title-container">
+        <h2 id='site-title' class='site-title'>
+            <a href='<?php echo esc_url( home_url() ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
+                <?php bloginfo( 'name' ); ?>
+            </a>
+        </h2>
+        <?php if ( get_bloginfo( 'description' ) ) {
+            echo '<p class="tagline">' . get_bloginfo( 'description' ) . '</p>';
+        } ?>
+    </div>
     <?php do_action( 'footer_top' ); ?>
     <div class="design-credit">
         <span>

@@ -2,6 +2,7 @@
   text-align: center;
   background: $color-gray-20;
   margin-top: $baseline-height * 2.5;
+  padding-top: $baseline-height * 1.25;
   color: $color-gray-83;
 
   a {
@@ -11,6 +12,10 @@
 }
 .design-credit {
   background: $color-gray-14;
-  @extend %twelve-pixels;
   padding: 9px $column * 2;
+  margin-top: $baseline-height * 1.25;
+
+  span {
+    @extend %twelve-pixels;
+  }
 }
