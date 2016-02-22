@@ -670,13 +670,6 @@ a img {
 .menu-primary li {
   margin-bottom: 6px;
 }
-.menu-primary li:hover, .menu-primary li:active {
-  color: #333333;
-  background: white;
-}
-.menu-primary li:hover a, .menu-primary li:active a {
-  color: #333333;
-}
 .menu-primary li:last-child {
   margin-bottom: 0;
 }
@@ -734,10 +727,10 @@ a img {
   font-family: FontAwesome;
   content: '\f107';
 }
-.menu-primary .open ul {
+.menu-primary .open > ul {
   max-height: 999px;
 }
-.menu-primary .open .toggle-dropdown .arrow {
+.menu-primary .open > .toggle-dropdown .arrow {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -760,6 +753,13 @@ a img {
   }
   .menu-primary .toggle-dropdown {
     display: none;
+  }
+  .menu-primary li:hover, .menu-primary li:active {
+    color: #333333;
+    background: white;
+  }
+  .menu-primary li:hover a, .menu-primary li:active a {
+    color: #333333;
   }
   .menu-primary ul ul {
     position: absolute;

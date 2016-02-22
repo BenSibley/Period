@@ -28,16 +28,6 @@
   li {
     margin-bottom: 6px;
 
-    // for when hovering over child submenus
-    &:hover,
-    &:active {
-      color: $color-gray-20;
-      background: white;
-
-      a {
-        color: $color-gray-20;
-      }
-    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -115,10 +105,10 @@
   }
   .open {
 
-    ul {
+    > ul {
       max-height: 999px;
     }
-    .toggle-dropdown {
+    > .toggle-dropdown {
 
       .arrow {
         transform: rotate(180deg);
@@ -142,6 +132,19 @@
 
     .toggle-dropdown {
       display: none;
+    }
+    li {
+
+      // for when hovering over child submenus
+      &:hover,
+      &:active {
+        color: $color-gray-20;
+        background: white;
+
+        a {
+          color: $color-gray-20;
+        }
+      }
     }
     /***** Tier 2 *****/
     ul ul {
