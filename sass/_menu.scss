@@ -15,7 +15,7 @@
 .menu-primary-container {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.1s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 .menu-primary {
   color: white;
@@ -26,27 +26,31 @@
     list-style: none;
   }
   li {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 
+    // for when hovering over child submenus
+    &:hover,
+    &:active {
+      color: $color-gray-20;
+      background: white;
+
+      a {
+        color: $color-gray-20;
+      }
+    }
     &:last-child {
       margin-bottom: 0;
     }
     &.current-menu-item,
     &.current_page_item {
 
-      a {
+      > a {
+        background: $color-gray-14;
 
-        &:after {
-          transform: scale(1);
-          background: $color-gray-14;
-        }
         &:hover,
         &:active,
         &:focus {
-
-          &:after {
-            background: white;
-          }
+          background: white;
         }
       }
     }
@@ -56,32 +60,68 @@
     @extend %fourteen-pixels;
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     z-index: 9;
     overflow: hidden;
     padding: 0 8px 2px 8px;
-    transition: color 0.3s ease-out;
+    transition: all 0.2s;
+    backface-visibility: hidden;
 
-    &:after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      border-radius: 50%;
-      top: -24px;
-      right: -24px;
-      bottom: -24px;
-      left: -24px;
-      transform: scale(0);
-      transition: all 0.3s ease-out;
-      backface-visibility: hidden;
-    }
     &:hover,
     &:active,
     &:focus {
       color: $color-gray-20;
+      background: white;
+    }
+  }
 
-      &:after {
-        background: white;
-        transform: scale(1);
+  /***** Tier 2 *****/
+
+  ul ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+
+    li {
+
+      &:first-child {
+        margin-top: 6px;
+      }
+      &:last-child {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .toggle-dropdown {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    margin: 0 -26px 0 2px;
+    padding: 2px 6px;
+    border: solid 1px $color-gray-83;
+    background: none;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+    .arrow {
+      display: inline-block;
+    }
+    .arrow:after {
+      font-family: FontAwesome;
+      content: '\f107';
+    }
+  }
+  .open {
+
+    ul {
+      max-height: 999px;
+    }
+    .toggle-dropdown {
+
+      .arrow {
+        transform: rotate(180deg);
       }
     }
   }
@@ -100,9 +140,111 @@
   .menu-primary {
     margin: 0;
 
+    .toggle-dropdown {
+      display: none;
+    }
     li {
       display: inline-block;
       margin: 0 10px 0 0;
+
+      /***** Tier 2 *****/
+
+      &.menu-item-has-children {
+        position: relative;
+
+        &:hover {
+
+          > a {
+
+            &:after {
+              top: 2px;
+            }
+          }
+        }
+        > a {
+
+          &:hover,
+          &:active,
+          &:focus {
+
+            ~ ul {
+              opacity: 1;
+              visibility: visible;
+              top: 100%;
+            }
+            &:after {
+              top: 2px;
+            }
+          }
+          &:after {
+            position: relative;
+            top: 0;
+            font-family: FontAwesome;
+            content: '\f107';
+            margin-left: 4px;
+            transition: top 0.2s;
+          }
+        }
+        /***** Tier 3+ *****/
+        ul {
+
+          a {
+            &:hover,
+            &:active,
+            &:focus {
+
+              ~ ul {
+                opacity: 1;
+                visibility: visible;
+                top: 0;
+                left: 100%;
+              }
+            }
+          }
+          ul {
+            top: 0;
+            left: 100%;
+            left: calc(100% + 4px);
+
+            &:hover,
+            &.focus {
+              top: 0;
+              left: 100%;
+            }
+          }
+        }
+      }
+    }
+    ul ul {
+      position: absolute;
+      z-index: 19;
+      top: 100%;
+      top: calc(100% + 4px);
+      max-height: none;
+      overflow: visible;
+      background: white;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+
+      &:hover,
+      &.focus {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+      }
+      li {
+        white-space: nowrap;
+      }
+      a {
+        color: $color-gray-20;
+
+        &:link,
+        &:visited {
+          color: $color-gray-20;
+        }
+      }
     }
   }
 }

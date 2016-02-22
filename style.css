@@ -430,8 +430,17 @@ a img {
   border: solid 1px #333333;
   padding: 6px 12px;
   margin-right: 12px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.more-link:hover, .more-link:active, .more-link:focus {
+  color: white;
+  background: #333333;
 }
 
+.comments-link a:hover, .comments-link a:active, .comments-link a:focus {
+  text-decoration: underline;
+}
 .comments-link i {
   margin-right: 1px;
 }
@@ -445,6 +454,7 @@ a img {
 .search:not(.full-post).search .post-content p:last-of-type {
   display: inline-block;
   margin: 0.375em 0 0.75em;
+  line-height: 0;
 }
 
 .pagination {
@@ -644,67 +654,93 @@ a img {
 .menu-primary-container {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.1s ease-in-out;
-  transition: max-height 0.1s ease-in-out;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .menu-primary {
   color: white;
   margin: 1.5em 0 0.75em;
+  /***** Tier 2 *****/
 }
 .menu-primary ul {
   margin: 0;
   list-style: none;
 }
 .menu-primary li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+}
+.menu-primary li:hover, .menu-primary li:active {
+  color: #333333;
+  background: white;
+}
+.menu-primary li:hover a, .menu-primary li:active a {
+  color: #333333;
 }
 .menu-primary li:last-child {
   margin-bottom: 0;
 }
-.menu-primary li.current-menu-item a:after, .menu-primary li.current_page_item a:after {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+.menu-primary li.current-menu-item > a, .menu-primary li.current_page_item > a {
   background: #242424;
 }
-.menu-primary li.current-menu-item a:hover:after, .menu-primary li.current-menu-item a:active:after, .menu-primary li.current-menu-item a:focus:after, .menu-primary li.current_page_item a:hover:after, .menu-primary li.current_page_item a:active:after, .menu-primary li.current_page_item a:focus:after {
+.menu-primary li.current-menu-item > a:hover, .menu-primary li.current-menu-item > a:active, .menu-primary li.current-menu-item > a:focus, .menu-primary li.current_page_item > a:hover, .menu-primary li.current_page_item > a:active, .menu-primary li.current_page_item > a:focus {
   background: white;
 }
 .menu-primary a {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   z-index: 9;
   overflow: hidden;
   padding: 0 8px 2px 8px;
-  -webkit-transition: color 0.3s ease-out;
-  transition: color 0.3s ease-out;
-}
-.menu-primary a:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  border-radius: 50%;
-  top: -24px;
-  right: -24px;
-  bottom: -24px;
-  left: -24px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .menu-primary a:hover, .menu-primary a:active, .menu-primary a:focus {
   color: #333333;
-}
-.menu-primary a:hover:after, .menu-primary a:active:after, .menu-primary a:focus:after {
   background: white;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+}
+.menu-primary ul ul {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
+}
+.menu-primary ul ul li:first-child {
+  margin-top: 6px;
+}
+.menu-primary ul ul li:last-child {
+  margin-bottom: 6px;
+}
+.menu-primary .toggle-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  margin: 0 -26px 0 2px;
+  padding: 2px 6px;
+  border: solid 1px #D4D4D4;
+  background: none;
+  color: white;
+}
+.menu-primary .toggle-dropdown:hover {
+  cursor: pointer;
+}
+.menu-primary .toggle-dropdown .arrow {
+  display: inline-block;
+}
+.menu-primary .toggle-dropdown .arrow:after {
+  font-family: FontAwesome;
+  content: '\f107';
+}
+.menu-primary .open ul {
+  max-height: 999px;
+}
+.menu-primary .open .toggle-dropdown .arrow {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 @media all and (min-width: 56.25em) {
@@ -721,9 +757,80 @@ a img {
   .menu-primary {
     margin: 0;
   }
+  .menu-primary .toggle-dropdown {
+    display: none;
+  }
   .menu-primary li {
     display: inline-block;
     margin: 0 10px 0 0;
+    /***** Tier 2 *****/
+  }
+  .menu-primary li.menu-item-has-children {
+    position: relative;
+    /***** Tier 3+ *****/
+  }
+  .menu-primary li.menu-item-has-children:hover > a:after {
+    top: 2px;
+  }
+  .menu-primary li.menu-item-has-children > a:hover ~ ul, .menu-primary li.menu-item-has-children > a:active ~ ul, .menu-primary li.menu-item-has-children > a:focus ~ ul {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
+  .menu-primary li.menu-item-has-children > a:hover:after, .menu-primary li.menu-item-has-children > a:active:after, .menu-primary li.menu-item-has-children > a:focus:after {
+    top: 2px;
+  }
+  .menu-primary li.menu-item-has-children > a:after {
+    position: relative;
+    top: 0;
+    font-family: FontAwesome;
+    content: '\f107';
+    margin-left: 4px;
+    -webkit-transition: top 0.2s;
+    transition: top 0.2s;
+  }
+  .menu-primary li.menu-item-has-children ul a:hover ~ ul, .menu-primary li.menu-item-has-children ul a:active ~ ul, .menu-primary li.menu-item-has-children ul a:focus ~ ul {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    left: 100%;
+  }
+  .menu-primary li.menu-item-has-children ul ul {
+    top: 0;
+    left: 100%;
+    left: calc(100% + 4px);
+  }
+  .menu-primary li.menu-item-has-children ul ul:hover, .menu-primary li.menu-item-has-children ul ul.focus {
+    top: 0;
+    left: 100%;
+  }
+  .menu-primary ul ul {
+    position: absolute;
+    z-index: 19;
+    top: 100%;
+    top: calc(100% + 4px);
+    max-height: none;
+    overflow: visible;
+    background: white;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .menu-primary ul ul:hover, .menu-primary ul ul.focus {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
+  .menu-primary ul ul li {
+    white-space: nowrap;
+  }
+  .menu-primary ul ul a {
+    color: #333333;
+  }
+  .menu-primary ul ul a:link, .menu-primary ul ul a:visited {
+    color: #333333;
   }
 }
 .sticky-status {

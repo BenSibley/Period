@@ -7,9 +7,25 @@
   border: solid 1px $color-gray-20;
   padding: 6px 12px;
   margin-right: 12px;
+  transition: all 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+    background: $color-gray-20;
+  }
 }
 .comments-link {
 
+  a {
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
   i {
     margin-right: 1px;
   }
@@ -29,6 +45,7 @@
         p:last-of-type {
           display: inline-block;
           margin: $baseline-height * 0.25 0 $baseline-height / 2;
+          line-height: 0;
         }
       }
     }

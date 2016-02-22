@@ -372,7 +372,7 @@ function ct_period_nav_dropdown_buttons( $item_output, $item, $depth, $args ) {
 	if ( $args->theme_location == 'primary' ) {
 
 		if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-			$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open menu", "period" ) . '</span></button>', $item_output );
+			$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open menu", "period" ) . '</span><span class="arrow"></span></button>', $item_output );
 		}
 	}
 
