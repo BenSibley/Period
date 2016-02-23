@@ -41,7 +41,7 @@ function ct_period_add_customizer_content( $wp_customize ) {
 	) );
 	// Size - setting
 	$wp_customize->add_setting( 'logo_size', array(
-		'default'           => '48',
+		'default'           => '168',
 		'sanitize_callback' => 'absint',
 		'transport'         => 'postMessage'
 	) );
