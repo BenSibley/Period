@@ -1,18 +1,17 @@
 <?php get_header(); ?>
-    <div class="post-header search-header">
+    <div class="search-header archive-header">
         <h1 class="post-title">
             <?php
             global $wp_query;
             $total_results = $wp_query->found_posts;
             $s             = htmlentities( $s );
             if ( $total_results ) {
-                printf( _n( '%d search result for "%s"', '%d search results for "%s"', $total_results, 'period' ), $total_results, $s );
+                printf( _n( '%d search result for "%s"', '%d search results for <span class="query">"%s"</span>', $total_results, 'period' ), $total_results, $s );
             } else {
-                printf( __( 'No search results for "%s"', 'period' ), $s );
+                printf( __( 'No search results for <span class="query">"%s"</span>', 'period' ), $s );
             }
             ?>
         </h1>
-        <?php get_search_form(); ?>
     </div>
     <div id="loop-container" class="loop-container">
         <?php

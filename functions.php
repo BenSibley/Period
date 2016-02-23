@@ -99,14 +99,14 @@ if ( ! function_exists( 'ct_period_update_fields' ) ) {
 		$fields['author'] =
 			'<p class="comment-form-author">
 	            <label for="author">' . __( "Name", "period" ) . $label . '</label>
-	            <input id="author" name="author" type="text" placeholder="Jane Doe" value="' . esc_attr( $commenter['comment_author'] ) .
+	            <input id="author" name="author" type="text" placeholder="' . __( "Jane Doe", "period" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['email'] =
 			'<p class="comment-form-email">
 	            <label for="email">' . __( "Email", "period" ) . $label . '</label>
-	            <input id="email" name="email" type="email" placeholder="name@email.com" value="' . esc_attr( $commenter['comment_author_email'] ) .
+	            <input id="email" name="email" type="email" placeholder="' . __( "name@email.com", "period" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 

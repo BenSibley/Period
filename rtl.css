@@ -33,6 +33,7 @@ h1, .post-title {
   /* 24px */
 }
 
+.archive-header h1,
 .archive-header h2, .more-link,
 .comments-link, .comment-respond label, .comment-author .author-name, .comment-content > *, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
   font-size: 0.875em;
@@ -64,7 +65,7 @@ textarea, input[type="submit"], .comment-author .comment-date, .comment-footer a
 .pagination, .comments-number,
 li.comment > article,
 li.pingback > article,
-.comment-respond, .comments-closed, .comment-pagination, .sidebar-primary .widget {
+.comment-respond, .comments-closed, .comment-pagination, .search-bottom, .sidebar-primary .widget {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
   padding: 1.5em 4.68754%;
@@ -74,7 +75,7 @@ li.pingback > article,
   .pagination, .comments-number,
   li.comment > article,
   li.pingback > article,
-  .comment-respond, .comments-closed, .comment-pagination, .sidebar-primary .widget {
+  .comment-respond, .comments-closed, .comment-pagination, .search-bottom, .sidebar-primary .widget {
     background: white;
     box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
     padding: 1.5em 7.50006%;
@@ -448,11 +449,16 @@ a img {
   margin-bottom: 0.75em;
   color: white;
 }
+.archive-header h1,
 .archive-header h2 {
   display: inline-block;
   font-weight: 300;
   background: #242424;
   padding: 6px 14px 6px 14px;
+}
+.archive-header h1 .query,
+.archive-header h2 .query {
+  font-weight: 700;
 }
 .archive-header i {
   margin-left: 4px;
@@ -1199,6 +1205,14 @@ li.pingback.bypostauthor {
     /* 38px */
   }
 }
+.search-form-container .search-submit {
+  min-width: 99px;
+}
+
+.search-bottom p {
+  margin-top: 0;
+}
+
 .sidebar-primary .widget-title {
   font-size: 1em;
   line-height: 1.5;

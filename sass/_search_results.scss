@@ -1,0 +1,9 @@
+// Check archive-header.scss for header section
+
+.search-bottom {
+  @extend %white-box;
+
+  p {
+    margin-top: 0;
+  }
+}
