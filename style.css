@@ -34,7 +34,7 @@ h1, .post-title {
 }
 
 .archive-header h2, .more-link,
-.comments-link, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
+.comments-link, .comment-respond label, .comment-author .author-name, .comment-content > *, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
   font-size: 0.875em;
   /* 14px / 16px */
   line-height: 1.714;
@@ -43,7 +43,8 @@ h1, .post-title {
 
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .design-credit span, .post-byline, .further-reading span {
+textarea, input[type="submit"], .comment-author .comment-date, .comment-footer a,
+.comment-footer i, .design-credit span, .post-byline, .further-reading span {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -61,9 +62,9 @@ textarea, input[type="submit"], .design-credit span, .post-byline, .further-read
 }
 
 .pagination, .comments-number,
-li.comment,
-li.pingback,
-.comment-respond, .sidebar-primary .widget {
+li.comment > article,
+li.pingback > article,
+.comment-respond, .comments-closed, .comment-pagination, .sidebar-primary .widget {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
   padding: 1.5em 4.68754%;
@@ -71,9 +72,9 @@ li.pingback,
 
 @media all and (min-width: 56.25em) {
   .pagination, .comments-number,
-  li.comment,
-  li.pingback,
-  .comment-respond, .sidebar-primary .widget {
+  li.comment > article,
+  li.pingback > article,
+  .comment-respond, .comments-closed, .comment-pagination, .sidebar-primary .widget {
     background: white;
     box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
     padding: 1.5em 7.50006%;
@@ -268,6 +269,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type=
 textarea {
   width: 100%;
   font-family: "Roboto", "Open Sans", sans-serif;
+  font-weight: 400;
   padding: 10px 12px;
   max-width: 27.75em;
   background: #F7F7F7;
@@ -275,12 +277,23 @@ textarea {
   border: solid 1px #D4D4D4;
   border-radius: 0;
   -webkit-appearance: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]):focus,
+textarea:focus {
+  outline: none;
+  background: white;
 }
 
 textarea {
   max-width: 41.625em;
   overflow: auto;
   /* to hide scrollbar in IE */
+}
+textarea:focus {
+  outline: none;
+  background: white;
 }
 
 input[type="submit"] {
@@ -292,9 +305,15 @@ input[type="submit"] {
   background: none;
   border-radius: 0;
   -webkit-appearance: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 input[type="submit"]:hover {
   cursor: pointer;
+}
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+  background: #333333;
+  color: white;
 }
 
 input[type="search"] {
@@ -304,18 +323,22 @@ input[type="search"] {
 
 ::-webkit-input-placeholder {
   color: #666666;
+  font-weight: 300;
 }
 
 :-moz-placeholder {
   color: #666666;
+  font-weight: 300;
 }
 
 ::-moz-placeholder {
   color: #666666;
+  font-weight: 300;
 }
 
 :-ms-input-placeholder {
   color: #666666;
+  font-weight: 300;
 }
 
 /* ie image border fix */
@@ -511,14 +534,121 @@ a img {
     right: 0;
   }
 }
+.comment-respond label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.comment-respond p {
+  margin: 1.125em 0;
+}
+.comment-respond p.comment-notes {
+  margin: 1.5em 0;
+}
+.comment-respond p.form-submit {
+  margin-top: 2.25em;
+}
+
 .comments-number {
-  padding: 18px 4.1667%;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
-.comment-list {
+.comment-list,
+.comment-list .children {
   margin: 0.75em 0;
+  list-style: none;
 }
 
+.comment-list .children {
+  padding-left: 1.5em;
+  border-left: solid 1px #D4D4D4;
+}
+
+li.comment,
+li.pingback {
+  position: relative;
+  margin-bottom: 0.75em;
+}
+li.comment.bypostauthor,
+li.pingback.bypostauthor {
+  border: solid 5px #D4D4D4;
+}
+
+.comment-author .avatar {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  float: left;
+  margin-right: 0.75em;
+}
+.comment-author .author-name {
+  display: block;
+  font-weight: 700;
+}
+.comment-author .comment-date {
+  float: left;
+}
+.comment-author:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.comment-content {
+  margin: 1.5em 0;
+}
+
+.comment-footer {
+  position: absolute;
+  top: 1.5em;
+  right: 4.68754%;
+}
+.comment-footer a,
+.comment-footer i {
+  vertical-align: text-top;
+}
+.comment-footer a {
+  font-weight: 700;
+  margin-left: 4px;
+}
+.comment-footer i.fa-pencil {
+  margin-left: 6px;
+}
+
+.comment-pagination {
+  margin-bottom: 0.75em;
+}
+.comment-pagination p {
+  display: inline-block;
+  margin: 0 -4px 0 0;
+  width: 50%;
+}
+.comment-pagination a {
+  font-weight: 700;
+}
+.comment-pagination .next-comment {
+  float: right;
+  text-align: right;
+}
+.comment-pagination:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+@media all and (min-width: 37.5em) {
+  li.comment > article,
+  li.pingback > article {
+    padding-top: 2.25em;
+  }
+}
 .site-footer {
   text-align: center;
   background: #333333;
@@ -904,7 +1034,7 @@ a img {
 .entry {
   margin-bottom: 1.5em;
 }
-.entry article {
+.entry > article {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
 }
@@ -977,10 +1107,32 @@ a img {
   text-decoration: underline;
 }
 
+.post-content iframe {
+  max-width: 100%;
+}
+.post-content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.post-meta {
+  margin: 1.875em 0 0.75em;
+}
+
+.post-categories {
+  margin-bottom: 1.71em;
+}
 .post-categories a {
   font-weight: 700;
 }
 
+.post-tags {
+  margin-bottom: 1.5em;
+}
 .post-tags ul {
   list-style: none;
   margin: 0;
@@ -1001,6 +1153,9 @@ a img {
   color: white;
 }
 
+.further-reading .previous {
+  margin-bottom: 0.75em;
+}
 .further-reading a {
   font-weight: 700;
   display: block;
@@ -1012,6 +1167,19 @@ a img {
     /* 21px / 16px */
     line-height: 1.333;
     /* 28px */
+  }
+
+  .further-reading div {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+  }
+  .further-reading .previous {
+    margin-bottom: 0;
+  }
+  .further-reading .next {
+    text-align: right;
   }
 }
 @media all and (min-width: 56.25em) {

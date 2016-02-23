@@ -173,6 +173,7 @@ textarea {
   @extend %twelve-pixels;
   width: 100%;
   font-family: $primary-font-stack;
+  font-weight: 400;
   padding: 10px 12px;
   max-width: $baseline-height * 10 * 1.85;
   background: $color-gray-97;
@@ -180,10 +181,21 @@ textarea {
   border: solid 1px $color-gray-83;
   border-radius: 0;
   -webkit-appearance: none;
+  transition: background 0.2s;
+
+  &:focus {
+    outline: none;
+    background: white;
+  }
 }
 textarea {
   max-width: $baseline-height * 15 * 1.85;
   overflow: auto; /* to hide scrollbar in IE */
+
+  &:focus {
+    outline: none;
+    background: white;
+  }
 }
 input[type="submit"] {
   @extend %twelve-pixels;
@@ -195,6 +207,7 @@ input[type="submit"] {
   background: none;
   border-radius: 0;
   -webkit-appearance: none;
+  transition: all 0.2s;
 
   &:hover {
     cursor: pointer;
@@ -202,7 +215,8 @@ input[type="submit"] {
   &:hover,
   &:active,
   &:focus {
-
+    background: $color-gray-20;
+    color: white;
   }
 }
 
@@ -211,15 +225,19 @@ input[type="search"] {
 }
 ::-webkit-input-placeholder {
   color: $color-gray-40;
+  font-weight: 300;
 }
 :-moz-placeholder /* Firefox 18- */ {
   color: $color-gray-40;
+  font-weight: 300;
 }
 ::-moz-placeholder /* Firefox 19+ */ {
   color: $color-gray-40;
+  font-weight: 300;
 }
 :-ms-input-placeholder {
   color: $color-gray-40;
+  font-weight: 300;
 }
 
 /* ie image border fix */

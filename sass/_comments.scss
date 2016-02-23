@@ -1,12 +1,106 @@
 .comments-number,
-li.comment,
-li.pingback,
+li.comment > article,
+li.pingback > article,
 .comment-respond {
   @extend %white-box;
 }
 .comments-number {
-  padding: 18px $column * 1.5;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
-.comment-list {
+.comment-list,
+.comment-list .children {
   margin: $baseline-height / 2 0;
+  list-style: none;
+}
+.comment-list .children {
+  padding-left: $baseline-height;
+  border-left: solid 1px $color-gray-83;
+}
+li.comment,
+li.pingback {
+  position: relative;
+  margin-bottom: $baseline-height / 2;
+
+  &.bypostauthor {
+    border: solid 5px $color-gray-83;
+  }
+}
+.comment-author {
+
+  .avatar {
+    border-radius: 50%;
+    width: $baseline-height * 2;
+    height: $baseline-height * 2;
+    float: left;
+    margin-right: $baseline-height / 2;
+  }
+  .author-name {
+    @extend %fourteen-pixels;
+    display: block;
+    font-weight: 700;
+  }
+  .comment-date {
+    @extend %twelve-pixels;
+    float: left;
+  }
+  &:after {
+    @include clearfix;
+  }
+}
+.comment-content {
+  margin: $baseline-height 0;
+
+  > * {
+    @extend %fourteen-pixels;
+  }
+}
+.comments-closed {
+  @extend %white-box;
+}
+.comment-footer {
+  position: absolute;
+  top: $baseline-height;
+  right: $column * 1.5 * 1.125;
+
+  a,
+  i {
+    @extend %twelve-pixels;
+    vertical-align: text-top;
+  }
+  a {
+    font-weight: 700;
+    margin-left: 4px;
+  }
+  i.fa-pencil {
+    margin-left: 6px;
+  }
+}
+.comment-pagination {
+  @extend %white-box;
+  margin-bottom: $baseline-height / 2;
+
+  p {
+    display: inline-block;
+    margin: 0 -4px 0 0;
+    width: 50%;
+  }
+  a {
+    font-weight: 700;
+  }
+  .next-comment {
+    float: right;
+    text-align: right;
+  }
+  &:after {
+    @include clearfix;
+  }
+}
+
+@media all and (min-width: $six-hundred) {
+
+  li.comment > article,
+  li.pingback > article {
+    padding-top: $baseline-height * 1.5;
+  }
 }

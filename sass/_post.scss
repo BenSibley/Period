@@ -5,7 +5,7 @@
 .entry {
   margin-bottom: $baseline-height;
 
-  article {
+  > article {
     background: white;
     box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
   }
@@ -85,14 +85,28 @@
     text-decoration: underline;
   }
 }
+.post-content {
+
+  iframe {
+    max-width: 100%;
+  }
+  &:after {
+    @include clearfix;
+  }
+}
+.post-meta {
+  margin: $baseline-height * 1.25 0 $baseline-height / 2;
+}
 .post-categories {
   @extend %fourteen-pixels;
+  margin-bottom: $baseline-height * 1.14;
 
   a {
     font-weight: 700;
   }
 }
 .post-tags {
+  margin-bottom: $baseline-height;
 
   ul {
     list-style: none;
@@ -119,6 +133,9 @@
 }
 .further-reading {
 
+  .previous {
+    margin-bottom: $baseline-height / 2;
+  }
   span {
     @extend %twelve-pixels;
   }
@@ -133,6 +150,21 @@
   .post-title {
     font-size: 1.3125em; /* 21px / 16px */
     line-height: 1.333; /* 28px */
+  }
+  .further-reading {
+
+    div {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: -4px;
+    }
+    .previous {
+      margin-bottom: 0;
+    }
+    .next {
+      text-align: right;
+    }
   }
 }
 
