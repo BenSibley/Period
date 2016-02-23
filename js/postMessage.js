@@ -1,8 +1,9 @@
 ( function( $ ) {
 
-    /*
-     * Following functions are for utilizing the postMessage transport setting
-     */
-
+    wp.customize( 'logo_size', function( value ) {
+        value.bind( function( to ) {
+            $('.logo').css('width', to);
+        } );
+    } );
 
 } )( jQuery );

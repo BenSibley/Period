@@ -21,6 +21,11 @@
   color: $color-gray-83;
   margin: 0;
 }
+.logo {
+  max-width: 100%;
+  width: $baseline-height * 3;
+  height: auto;
+}
 .social-media-icons {
   list-style: none;
   margin: $baseline-height 0;

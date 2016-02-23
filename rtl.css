@@ -777,6 +777,12 @@ li.pingback.bypostauthor {
   margin: 0;
 }
 
+.logo {
+  max-width: 100%;
+  width: 4.5em;
+  height: auto;
+}
+
 .social-media-icons {
   list-style: none;
   margin: 1.5em 0;

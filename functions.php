@@ -472,7 +472,14 @@ add_filter( 'post_class', 'ct_period_post_class' );
 function ct_period_custom_css_output() {
 
 	$custom_css = get_theme_mod( 'custom_css' );
+	$logo_size = get_theme_mod( 'logo_size' );
 
+	if ( $logo_size != 48 && ! empty( $logo_size ) ) {
+		$logo_size_css = '.logo {
+							width: ' . $logo_size . 'px;
+						  }';
+		$custom_css .= $logo_size_css;
+	}
 	if ( $custom_css ) {
 		$custom_css = ct_period_sanitize_css( $custom_css );
 
