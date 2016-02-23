@@ -2,14 +2,15 @@
 
   .widget {
     @extend %white-box;
+    margin-bottom: $baseline-height / 2;
 
     > * {
       @extend %fourteen-pixels;
     }
-  }
-  .widget-title {
-    font-size: 1em;
-    line-height: 1.5;
+    .widget-title {
+      font-size: 1em;
+      line-height: 1.5;
+    }
   }
 }
 @media all and (min-width: $nine-hundred) {
@@ -18,5 +19,9 @@
     width: $column * 11 * 1.125;
     float: left;
     margin-top: $baseline-height * 2;
+
+    .widget {
+      padding-top: $baseline-height * 1.25;
+    }
   }
 }

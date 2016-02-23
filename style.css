@@ -38,7 +38,7 @@ h1, .post-title {
 .comments-link, .comment-respond label, .comment-author .author-name, .comment-content > *, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
   font-size: 0.875em;
   /* 14px / 16px */
-  line-height: 1.714;
+  line-height: 1.715;
   /* 24px */
 }
 
@@ -1213,7 +1213,10 @@ li.pingback.bypostauthor {
   margin-top: 0;
 }
 
-.sidebar-primary .widget-title {
+.sidebar-primary .widget {
+  margin-bottom: 0.75em;
+}
+.sidebar-primary .widget .widget-title {
   font-size: 1em;
   line-height: 1.5;
 }
@@ -1224,4 +1227,107 @@ li.pingback.bypostauthor {
     float: left;
     margin-top: 3em;
   }
+  .sidebar-primary .widget {
+    padding-top: 1.875em;
+  }
+}
+.widget-title {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.widget_calendar caption {
+  margin-bottom: 6px;
+}
+.widget_calendar table {
+  margin: 0 auto 0.75em;
+  width: 100%;
+  text-align: center;
+}
+.widget_calendar thead {
+  background: #EDEDED;
+}
+.widget_calendar th,
+.widget_calendar tr,
+.widget_calendar td {
+  border-color: #D4D4D4;
+}
+.widget_calendar #today {
+  background: #333333;
+  color: white;
+}
+.widget_calendar #prev,
+.widget_calendar #next,
+.widget_calendar .pad {
+  padding: 0;
+}
+.widget_calendar #prev a,
+.widget_calendar #next a,
+.widget_calendar .pad a {
+  display: block;
+  padding: 8px;
+}
+.widget_calendar #prev a:hover, .widget_calendar #prev a:active, .widget_calendar #prev a:focus,
+.widget_calendar #next a:hover,
+.widget_calendar #next a:active,
+.widget_calendar #next a:focus,
+.widget_calendar .pad a:hover,
+.widget_calendar .pad a:active,
+.widget_calendar .pad a:focus {
+  background: #EDEDED;
+}
+
+.widget_nav_menu .current-menu-item > a {
+  font-weight: 700;
+}
+
+.widget_recent_comments a {
+  text-decoration: underline;
+}
+.widget_recent_comments a:hover, .widget_recent_comments a:active, .widget_recent_comments a:focus {
+  text-decoration: none;
+}
+
+.widget_recent_entries .post-date {
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.widget_search .search-field {
+  width: 74% !important;
+  width: calc(75% - 6px) !important;
+}
+.widget_search .search-submit {
+  width: auto !important;
+  max-width: 25% !important;
+  min-width: 25% !important;
+}
+
+.widget_rss .widget-title img {
+  margin-right: 4px;
+}
+.widget_rss .rssSummary {
+  margin: 0.75em 1.5em;
+  color: #666666;
+}
+.widget_rss .rssSummary + cite {
+  display: block;
+  margin: 0 0 1.5em 1.5em;
+}
+.widget_rss .rss-date {
+  font-style: italic;
+}
+.widget_rss li {
+  display: block;
+}
+.widget_rss cite,
+.widget_rss span {
+  margin-bottom: 1.5em;
+  display: block;
+}
+.widget_rss span + cite {
+  margin-top: -1.5em;
 }
