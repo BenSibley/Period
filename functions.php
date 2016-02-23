@@ -480,7 +480,14 @@ function ct_period_custom_css_output() {
 						  }';
 		$custom_css .= $logo_size_css;
 	}
-	if ( $custom_css ) {
+	if ( get_theme_mod( 'display_post_author') == 'hide' ) {
+		$custom_css .= '';
+	}
+	if ( get_theme_mod( 'display_post_date') == 'hide' ) {
+		$custom_css .= '';
+	}
+
+	if ( ! empty( $custom_css ) ) {
 		$custom_css = ct_period_sanitize_css( $custom_css );
 
 		wp_add_inline_style( 'ct-period-style', $custom_css );

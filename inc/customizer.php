@@ -218,6 +218,47 @@ function ct_period_add_customizer_content( $wp_customize ) {
 		'type'     => 'text'
 	) );
 
+	/***** Display Controls *****/
+
+	// section
+	$wp_customize->add_section( 'period_display', array(
+		'title'       => __( 'Display Controls', 'period' ),
+		'priority'    => 55,
+		'description' => sprintf( __( 'Want more options like these? Check out the <a target="_blank" href="%s"> Period Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/' )
+	) );
+	// setting - post author
+	$wp_customize->add_setting( 'display_post_author', array(
+		'default'           => 'show',
+		'sanitize_callback' => 'ct_period_sanitize_show_hide'
+	) );
+	// control - post author
+	$wp_customize->add_control( 'display_post_author', array(
+		'type'    => 'radio',
+		'label'   => __( 'Post author name in byline', 'period' ),
+		'section' => 'period_display',
+		'setting' => 'display_post_author',
+		'choices' => array(
+			'show' => __( 'Show', 'period' ),
+			'hide' => __( 'Hide', 'period' )
+		)
+	) );
+	// setting - post date
+	$wp_customize->add_setting( 'display_post_date', array(
+		'default'           => 'show',
+		'sanitize_callback' => 'ct_period_sanitize_show_hide'
+	) );
+	// control - post author
+	$wp_customize->add_control( 'display_post_date', array(
+		'type'    => 'radio',
+		'label'   => __( 'Post date in byline', 'period' ),
+		'section' => 'period_display',
+		'setting' => 'display_post_date',
+		'choices' => array(
+			'show' => __( 'Show', 'period' ),
+			'hide' => __( 'Hide', 'period' )
+		)
+	) );
+
 	/***** Additional Options *****/
 
 	// section
@@ -308,7 +349,7 @@ function ct_period_sanitize_yes_no_settings( $input ) {
 
 	$valid = array(
 		'yes' => __( 'Yes', 'period' ),
-		'no'  => __( 'No', 'period' ),
+		'no'  => __( 'No', 'period' )
 	);
 
 	return array_key_exists( $input, $valid ) ? $input : '';
@@ -327,6 +368,16 @@ function ct_period_sanitize_css( $css ) {
 	$css = str_replace( '&gt;', '>', $css );
 
 	return $css;
+}
+
+function ct_period_sanitize_show_hide( $input ) {
+
+	$valid = array(
+		'show' => __( 'Show', 'period' ),
+		'hide' => __( 'Hide', 'period' )
+	);
+
+	return array_key_exists( $input, $valid ) ? $input : '';
 }
 
 /***** Helper Functions *****/

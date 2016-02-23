@@ -47,6 +47,7 @@ add_action( 'admin_enqueue_scripts', 'ct_period_enqueue_admin_styles' );
 
 // Customizer scripts
 function ct_period_enqueue_customizer_scripts() {
+	wp_enqueue_script( 'ct-period-customizer-js', get_template_directory_uri() . '/js/build/customizer.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_style( 'ct-period-customizer-styles', get_template_directory_uri() . '/styles/customizer.min.css' );
 }
 add_action( 'customize_controls_enqueue_scripts', 'ct_period_enqueue_customizer_scripts' );
