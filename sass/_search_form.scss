@@ -4,3 +4,106 @@
     min-width: 99px;
   }
 }
+
+.site-header {
+
+  .search-form-container {
+    position: absolute;
+    right: 6px;
+    top: $baseline-height / 2;
+    z-index: 19;
+
+    button {
+      position: relative;
+      z-index: 9;
+      background: none;
+      border: none;
+      margin: 5px -10px 0 0;
+      padding: 6px 10px;
+      font-size: 1em;
+      line-height: 1.5;
+
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+
+        i {
+          color: white;
+        }
+      }
+      &.open {
+
+        i {
+          color: $color-gray-20;
+        }
+        + form {
+          opacity: 1;
+        }
+      }
+    }
+    i {
+      color: white;
+      z-index: -1; // so that the button is clicked, not this icon
+      transition: all 0.2s;
+    }
+    form {
+      position: absolute;
+      top: 0;
+      right: -12px;
+      left: 0;
+      padding-top: 6px;
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out, left 0.15s ease-in-out;
+    }
+    .search-field {
+      max-width: none !important;
+      outline: none !important;
+      padding: 6px 12px !important;
+
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button,
+      &::-webkit-search-results-decoration {
+        -webkit-appearance: none;
+      }
+      &:focus {
+        background: $color-gray-93 !important;
+        outline: solid 1px $color-gray-83 !important;
+      }
+    }
+  }
+}
+
+@media all and (min-width: $nine-hundred ) {
+
+  .site-header .search-form-container {
+    position: relative;
+    float: right;
+    top: -5px;
+    right: 0;
+    z-index: 9;
+    text-align: right;
+    margin: 0 0 0 $baseline-height;
+
+    button {
+      margin: 0;
+      padding: 4px 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+      &.open {
+
+        + form {
+          left: -266px;
+        }
+      }
+    }
+    form {
+      padding-top: 0;
+      right: 0;
+    }
+  }
+}

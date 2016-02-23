@@ -3,6 +3,10 @@
   color: white;
   text-align: center;
   padding: 36px $column * 2 $baseline-height * 3.5;
+
+  &:after {
+    @include clearfix;
+  }
 }
 .site-title {
   @extend %twenty-one-pixels;
@@ -17,6 +21,27 @@
   color: $color-gray-83;
   margin: 0;
 }
+.social-media-icons {
+  list-style: none;
+  margin: $baseline-height 0;
+  transition: all 0.2s;
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    @extend %white-link;
+  }
+  &.fade {
+    opacity: 0;
+    transform: translateX(4px);
+  }
+}
 
 @media all and (min-width: $nine-hundred) {
 
@@ -25,6 +50,7 @@
   }
   .title-container {
     margin-bottom: $baseline-height * 1.5;
+    float: left;
   }
   .site-title,
   .tagline {
@@ -32,5 +58,9 @@
   }
   .tagline {
     margin-left: 6px;
+  }
+  .social-media-icons {
+    float: right;
+    margin: 0;
   }
 }

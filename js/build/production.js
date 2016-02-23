@@ -95,10 +95,11 @@ jQuery(document).ready(function($){
     //var sidebarPrimary = $('#sidebar-primary');
     //var sidebarPrimaryContent = $('#sidebar-primary-content');
     //var sidebarWidgets = $('#sidebar-primary-widgets');
-    //var socialMediaIcons = siteHeader.find('.social-media-icons');
+    var socialMediaIcons = siteHeader.find('.social-media-icons');
     var menuLink = $('.menu-item').children('a');
 
     toggleNavigation.on('click', openPrimaryMenu);
+    body.on('click', '#search-icon', openSearchBar);
 
     function openPrimaryMenu() {
 
@@ -118,7 +119,8 @@ jQuery(document).ready(function($){
             menuPrimaryContainer.addClass('open');
             $(this).addClass('open');
 
-            menuPrimaryContainer.css('max-height', menuPrimary.outerHeight(true) + 'px');
+            var newHeight = menuPrimary.outerHeight(true) + socialMediaIcons.outerHeight(true);
+            menuPrimaryContainer.css('max-height', newHeight + 'px');
 
             // change screen reader text
             //$(this).children('span').text(objectL10n.closeMenu);
@@ -174,6 +176,40 @@ jQuery(document).ready(function($){
 
                 // change aria text
                 $(this).attr('aria-expanded', 'true');
+            }
+        }
+    }
+
+    function openSearchBar(){
+
+        if( $(this).hasClass('open') ) {
+
+            $(this).removeClass('open');
+
+            socialMediaIcons.removeClass('fade');
+
+            // make search input inaccessible to keyboards
+            siteHeader.find('.search-field').attr('tabindex', -1);
+
+            // handle mobile width search bar sizing
+            if( window.innerWidth < 900 ) {
+                siteHeader.find('.search-form').attr('style', '');
+            }
+        } else {
+            $(this).addClass('open');
+
+            socialMediaIcons.addClass('fade');
+
+            // make search input keyboard accessible
+            siteHeader.find('.search-field').attr('tabindex', 0);
+
+            // handle mobile width search bar sizing
+            if( window.innerWidth < 900 ) {
+
+                // distance to other side (35px is width of icon space)
+                var leftDistance = window.innerWidth * 0.83332 - 35;
+
+                siteHeader.find('.search-form').css('left', -leftDistance + 'px')
             }
         }
     }

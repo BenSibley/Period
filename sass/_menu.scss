@@ -13,6 +13,7 @@
   }
 }
 .menu-primary-container {
+  position: relative;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
@@ -129,6 +130,7 @@
   }
   .menu-primary {
     margin: 0;
+    clear: both;
 
     .toggle-dropdown {
       display: none;
