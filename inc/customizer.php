@@ -285,46 +285,6 @@ function ct_period_add_customizer_content( $wp_customize ) {
 		)
 	) );
 
-	/***** Additional Options *****/
-
-	// section
-	$wp_customize->add_section( 'period_additional', array(
-		'title'    => __( 'Additional Options', 'period' ),
-		'priority' => 70
-	) );
-	// extra-wide post - setting
-	$wp_customize->add_setting( 'full_width_post', array(
-		'default'           => 'yes',
-		'sanitize_callback' => 'ct_period_sanitize_yes_no_settings'
-	) );
-	// extra-wide post - control
-	$wp_customize->add_control( 'full_width_post', array(
-		'label'    => __( 'Make first post on blog extra wide?', 'period' ),
-		'section'  => 'period_additional',
-		'settings' => 'full_width_post',
-		'type'     => 'radio',
-		'choices'  => array(
-			'yes' => __( 'Yes', 'period' ),
-			'no'  => __( 'No', 'period' )
-		)
-	) );
-	// author byline - setting
-	$wp_customize->add_setting( 'author_byline', array(
-		'default'           => 'no',
-		'sanitize_callback' => 'ct_period_sanitize_yes_no_settings'
-	) );
-	// author byline - control
-	$wp_customize->add_control( 'author_byline', array(
-		'label'    => __( 'Display post author name in byline?', 'period' ),
-		'section'  => 'period_additional',
-		'settings' => 'author_byline',
-		'type'     => 'radio',
-		'choices'  => array(
-			'yes' => __( 'Yes', 'period' ),
-			'no'  => __( 'No', 'period' )
-		)
-	) );
-
 	/***** Custom CSS *****/
 
 	// section
@@ -340,7 +300,7 @@ function ct_period_add_customizer_content( $wp_customize ) {
 	// control
 	$wp_customize->add_control( 'custom_css', array(
 		'type'     => 'textarea',
-		'label'    => __( 'Add Custom CSS Here:', 'period' ),
+		'label'    => __( 'Add Custom CSS Here', 'period' ),
 		'section'  => 'period_custom_css',
 		'settings' => 'custom_css'
 	) );
