@@ -4,7 +4,6 @@
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-
 body {
   height: 100%;
   font-size: 100%;
@@ -24,6 +23,10 @@ body {
   overflow: hidden;
   height: auto;
   min-height: 100%;
+}
+.max-width {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .primary-container {
   padding: 0 $column * 2;
@@ -296,13 +299,6 @@ a img {
   .skip-content:focus {
     top: 32px;
   }
-}
-.max-width {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.site-footer {
-  clear: both;
 }
 
 @media all and (min-width: $six-hundred) {

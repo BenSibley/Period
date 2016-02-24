@@ -3,6 +3,7 @@
   background: $color-gray-20;
   margin-top: $baseline-height * 2.5;
   color: $color-gray-83;
+  clear: both;
 
   a {
     @extend %white-link;

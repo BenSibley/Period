@@ -2,10 +2,13 @@
 </section> <!-- .main -->
 <?php get_sidebar( 'primary' ); ?>
 <?php do_action( 'after_main' ); ?>
+</div><!-- .max-width -->
 </div><!-- .primary-container -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
-    <?php do_action( 'footer_top' ); ?>
+    <div id="max-width" class="max-width">
+        <?php do_action( 'footer_top' ); ?>
+    </div>
     <div class="design-credit">
         <span>
             <?php
@@ -16,7 +19,6 @@
         </span>
     </div>
 </footer>
-</div><!-- .max-width -->
 </div><!-- .overflow-container -->
 
 <?php do_action( 'body_bottom' ); ?>

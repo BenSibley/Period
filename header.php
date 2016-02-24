@@ -10,9 +10,9 @@
 <?php do_action( 'body_top' ); ?>
 <a class="skip-content" href="#main"><?php _e( 'Skip to content', 'period' ); ?></a>
 <div id="overflow-container" class="overflow-container">
-	<div id="max-width" class="max-width">
-		<?php do_action( 'before_header' ); ?>
-		<header class="site-header" id="site-header" role="banner">
+	<?php do_action( 'before_header' ); ?>
+	<header class="site-header" id="site-header" role="banner">
+		<div id="max-width" class="max-width">
 			<div id="title-container" class="title-container">
 				<?php get_template_part( 'logo' ) ?>
 				<?php if ( get_bloginfo( 'description' ) ) {
@@ -28,9 +28,11 @@
 				<span class="screen-reader-text"><?php _e( 'open menu', 'period' ); ?></span>
 				<?php echo ct_period_svg_output( 'toggle-navigation' ); ?>
 			</button>
-		</header>
-		<?php do_action( 'after_header' ); ?>
-		<div id="primary-container" class="primary-container">
+		</div>
+	</header>
+	<?php do_action( 'after_header' ); ?>
+	<div id="primary-container" class="primary-container">
+		<div id="max-width" class="max-width">
 			<section id="main" class="main" role="main">
 				<?php do_action( 'main_top' );
 				if ( function_exists( 'yoast_breadcrumb' ) ) {

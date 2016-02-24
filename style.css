@@ -109,6 +109,11 @@ body {
   min-height: 100%;
 }
 
+.max-width {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .primary-container {
   padding: 0 5.5556%;
   margin-top: -5.25em;
@@ -392,15 +397,6 @@ a img {
 
 .admin-bar .skip-content:focus {
   top: 32px;
-}
-
-.max-width {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.site-footer {
-  clear: both;
 }
 
 @media all and (min-width: 37.5em) {
@@ -700,6 +696,7 @@ li.pingback.bypostauthor {
   background: #333333;
   margin-top: 3.75em;
   color: #D4D4D4;
+  clear: both;
 }
 .site-footer a {
   font-weight: 700;
