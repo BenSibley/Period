@@ -112,6 +112,8 @@ body {
 .primary-container {
   padding: 0 5.5556%;
   margin-top: -5.25em;
+  min-height: 100vh;
+  min-height: calc(100vh - 291px);
 }
 .primary-container:after {
   content: ".";

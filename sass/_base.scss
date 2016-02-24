@@ -28,6 +28,8 @@ body {
 .primary-container {
   padding: 0 $column * 2;
   margin-top: -$baseline-height * 3.5;
+  min-height: 100vh;
+  min-height: calc(100vh - 291px);
 
   &:after {
     @include clearfix;
