@@ -33,7 +33,7 @@ h1, .post-title {
   /* 24px */
 }
 
-.archive-header h1,
+#breadcrumbs > span, .archive-header h1,
 .archive-header h2, .more-link,
 .comments-link, .comment-respond label, .comment-author .author-name, .comment-content > *, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
   font-size: 0.875em;
@@ -52,13 +52,13 @@ textarea, input[type="submit"], .sticky-status span, .comment-author .comment-da
   /* 18px */
 }
 
-.site-footer a, .site-title a, .social-media-icons a, .menu-primary a {
+#breadcrumbs a, .site-footer a, .site-title a, .social-media-icons a, .menu-primary a {
   color: white;
 }
-.site-footer a:link, .site-title a:link, .social-media-icons a:link, .menu-primary a:link, .site-footer a:visited, .site-title a:visited, .social-media-icons a:visited, .menu-primary a:visited {
+#breadcrumbs a:link, .site-footer a:link, .site-title a:link, .social-media-icons a:link, .menu-primary a:link, #breadcrumbs a:visited, .site-footer a:visited, .site-title a:visited, .social-media-icons a:visited, .menu-primary a:visited {
   color: white;
 }
-.site-footer a:hover, .site-title a:hover, .social-media-icons a:hover, .menu-primary a:hover, .site-footer a:active, .site-title a:active, .social-media-icons a:active, .menu-primary a:active, .site-footer a:focus, .site-title a:focus, .social-media-icons a:focus, .menu-primary a:focus {
+#breadcrumbs a:hover, .site-footer a:hover, .site-title a:hover, .social-media-icons a:hover, .menu-primary a:hover, #breadcrumbs a:active, .site-footer a:active, .site-title a:active, .social-media-icons a:active, .menu-primary a:active, #breadcrumbs a:focus, .site-footer a:focus, .site-title a:focus, .social-media-icons a:focus, .menu-primary a:focus {
   color: #D4D4D4;
 }
 
@@ -397,6 +397,13 @@ a img {
 
 .admin-bar .skip-content:focus {
   top: 32px;
+}
+
+#breadcrumbs {
+  display: inline-block;
+  margin-bottom: 0.75em;
+  color: #D4D4D4;
+  margin-top: 0;
 }
 
 @media all and (min-width: 37.5em) {

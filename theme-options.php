@@ -28,14 +28,14 @@ function ct_period_options_content() {
 		</div>
 		<div class="content content-support">
 			<h3><?php _e( 'Support', 'period' ); ?></h3>
-			<p><?php _e( "You can find the knowledgebase, changelog, support forum, and more in the period Support Center", "period" ); ?>.</p>
+			<p><?php _e( "You can find the knowledgebase, changelog, support forum, and more in the Period Support Center", "period" ); ?>.</p>
 			<p>
 				<a target="_blank" class="button-primary"
 				   href="https://www.competethemes.com/documentation/period-support-center/"><?php _e( 'Visit Support Center', 'period' ); ?></a>
 			</p>
 		</div>
 		<div class="content content-premium-upgrade">
-			<h3><?php _e( 'Get More Features & Flexibility', 'period' ); ?></h3>
+			<h3><?php _e( 'Period Pro', 'period' ); ?></h3>
 			<p><?php _e( 'Download the Period Pro plugin and unlock custom colors, new layouts, sliders, and more', 'period' ); ?>...</p>
 			<p>
 				<a target="_blank" class="button-primary"

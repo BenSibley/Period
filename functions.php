@@ -316,6 +316,12 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 
 			foreach ( $active_sites as $key => $active_site ) {
 
+				if ( $active_site == 'email-form' ) {
+					$class = 'fa fa-envelope-o';
+				} else {
+					$class = 'fa fa-' . $active_site;
+				}
+
 				echo '<li>';
 				if ( $active_site == 'email' ) { ?>
 					<a class="email" target="_blank"
@@ -325,19 +331,13 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 				<?php } elseif ( $active_site == 'skype' ) { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
-						<i class="fa fa-<?php echo esc_attr( $active_site ); ?>"
-						   title="<?php echo esc_attr( $active_site ); ?>"></i>
-					</a>
-				<?php } elseif ( $active_site == 'email-form' ) { ?>
-					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
-					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
-						<i class="fa fa-envelope-o"
+						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
 					</a>
 				<?php } else { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
-						<i class="fa fa-<?php echo esc_attr( $active_site ); ?>"
+						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
 					</a>
 					<?php
@@ -408,11 +408,12 @@ function ct_period_reset_customizer_options() {
 	$mods_array = array(
 		'logo_upload',
 		'search_bar',
+		'layout',
 		'full_post',
 		'excerpt_length',
 		'read_more_text',
-		'full_width_post',
-		'author_byline',
+		'display_post_author',
+		'display_post_date',
 		'custom_css'
 	);
 
