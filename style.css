@@ -44,7 +44,7 @@ h1, .post-title {
 
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
-textarea, input[type="submit"], .comment-author .comment-date, .comment-footer a,
+textarea, input[type="submit"], .sticky-status span, .comment-author .comment-date, .comment-footer a,
 .comment-footer i, .design-credit span, .post-byline, .further-reading span {
   font-size: 0.75em;
   /* 12px / 16px */
@@ -532,6 +532,27 @@ a img {
   background: #EDEDED;
 }
 
+.entry.sticky .post-title {
+  margin-top: -12px;
+}
+.entry.sticky.has-post-thumbnail .post-title {
+  margin-top: 0;
+}
+.entry.sticky.has-post-thumbnail .sticky-status {
+  position: absolute;
+  top: 0.75em;
+}
+
+.sticky-status {
+  position: relative;
+  display: inline-block;
+  top: -1.5em;
+  left: 0;
+  padding: 0 12px 2px;
+  background: #D4D4D4;
+  font-weight: 400;
+}
+
 @media all and (min-width: 37.5em) {
   .pagination {
     position: relative;
@@ -544,6 +565,15 @@ a img {
   }
   .pagination.next {
     right: 0;
+  }
+}
+@media all and (min-width: 68.75em) {
+  .entry.sticky .post-title {
+    margin-top: -12px;
+  }
+
+  .sticky-status {
+    top: -1.875em;
   }
 }
 .comment-respond label {
@@ -1082,11 +1112,8 @@ li.pingback.bypostauthor {
     left: 100%;
   }
 }
-.sticky-status {
-  display: none;
-}
-
 .entry {
+  position: relative;
   margin-bottom: 1.5em;
 }
 .entry > article {

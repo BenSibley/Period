@@ -1,8 +1,5 @@
-// CHANGE THIS
-.sticky-status {
-  display: none;
-}
 .entry {
+  position: relative;
   margin-bottom: $baseline-height;
 
   > article {

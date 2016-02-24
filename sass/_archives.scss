@@ -51,7 +51,6 @@
     }
   }
 }
-
 .pagination {
   @extend %white-box;
   text-align: center;
@@ -79,6 +78,35 @@
     }
   }
 }
+.entry.sticky {
+
+  .post-title {
+    margin-top: -12px;
+  }
+  &.has-post-thumbnail {
+
+    .post-title {
+      margin-top: 0;
+    }
+    .sticky-status {
+      position: absolute;
+      top: $baseline-height / 2;
+    }
+  }
+}
+.sticky-status {
+  position: relative;
+  display: inline-block;
+  top: -$baseline-height;
+  left: 0;
+  padding: 0 12px 2px;
+  background: $color-gray-83;
+  font-weight: 400;
+
+  span {
+    @extend %twelve-pixels;
+  }
+}
 
 @media all and (min-width: $six-hundred) {
 
@@ -95,5 +123,18 @@
     &.next {
       right: 0;
     }
+  }
+}
+
+@media all and (min-width: $eleven-hundred) {
+
+  .entry.sticky {
+
+    .post-title {
+      margin-top: -12px;
+    }
+  }
+  .sticky-status {
+    top: -$baseline-height * 1.25;
   }
 }
