@@ -6,7 +6,7 @@
 </div><!-- .primary-container -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
-    <div id="max-width" class="max-width">
+    <div class="max-width">
         <?php do_action( 'footer_top' ); ?>
     </div>
     <div class="design-credit">

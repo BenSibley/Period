@@ -68,6 +68,16 @@
       &::-webkit-search-results-decoration {
         -webkit-appearance: none;
       }
+      &::-ms-clear {
+        display: none;
+        width : 0;
+        height: 0;
+      }
+      &::-ms-reveal {
+        display: none;
+        width : 0;
+        height: 0;
+      }
       &:focus {
         background: white !important;
         outline: solid 1px $color-gray-93 !important;

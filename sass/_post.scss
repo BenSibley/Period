@@ -104,7 +104,7 @@
   }
 }
 .post-tags {
-  margin-bottom: $baseline-height;
+  margin-bottom: $baseline-height * .75; // b/c tags have 6px bottom margin
 
   ul {
     list-style: none;
@@ -118,7 +118,7 @@
     display: inline-block;
     padding: 0 12px;
     border: solid 1px $color-gray-20;
-    margin-right: 6px;
+    margin: 0 6px 6px 0;
     transition: all 0.2s;
 
     &:hover,
@@ -141,6 +141,19 @@
     @extend %fourteen-pixels;
     font-weight: 700;
     display: block;
+  }
+}
+.singular-pagination {
+
+  a {
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:hover,
+    &:after,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 @media all and (min-width: $six-hundred) {

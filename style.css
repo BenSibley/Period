@@ -34,7 +34,7 @@ h1, .post-title {
 }
 
 #breadcrumbs > span, .archive-header h1,
-.archive-header h2, .more-link,
+.archive-header h2, .archive-header p, .more-link,
 .comments-link, .comment-respond label, .comment-author .author-name, .comment-content > *, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
   font-size: 0.875em;
   /* 14px / 16px */
@@ -62,20 +62,20 @@ textarea, input[type="submit"], .sticky-status span, .comment-author .comment-da
   color: #D4D4D4;
 }
 
-.pagination, .comments-number,
+.comments-number,
 li.comment > article,
 li.pingback > article,
-.comment-respond, .comments-closed, .comment-pagination, .search-bottom, .sidebar-primary .widget {
+.comment-respond, .comments-closed, .comment-pagination, .pagination, .search-bottom, .sidebar-primary .widget {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
   padding: 1.5em 4.68754%;
 }
 
 @media all and (min-width: 56.25em) {
-  .pagination, .comments-number,
+  .comments-number,
   li.comment > article,
   li.pingback > article,
-  .comment-respond, .comments-closed, .comment-pagination, .search-bottom, .sidebar-primary .widget {
+  .comment-respond, .comments-closed, .comment-pagination, .pagination, .search-bottom, .sidebar-primary .widget {
     background: white;
     box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
     padding: 1.5em 7.50006%;
@@ -474,6 +474,13 @@ a img {
 .archive-header i {
   margin-right: 4px;
 }
+.archive-header p {
+  display: inline-block;
+  margin: 0;
+  color: #D4D4D4;
+  background: #242424;
+  padding: 6px 14px 6px 14px;
+}
 
 .more-link,
 .comments-link {
@@ -511,32 +518,6 @@ a img {
   line-height: 0;
 }
 
-.pagination {
-  text-align: center;
-  margin-bottom: 1.5em;
-}
-.pagination .prev,
-.pagination .next {
-  font-weight: 700;
-}
-.pagination .prev {
-  float: left;
-  margin-left: 0;
-}
-.pagination .next {
-  float: right;
-  margin-right: 0;
-}
-.pagination a,
-.pagination span {
-  margin: 0 0.75em;
-}
-.pagination a.current,
-.pagination span.current {
-  padding: 2px 8px;
-  background: #EDEDED;
-}
-
 .entry.sticky .post-title {
   margin-top: -12px;
 }
@@ -560,20 +541,6 @@ a img {
   font-weight: 400;
 }
 
-@media all and (min-width: 37.5em) {
-  .pagination {
-    position: relative;
-  }
-  .pagination.prev, .pagination.next {
-    position: absolute;
-  }
-  .pagination.prev {
-    left: 0;
-  }
-  .pagination.next {
-    right: 0;
-  }
-}
 @media all and (min-width: 68.75em) {
   .entry.sticky .post-title {
     margin-top: -12px;
@@ -619,8 +586,8 @@ li.pingback {
   position: relative;
   margin-bottom: 0.75em;
 }
-li.comment.bypostauthor,
-li.pingback.bypostauthor {
+li.comment.bypostauthor > article,
+li.pingback.bypostauthor > article {
   border: solid 5px #D4D4D4;
 }
 
@@ -649,6 +616,10 @@ li.pingback.bypostauthor {
 
 .comment-content {
   margin: 1.5em 0;
+}
+
+.comments-closed {
+  margin: 0.75em 0;
 }
 
 .comment-footer {
@@ -872,6 +843,54 @@ li.pingback.bypostauthor {
     margin: 0;
   }
 }
+.pagination {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.pagination .prev,
+.pagination .next {
+  font-weight: 700;
+}
+.pagination .prev {
+  float: left;
+  margin-left: 0;
+}
+.pagination .prev:before {
+  content: '\00ab';
+  margin-right: 4px;
+}
+.pagination .next {
+  float: right;
+  margin-right: 0;
+}
+.pagination .next:after {
+  content: '\00bb';
+  margin-left: 4px;
+}
+.pagination a,
+.pagination span {
+  margin: 0 0.75em;
+}
+.pagination a.current,
+.pagination span.current {
+  padding: 2px 8px;
+  background: #EDEDED;
+}
+
+@media all and (min-width: 37.5em) {
+  .pagination {
+    position: relative;
+  }
+  .pagination.prev, .pagination.next {
+    position: absolute;
+  }
+  .pagination.prev {
+    left: 0;
+  }
+  .pagination.next {
+    right: 0;
+  }
+}
 .toggle-navigation {
   font-size: 1em;
   background: 0;
@@ -1087,7 +1106,7 @@ li.pingback.bypostauthor {
   .menu-primary li.menu-item-has-children ul .menu-item-has-children a:hover ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:active ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:focus ~ ul {
     opacity: 1;
     visibility: visible;
-    top: -5px;
+    top: -6px;
     left: 100%;
   }
   .menu-primary li.menu-item-has-children ul .menu-item-has-children a:hover:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:active:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:focus:after {
@@ -1095,12 +1114,12 @@ li.pingback.bypostauthor {
     right: -2px;
   }
   .menu-primary li.menu-item-has-children ul ul {
-    top: -5px;
+    top: -6px;
     left: 100%;
     left: calc(100% + 4px);
   }
   .menu-primary li.menu-item-has-children ul ul:hover, .menu-primary li.menu-item-has-children ul ul.focused {
-    top: -5px;
+    top: -6px;
     left: 100%;
   }
 
@@ -1235,7 +1254,7 @@ li.pingback.bypostauthor {
 }
 
 .post-tags {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
 }
 .post-tags ul {
   list-style: none;
@@ -1248,7 +1267,7 @@ li.pingback.bypostauthor {
   display: inline-block;
   padding: 0 12px;
   border: solid 1px #333333;
-  margin-right: 6px;
+  margin: 0 6px 6px 0;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -1263,6 +1282,14 @@ li.pingback.bypostauthor {
 .further-reading a {
   font-weight: 700;
   display: block;
+}
+
+.singular-pagination a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.singular-pagination a:hover, .singular-pagination a:after, .singular-pagination a:focus {
+  text-decoration: none;
 }
 
 @media all and (min-width: 37.5em) {
@@ -1361,6 +1388,16 @@ li.pingback.bypostauthor {
 }
 .site-header .search-form-container .search-field::-webkit-search-decoration, .site-header .search-form-container .search-field::-webkit-search-cancel-button, .site-header .search-form-container .search-field::-webkit-search-results-button, .site-header .search-form-container .search-field::-webkit-search-results-decoration {
   -webkit-appearance: none;
+}
+.site-header .search-form-container .search-field::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.site-header .search-form-container .search-field::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
 }
 .site-header .search-form-container .search-field:focus {
   background: white !important;

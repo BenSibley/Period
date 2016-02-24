@@ -22,7 +22,7 @@ li.pingback {
   position: relative;
   margin-bottom: $baseline-height / 2;
 
-  &.bypostauthor {
+  &.bypostauthor > article {
     border: solid 5px $color-gray-83;
   }
 }
@@ -57,6 +57,7 @@ li.pingback {
 }
 .comments-closed {
   @extend %white-box;
+  margin: $baseline-height / 2 0;
 }
 .comment-footer {
   position: absolute;

@@ -1,0 +1,55 @@
+.pagination {
+  @extend %white-box;
+  text-align: center;
+  margin-bottom: $baseline-height;
+
+  .prev,
+  .next {
+    font-weight: 700;
+  }
+  .prev {
+    float: left;
+    margin-left: 0;
+
+    &:before {
+      content: '\00ab';
+      margin-right: 4px;
+    }
+  }
+  .next {
+    float: right;
+    margin-right: 0;
+
+    &:after {
+      content: '\00bb';
+      margin-left: 4px;
+    }
+  }
+  a,
+  span {
+    margin: 0 $baseline-height / 2;
+
+    &.current {
+      padding: 2px 8px;
+      background: $color-gray-93;
+    }
+  }
+}
+
+@media all and (min-width: $six-hundred) {
+
+  .pagination {
+    position: relative;
+
+    &.prev,
+    &.next {
+      position: absolute;
+    }
+    &.prev {
+      left: 0;
+    }
+    &.next {
+      right: 0;
+    }
+  }
+}

@@ -274,7 +274,7 @@
                 ~ ul {
                   opacity: 1;
                   visibility: visible;
-                  top: -5px;
+                  top: -6px;
                   left: 100%;
                 }
                 &:after {
@@ -285,13 +285,13 @@
             }
           }
           ul {
-            top: -5px;
+            top: -6px;
             left: 100%;
             left: calc(100% + 4px);
 
             &:hover,
             &.focused {
-              top: -5px;
+              top: -6px;
               left: 100%;
             }
           }

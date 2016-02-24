@@ -567,7 +567,6 @@ if ( ! function_exists( 'ct_period_get_content_template' ) ) {
 			get_template_part( 'content', 'attachment' );
 		} /* Archive */
 		elseif ( is_archive() ) {
-			get_template_part( 'content/archive-header' );
 			get_template_part( 'content', 'archive' );
 		} /* Custom Post Type */
 		else {
