@@ -1102,6 +1102,8 @@ li.pingback.bypostauthor {
   height: 0;
   padding-bottom: 50%;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .featured-image > a {
   position: absolute;

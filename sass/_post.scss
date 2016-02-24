@@ -19,6 +19,7 @@
   height: 0;
   padding-bottom: 50%;
   overflow: hidden;
+  backface-visibility: hidden;
 
   > a {
     position: absolute;
