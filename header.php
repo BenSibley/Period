@@ -8,7 +8,7 @@
 
 <body id="<?php print get_stylesheet(); ?>" <?php body_class(); ?>>
 <?php do_action( 'body_top' ); ?>
-<a class="skip-content" href="#main"><?php _e( 'Skip to content', 'period' ); ?></a>
+<a class="skip-content" href="#main"><?php _e( 'Press "Enter" to skip to content', 'period' ); ?></a>
 <div id="overflow-container" class="overflow-container">
 	<?php do_action( 'before_header' ); ?>
 	<header class="site-header" id="site-header" role="banner">

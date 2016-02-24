@@ -386,7 +386,8 @@ a img {
   color: white !important;
   z-index: 99;
   padding: 1.5em;
-  background: #333333;
+  background: #242424;
+  box-shadow: 0 2px 2px 0 rgba(41, 41, 41, 0.4);
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
 }
@@ -1352,9 +1353,6 @@ li.pingback.bypostauthor > article {
 }
 .site-header .search-form-container button:hover {
   cursor: pointer;
-}
-.site-header .search-form-container button:focus {
-  outline: none;
 }
 .site-header .search-form-container button:focus i {
   color: white;

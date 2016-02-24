@@ -286,7 +286,8 @@ a img {
   color: white !important;
   z-index: 99;
   padding: $baseline-height;
-  background: $color-gray-20;
+  background: $color-gray-14;
+  box-shadow: 0 2px 2px 0 rgba(41, 41, 41, 0.4);
   transition: top 0.2s ease-in-out;
 
   &:focus {

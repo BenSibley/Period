@@ -129,6 +129,7 @@ jQuery(document).ready(function($){
 
             // make search input keyboard accessible
             siteHeader.find('.search-field').attr('tabindex', 0);
+            siteHeader.find('.search-field').focus();
 
             // handle mobile width search bar sizing
             if( window.innerWidth < 900 ) {
