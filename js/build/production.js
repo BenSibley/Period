@@ -95,6 +95,8 @@ jQuery(document).ready(function($){
     var socialMediaIcons = siteHeader.find('.social-media-icons');
     var menuLink = $('.menu-item').children('a');
 
+    objectFitAdjustment();
+
     toggleNavigation.on('click', openPrimaryMenu);
     toggleDropdown.on('click', openDropdownMenu);
     body.on('click', '#search-icon', openSearchBar);
@@ -103,16 +105,25 @@ jQuery(document).ready(function($){
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
 
+    $(window).resize(function(){
+        objectFitAdjustment();
+    });
+
+    // Jetpack infinite scroll event that reloads posts.
+    $( document.body ).on( 'post-load', function () {
+        objectFitAdjustment();
+    } );
+
     function openPrimaryMenu() {
 
         if( menuPrimaryContainer.hasClass('open') ) {
             menuPrimaryContainer.removeClass('open');
             $(this).removeClass('open');
 
-            menuPrimaryContainer.css('max-height', '0');
+            menuPrimaryContainer.css('max-height', '');
 
             // change screen reader text
-            //$(this).children('span').text(objectL10n.openMenu);
+            $(this).children('span').text(objectL10n.openMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
@@ -125,7 +136,7 @@ jQuery(document).ready(function($){
             menuPrimaryContainer.css('max-height', newHeight + 'px');
 
             // change screen reader text
-            //$(this).children('span').text(objectL10n.closeMenu);
+            $(this).children('span').text(objectL10n.closeMenu);
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
@@ -149,7 +160,7 @@ jQuery(document).ready(function($){
                 $(this).siblings('ul').css('max-height', 0);
 
                 // change screen reader text
-                //$(this).children('span').text(objectL10n.openChildMenu);
+                $(this).children('.screen-reader-text').text(objectL10n.openChildMenu);
 
                 // change aria text
                 $(this).attr('aria-expanded', 'false');
@@ -171,7 +182,7 @@ jQuery(document).ready(function($){
                 menuPrimaryContainer.css('max-height', 9999);
 
                 // change screen reader text
-                //$(this).children('span').text(objectL10n.closeChildMenu);
+                $(this).children('.screen-reader-text').text(objectL10n.closeChildMenu);
 
                 // change aria text
                 $(this).attr('aria-expanded', 'true');
@@ -210,6 +221,54 @@ jQuery(document).ready(function($){
 
                 siteHeader.find('.search-form').css('left', -leftDistance + 'px')
             }
+        }
+    }
+
+    // mimic cover positioning without using cover
+    function objectFitAdjustment() {
+
+        // if the object-fit property is not supported
+        if( !('object-fit' in document.body.style) ) {
+
+            $('.featured-image').each(function () {
+
+                if ( !$(this).parent().parent('.post').hasClass('ratio-natural') ) {
+
+                    var image = $(this).children('img').add($(this).children('a').children('img'));
+
+                    // don't process images twice (relevant when using infinite scroll)
+                    if ( image.hasClass('no-object-fit') ) {
+                        return;
+                    }
+
+                    image.addClass('no-object-fit');
+
+                    // if the image is not wide enough to fill the space
+                    if (image.outerWidth() < $(this).outerWidth()) {
+
+                        image.css({
+                            'width': '100%',
+                            'min-width': '100%',
+                            'max-width': '100%',
+                            'height': 'auto',
+                            'min-height': '100%',
+                            'max-height': 'none'
+                        });
+                    }
+                    // if the image is not tall enough to fill the space
+                    if (image.outerHeight() < $(this).outerHeight()) {
+
+                        image.css({
+                            'height': '100%',
+                            'min-height': '100%',
+                            'max-height': '100%',
+                            'width': 'auto',
+                            'min-width': '100%',
+                            'max-width': 'none'
+                        });
+                    }
+                }
+            });
         }
     }
 
