@@ -32,6 +32,36 @@
   transition: right 0.15s ease-in-out;
 }
 
+#customize-control-layout .customize-control-title {
+  margin-bottom: 12px;
+}
+#customize-control-layout label {
+  display: inline-block;
+  margin-bottom: 12px;
+  margin-left: 0;
+  padding: 0;
+  width: 123px;
+  height: 72px;
+  background-size: cover;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: transparent;
+}
+#customize-control-layout label:nth-child(even) {
+  margin-right: 9px;
+}
+#customize-control-layout label.selected {
+  outline: solid 1px #43B3C4;
+}
+
+#customize-control-layout label:hover {
+  opacity: 0.8;
+}
+
+#customize-control-layout input {
+  display: none;
+}
+
 /* Multiple select styles (for comments dropdown */
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>

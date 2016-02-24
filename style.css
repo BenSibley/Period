@@ -422,6 +422,12 @@ a img {
     float: left;
     margin-right: 3.12503%;
   }
+
+  .left-sidebar .main {
+    float: right;
+    margin-right: 0;
+    margin-left: 3.12503%;
+  }
 }
 @media all and (min-width: 68.75em) {
   h1 {

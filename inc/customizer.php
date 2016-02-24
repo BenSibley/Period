@@ -170,6 +170,32 @@ function ct_period_add_customizer_content( $wp_customize ) {
 		),
 	) );
 
+	/***** Layout *****/
+
+	// section
+	$wp_customize->add_section( 'period_layout', array(
+		'title'       => __( 'Layout', 'period' ),
+		'priority'    => 40,
+		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%s">Period Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/' )
+	) );
+	// setting
+	$wp_customize->add_setting( 'layout', array(
+		'default'           => 'right',
+		'sanitize_callback' => 'ct_period_sanitize_layout_settings',
+		'transport'         => 'postMessage'
+	) );
+	// control
+	$wp_customize->add_control( 'layout', array(
+		'label'    => __( 'Choose your layout', 'period' ),
+		'section'  => 'period_layout',
+		'settings' => 'layout',
+		'type'     => 'radio',
+		'choices'  => array(
+			'right' => __( 'Right sidebar', 'period' ),
+			'left'  => __( 'Left sidebar', 'period' )
+		)
+	) );
+
 	/***** Blog *****/
 
 	// section
@@ -375,6 +401,16 @@ function ct_period_sanitize_show_hide( $input ) {
 	$valid = array(
 		'show' => __( 'Show', 'period' ),
 		'hide' => __( 'Hide', 'period' )
+	);
+
+	return array_key_exists( $input, $valid ) ? $input : '';
+}
+
+function ct_period_sanitize_layout_settings( $input ) {
+
+	$valid = array(
+		'right' => __( 'Right sidebar', 'period' ),
+		'left'  => __( 'Left sidebar', 'period' )
 	);
 
 	return array_key_exists( $input, $valid ) ? $input : '';

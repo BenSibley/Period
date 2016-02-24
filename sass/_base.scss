@@ -322,6 +322,14 @@ a img {
     float: left;
     margin-right: $column * 1.125;
   }
+  .left-sidebar {
+
+    .main {
+      float: right;
+      margin-right: 0;
+      margin-left: $column * 1.125;
+    }
+  }
 }
 
 @media all and (min-width: $eleven-hundred) {
