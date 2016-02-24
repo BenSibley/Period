@@ -6,7 +6,7 @@
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
     <div id="footer-title-container" class="footer-title-container">
-        <h2 id='site-title' class='site-title'>
+        <h2 class='site-title'>
             <a href='<?php echo esc_url( home_url() ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
                 <?php bloginfo( 'name' ); ?>
             </a>
