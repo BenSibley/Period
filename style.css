@@ -543,6 +543,8 @@ a img {
 .entry.sticky.has-post-thumbnail .sticky-status {
   position: absolute;
   top: 0.75em;
+  left: -4px;
+  background: white;
 }
 
 .sticky-status {

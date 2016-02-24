@@ -8,15 +8,17 @@ jQuery(document).ready(function($){
     var menuPrimary = $('#menu-primary');
     var menuPrimaryItems = $('#menu-primary-items');
     var toggleDropdown = $('.toggle-dropdown');
-    //var toggleSidebar = $('#toggle-sidebar');
-    //var sidebarPrimary = $('#sidebar-primary');
-    //var sidebarPrimaryContent = $('#sidebar-primary-content');
-    //var sidebarWidgets = $('#sidebar-primary-widgets');
+    var sidebarPrimary = $('#sidebar-primary');
     var socialMediaIcons = siteHeader.find('.social-media-icons');
     var menuLink = $('.menu-item').children('a');
 
     toggleNavigation.on('click', openPrimaryMenu);
+    toggleDropdown.on('click', openDropdownMenu);
     body.on('click', '#search-icon', openSearchBar);
+
+    $('.post-content').fitVids({
+        customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
+    });
 
     function openPrimaryMenu() {
 
@@ -46,9 +48,6 @@ jQuery(document).ready(function($){
             $(this).attr('aria-expanded', 'true');
         }
     }
-
-    // display the dropdown menus
-    toggleDropdown.on('click', openDropdownMenu);
 
     // display the dropdown menus
     function openDropdownMenu() {

@@ -91,6 +91,8 @@
     .sticky-status {
       position: absolute;
       top: $baseline-height / 2;
+      left: -4px;
+      background: white;
     }
   }
 }
