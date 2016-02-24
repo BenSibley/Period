@@ -54,6 +54,8 @@
     text-align: left;
   }
   .title-container {
+    position: relative;
+    z-index: 9; // menu overlaps so social icons can be in top row. This makes site title clickable
     margin-bottom: $baseline-height * 1.5;
     float: left;
   }

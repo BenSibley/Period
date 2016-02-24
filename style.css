@@ -814,6 +814,8 @@ li.pingback.bypostauthor {
   }
 
   .title-container {
+    position: relative;
+    z-index: 9;
     margin-bottom: 2.25em;
     float: left;
   }
@@ -1314,8 +1316,8 @@ li.pingback.bypostauthor {
   -webkit-appearance: none;
 }
 .site-header .search-form-container .search-field:focus {
-  background: #EDEDED !important;
-  outline: solid 1px #D4D4D4 !important;
+  background: white !important;
+  outline: solid 1px #EDEDED !important;
 }
 
 @media all and (min-width: 56.25em) {
