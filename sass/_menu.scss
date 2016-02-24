@@ -33,7 +33,8 @@
       margin-bottom: 0;
     }
     &.current-menu-item,
-    &.current_page_item {
+    &.current_page_item,
+    &.current-menu-ancestor {
 
       > a {
         background: $color-gray-14;
@@ -80,6 +81,14 @@
       }
       &:last-child {
         margin-bottom: 6px;
+      }
+      &.current-menu-item,
+      &.current_page_item {
+
+        > a {
+          background: none;
+          font-weight: 700;
+        }
       }
     }
   }
@@ -144,8 +153,9 @@
         color: $color-gray-20;
         background: white;
 
-        a {
+        > a {
           color: $color-gray-20;
+          background: white;
         }
       }
     }
@@ -172,6 +182,15 @@
       li {
         white-space: nowrap;
         margin: 0 10px 6px 0;
+
+        &.current-menu-ancestor {
+          background: none;
+
+          > a {
+            background: none;
+            font-weight: 700;
+          }
+        }
       }
       a {
         color: $color-gray-20;

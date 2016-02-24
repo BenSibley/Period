@@ -903,10 +903,10 @@ li.pingback.bypostauthor {
 .menu-primary li:last-child {
   margin-bottom: 0;
 }
-.menu-primary li.current-menu-item > a, .menu-primary li.current_page_item > a {
+.menu-primary li.current-menu-item > a, .menu-primary li.current_page_item > a, .menu-primary li.current-menu-ancestor > a {
   background: #242424;
 }
-.menu-primary li.current-menu-item > a:hover, .menu-primary li.current-menu-item > a:active, .menu-primary li.current-menu-item > a:focus, .menu-primary li.current_page_item > a:hover, .menu-primary li.current_page_item > a:active, .menu-primary li.current_page_item > a:focus {
+.menu-primary li.current-menu-item > a:hover, .menu-primary li.current-menu-item > a:active, .menu-primary li.current-menu-item > a:focus, .menu-primary li.current_page_item > a:hover, .menu-primary li.current_page_item > a:active, .menu-primary li.current_page_item > a:focus, .menu-primary li.current-menu-ancestor > a:hover, .menu-primary li.current-menu-ancestor > a:active, .menu-primary li.current-menu-ancestor > a:focus {
   background: white;
 }
 .menu-primary a {
@@ -936,6 +936,10 @@ li.pingback.bypostauthor {
 }
 .menu-primary ul ul li:last-child {
   margin-bottom: 6px;
+}
+.menu-primary ul ul li.current-menu-item > a, .menu-primary ul ul li.current_page_item > a {
+  background: none;
+  font-weight: 700;
 }
 .menu-primary .toggle-dropdown {
   display: inline-block;
@@ -993,8 +997,9 @@ li.pingback.bypostauthor {
     color: #333333;
     background: white;
   }
-  .menu-primary li:hover a, .menu-primary li:active a {
+  .menu-primary li:hover > a, .menu-primary li:active > a {
     color: #333333;
+    background: white;
   }
   .menu-primary ul ul {
     position: absolute;
@@ -1018,6 +1023,13 @@ li.pingback.bypostauthor {
   .menu-primary ul ul li {
     white-space: nowrap;
     margin: 0 10px 6px 0;
+  }
+  .menu-primary ul ul li.current-menu-ancestor {
+    background: none;
+  }
+  .menu-primary ul ul li.current-menu-ancestor > a {
+    background: none;
+    font-weight: 700;
   }
   .menu-primary ul ul a {
     color: #333333;
