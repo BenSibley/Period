@@ -26,8 +26,8 @@
   #period-dashboard-wrap .content p {
     min-height: 57px;
   }
-  #period-dashboard-wrap .content-review p {
-    min-height: 75px;
+  #period-dashboard-wrap .content-review {
+    min-height: 192px;
   }
   #period-dashboard-wrap .content-customization,
   #period-dashboard-wrap .content-premium-upgrade,
