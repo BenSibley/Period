@@ -575,6 +575,10 @@ a img {
   padding-top: 18px;
   padding-bottom: 18px;
 }
+.comments-number h2 {
+  font-size: 1em;
+  line-height: 1.5;
+}
 
 .comment-list,
 .comment-list .children {
@@ -673,6 +677,14 @@ li.pingback.bypostauthor > article {
   li.comment > article,
   li.pingback > article {
     padding-top: 2.25em;
+  }
+}
+@media all and (min-width: 68.75em) {
+  .comments-number h2 {
+    font-size: 1.125em;
+    /* 18px / 16px */
+    line-height: 1.333;
+    /* 24px */
   }
 }
 .site-footer {
@@ -1243,9 +1255,6 @@ li.pingback.bypostauthor > article {
 .post-content a {
   text-decoration: underline;
 }
-.post-content a:hover, .post-content a:active, .post-content a:focus {
-  text-decoration: none;
-}
 .post-content iframe {
   max-width: 100%;
 }
@@ -1470,6 +1479,13 @@ li.pingback.bypostauthor > article {
   margin-bottom: 1.5em;
 }
 
+.widget a:hover, .widget a:active, .widget a:focus {
+  text-decoration: underline;
+}
+
+.widget_calendar a:hover, .widget_calendar a:active, .widget_calendar a:focus {
+  text-decoration: none;
+}
 .widget_calendar caption {
   margin-bottom: 6px;
 }
@@ -1541,6 +1557,9 @@ li.pingback.bypostauthor > article {
 
 .widget_rss .widget-title img {
   margin-right: 4px;
+}
+.widget_rss .widget-title a:hover, .widget_rss .widget-title a:active, .widget_rss .widget-title a:focus {
+  text-decoration: none;
 }
 .widget_rss .rssSummary {
   margin: 0.75em 1.5em;

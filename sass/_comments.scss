@@ -7,6 +7,11 @@ li.pingback > article,
 .comments-number {
   padding-top: 18px;
   padding-bottom: 18px;
+
+  h2 {
+    font-size: 1em;
+    line-height: 1.5;
+  }
 }
 .comment-list,
 .comment-list .children {
@@ -103,5 +108,16 @@ li.pingback {
   li.comment > article,
   li.pingback > article {
     padding-top: $baseline-height * 1.5;
+  }
+}
+
+@media all and (min-width: $eleven-hundred) {
+
+  .comments-number {
+
+    h2 {
+      font-size: 1.125em; /* 18px / 16px */
+      line-height: 1.333; /* 24px */
+    }
   }
 }

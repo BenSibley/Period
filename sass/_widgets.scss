@@ -5,9 +5,24 @@
 }
 .widget {
 
+  a {
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 .widget_calendar {
 
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
   caption {
     margin-bottom: 6px;
   }
@@ -93,6 +108,14 @@
 
     img {
       margin-right: 4px;
+    }
+    a {
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
   .rssSummary {
