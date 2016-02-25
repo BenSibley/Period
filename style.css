@@ -156,7 +156,7 @@ a:link, a:visited {
   color: #333333;
 }
 a:hover, a:active, a:focus {
-  color: #666666;
+  color: #757575;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -486,6 +486,11 @@ a img {
 .more-link,
 .comments-link {
   display: inline-block;
+}
+
+.post-content .more-link,
+.post-content .comments-link a {
+  text-decoration: none;
 }
 
 .more-link {
@@ -839,8 +844,12 @@ li.pingback.bypostauthor > article {
     margin-left: 6px;
   }
 
-  .social-media-icons {
+  .icon-container {
     float: right;
+  }
+
+  .social-media-icons {
+    display: inline-block;
     margin: 0;
   }
 }
@@ -1231,6 +1240,12 @@ li.pingback.bypostauthor > article {
   text-decoration: underline;
 }
 
+.post-content a {
+  text-decoration: underline;
+}
+.post-content a:hover, .post-content a:active, .post-content a:focus {
+  text-decoration: none;
+}
 .post-content iframe {
   max-width: 100%;
 }
@@ -1354,8 +1369,8 @@ li.pingback.bypostauthor > article {
 .site-header .search-form-container button:hover {
   cursor: pointer;
 }
-.site-header .search-form-container button:focus i {
-  color: white;
+.site-header .search-form-container button:hover i, .site-header .search-form-container button:active i, .site-header .search-form-container button:focus i {
+  color: #D4D4D4;
 }
 .site-header .search-form-container button.open i {
   color: #333333;

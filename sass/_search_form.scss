@@ -26,10 +26,12 @@
       &:hover {
         cursor: pointer;
       }
+      &:hover,
+      &:active,
       &:focus {
 
         i {
-          color: white;
+          color: $color-gray-83;
         }
       }
       &.open {

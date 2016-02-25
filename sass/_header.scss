@@ -66,8 +66,11 @@
   .tagline {
     margin-left: 6px;
   }
-  .social-media-icons {
+  .icon-container {
     float: right;
+  }
+  .social-media-icons {
+    display: inline-block;
     margin: 0;
   }
 }

@@ -20,8 +20,10 @@
 				} ?>
 			</div>
 			<div id="menu-primary-container" class="menu-primary-container">
-				<?php get_template_part( 'content/search-bar' ); ?>
-				<?php ct_period_social_icons_output(); ?>
+				<div class="icon-container">
+					<?php ct_period_social_icons_output(); ?>
+					<?php get_template_part( 'content/search-bar' ); ?>
+				</div>
 				<?php get_template_part( 'menu', 'primary' ); ?>
 			</div>
 			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">

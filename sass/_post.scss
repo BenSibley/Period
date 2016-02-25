@@ -85,6 +85,15 @@
 }
 .post-content {
 
+  a {
+    text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
   iframe {
     max-width: 100%;
   }

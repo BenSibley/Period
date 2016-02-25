@@ -3,6 +3,13 @@
   display: inline-block;
   @extend %fourteen-pixels;
 }
+.post-content {
+
+  .more-link,
+  .comments-link a {
+    text-decoration: none;
+  }
+}
 .more-link {
   border: solid 1px $color-gray-20;
   padding: 6px 12px;
