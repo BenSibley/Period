@@ -61,4 +61,5 @@ Period also uses:
 * Font Awesome by Dave Gandy, licensed under open source licenses, see: http://fortawesome.github.io/Font-Awesome/license/.
 * HTML5shiv by Alexander Farkas, Jonathan Neal, Paul Irish, John-David Dalton, and Remy Sharp, licensed under MIT/GPL2, see: https://github.com/aFarkas/html5shiv
 * Respond.js by Scott Jehl, licensed under MIT, see: https://github.com/scottjehl/Respond
-* New York city image in screenshot.png by Anthony Indraus, http://unsplash.com, licensed under Public Domain
+* Wave image in screenshot.png by Cameron Kirby, http://unsplash.com, licensed under Public Domain
+* Mountain image in screenshot.png by Sven Scheuermeier, http://unsplash.com, licensed under Public Domain
