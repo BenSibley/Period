@@ -1126,18 +1126,18 @@ li.pingback.bypostauthor > article {
     left: -2px;
     top: 0;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children a:after {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:after {
     content: '\f105';
     -webkit-transition: left 0.2s ease;
     transition: left 0.2s ease;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children a:hover ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:active ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:focus ~ ul {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active ~ ul, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus ~ ul {
     opacity: 1;
     visibility: visible;
     top: -6px;
     right: 100%;
   }
-  .menu-primary li.menu-item-has-children ul .menu-item-has-children a:hover:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:active:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children a:focus:after {
+  .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:hover:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:active:after, .menu-primary li.menu-item-has-children ul .menu-item-has-children > a:focus:after {
     top: 0;
     left: -2px;
   }
