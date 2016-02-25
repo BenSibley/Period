@@ -1548,11 +1548,20 @@ li.pingback.bypostauthor > article {
 .widget_search .search-field {
   width: 74% !important;
   width: calc(75% - 6px) !important;
+  float: right;
 }
 .widget_search .search-submit {
   width: auto !important;
   max-width: 25% !important;
   min-width: 25% !important;
+}
+.widget_search:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .widget_rss .widget-title img {

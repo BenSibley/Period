@@ -21,18 +21,6 @@ function ct_period_load_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
-	/* Load Polyfills */
-
-	wp_enqueue_script( 'ct-period-html5-shiv', get_template_directory_uri() . '/js/build/html5shiv.min.js' );
-
-	wp_enqueue_script( 'ct-period-respond', get_template_directory_uri() . '/js/build/respond.min.js', '', '', true );
-
-	// prevent fatal error on < WP 4.2 (load files unconditionally instead)
-	if ( function_exists( 'wp_script_add_data' ) ) {
-		wp_script_add_data( 'ct-period-html5-shiv', 'conditional', 'IE 8' );
-		wp_script_add_data( 'ct-period-respond', 'conditional', 'IE 8' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'ct_period_load_scripts_styles' );
 

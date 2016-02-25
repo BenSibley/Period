@@ -95,11 +95,15 @@
   .search-field {
     width: 74% !important;
     width: calc(75% - 6px) !important;
+    float: left;
   }
   .search-submit {
     width: auto !important;
     max-width: 25% !important;
     min-width: 25% !important;
+  }
+  &:after {
+    @include clearfix;
   }
 }
 .widget_rss {
