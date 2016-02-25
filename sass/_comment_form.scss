@@ -17,3 +17,10 @@
     }
   }
 }
+
+@media all and (min-width: $six-hundred) {
+
+  .comment-respond {
+    padding-top: $baseline-height * 1.5;
+  }
+}

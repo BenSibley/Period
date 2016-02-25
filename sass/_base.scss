@@ -181,6 +181,7 @@ textarea {
   font-weight: 400;
   padding: 10px 12px;
   max-width: $baseline-height * 10 * 1.85;
+  min-height: 37px; // for IE keeping it shorter for no reason
   background: $color-gray-97;
   color: $color-gray-20;
   border: solid 1px $color-gray-83;

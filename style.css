@@ -280,6 +280,7 @@ textarea {
   font-weight: 400;
   padding: 10px 12px;
   max-width: 27.75em;
+  min-height: 37px;
   background: #F7F7F7;
   color: #333333;
   border: solid 1px #D4D4D4;
@@ -571,6 +572,11 @@ a img {
   margin-top: 2.25em;
 }
 
+@media all and (min-width: 37.5em) {
+  .comment-respond {
+    padding-top: 2.25em;
+  }
+}
 .comments-number {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -1549,6 +1555,7 @@ li.pingback.bypostauthor > article {
   width: 74% !important;
   width: calc(75% - 6px) !important;
   float: left;
+  margin-right: 2px;
 }
 .widget_search .search-submit {
   width: auto !important;
