@@ -1401,7 +1401,7 @@ li.pingback.bypostauthor > article {
 }
 .site-header .search-form-container form {
   position: absolute;
-  top: 0;
+  top: -2px;
   right: -12px;
   left: 0;
   padding-top: 6px;
