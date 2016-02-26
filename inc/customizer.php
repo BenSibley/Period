@@ -368,9 +368,20 @@ function ct_period_sanitize_show_hide( $input ) {
 
 function ct_period_sanitize_layout_settings( $input ) {
 
+	/*
+	 * Also allow layouts only included in the premium plugin.
+	 * Needs to be done this way b/c sanitize_callback cannot by updated
+	 * via get_setting()
+	 */
 	$valid = array(
-		'right' => __( 'Right sidebar', 'period' ),
-		'left'  => __( 'Left sidebar', 'period' )
+		'right'      => __( 'Right sidebar', 'period' ),
+		'left'       => __( 'Left sidebar', 'period' ),
+		'narrow'     => __( 'No sidebar - Narrow', 'period' ),
+		'wide'       => __( 'No sidebar - Wide', 'period' ),
+		'two-right'  => __( 'Two column - Right sidebar', 'period' ),
+		'two-left'   => __( 'Two column - Left sidebar', 'period' ),
+		'two-narrow' => __( 'Two column - No Sidebar - Narrow', 'period' ),
+		'two-wide'   => __( 'Two column - No Sidebar - Wide', 'period' )
 	);
 
 	return array_key_exists( $input, $valid ) ? $input : '';
