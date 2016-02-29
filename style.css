@@ -35,7 +35,7 @@ h1, .post-title {
 
 #breadcrumbs > span, .archive-header h1,
 .archive-header h2, .archive-header p, .more-link,
-.comments-link, .comment-respond label, .comment-author .author-name, .comment-content > *, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > * {
+.comments-link, .comment-respond label, .comment-author .author-name, .comment-content > *, .tagline, .menu-primary a, .post-categories, .post-tags a, .further-reading a, .sidebar-primary .widget > *, .widget > * {
   font-size: 0.875em;
   /* 14px / 16px */
   line-height: 1.715;

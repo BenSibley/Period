@@ -5,6 +5,9 @@
 }
 .widget {
 
+  > * {
+    @extend %fourteen-pixels;
+  }
   a {
 
     &:hover,
