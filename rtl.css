@@ -506,6 +506,10 @@ a img {
   background: #333333;
 }
 
+.comments-link {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
 .comments-link a:hover, .comments-link a:active, .comments-link a:focus {
   text-decoration: underline;
 }
