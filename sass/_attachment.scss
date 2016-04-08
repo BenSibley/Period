@@ -1,0 +1,12 @@
+.single-attachment {
+
+  .attachment-container {
+
+    img {
+      display: block;
+    }
+  }
+  .attachment-caption {
+    @extend %twelve-pixels;
+  }
+}

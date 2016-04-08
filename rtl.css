@@ -45,7 +45,7 @@ h1, .post-title {
 .wp-caption-text,
 .gallery-caption, input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .sticky-status span, .comment-author .comment-date, .comment-footer a,
-.comment-footer i, .design-credit span, .post-byline, .further-reading span {
+.comment-footer i, .design-credit span, .post-byline, .further-reading span, .single-attachment .attachment-caption {
   font-size: 0.75em;
   /* 12px / 16px */
   line-height: 1.5;
@@ -1602,4 +1602,8 @@ li.pingback.bypostauthor > article {
 }
 .widget_rss span + cite {
   margin-top: -1.5em;
+}
+
+.single-attachment .attachment-container img {
+  display: block;
 }
