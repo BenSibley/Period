@@ -327,18 +327,21 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
 						<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'period' ); ?>"></i>
+						<span class="screen-reader-text"><?php esc_attr_e('email', 'period'); ?></span>
 					</a>
 				<?php } elseif ( $active_site == 'skype' ) { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
 					</a>
 				<?php } else { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
 					</a>
 					<?php
 				}
