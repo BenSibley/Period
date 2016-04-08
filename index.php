@@ -15,6 +15,11 @@
         ?>
     </div>
 
-<?php the_posts_pagination(); ?>
+<?php
 
-<?php get_footer(); ?>
+the_posts_pagination( array(
+    'prev_text' => __( 'Previous', 'period' ),
+    'next_text' => __( 'Next', 'period' )
+) );
+
+get_footer();
