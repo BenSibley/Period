@@ -1258,9 +1258,19 @@ li.pingback.bypostauthor > article {
   font-weight: 700;
   text-decoration: underline;
 }
+.post-byline .date:hover, .post-byline .date:active, .post-byline .date:focus,
+.post-byline .author:hover,
+.post-byline .author:active,
+.post-byline .author:focus {
+  text-decoration: none;
+}
 
 .post-content a {
   text-decoration: underline;
+  font-weight: 700;
+}
+.post-content a:hover, .post-content a:active, .post-content a:focus {
+  text-decoration: none;
 }
 .post-content iframe {
   max-width: 100%;
@@ -1283,6 +1293,9 @@ li.pingback.bypostauthor > article {
 }
 .post-categories a {
   font-weight: 700;
+}
+.post-categories a:hover, .post-categories a:active, .post-categories a:focus {
+  text-decoration: underline;
 }
 
 .post-tags {
@@ -1314,6 +1327,9 @@ li.pingback.bypostauthor > article {
 .further-reading a {
   font-weight: 700;
   display: block;
+}
+.further-reading a:hover, .further-reading a:active, .further-reading a:focus {
+  text-decoration: underline;
 }
 
 .singular-pagination a {

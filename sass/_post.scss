@@ -81,12 +81,25 @@
   .author {
     font-weight: 700;
     text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 .post-content {
 
   a {
     text-decoration: underline;
+    font-weight: 700;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
   }
   iframe {
     max-width: 100%;
@@ -104,6 +117,12 @@
 
   a {
     font-weight: 700;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 .post-tags {
@@ -144,6 +163,12 @@
     @extend %fourteen-pixels;
     font-weight: 700;
     display: block;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 .singular-pagination {
