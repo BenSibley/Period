@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Period 1.01\n"
+"Project-Id-Version: Period 1.02\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-04-11 19:26:20+00:00\n"
+"POT-Creation-Date: 2016-06-27 13:43:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,31 +82,23 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: content/post-nav.php:11
+#: content/post-nav.php:7
 msgid "Previous Post"
 msgstr ""
 
-#: content/post-nav.php:13
-msgid "The Previous Post"
-msgstr ""
-
-#: content/post-nav.php:20
+#: content/post-nav.php:10
 msgid "No Older Posts"
 msgstr ""
 
-#: content/post-nav.php:22 content/post-nav.php:44
+#: content/post-nav.php:11 content/post-nav.php:22
 msgid "Return to Blog"
 msgstr ""
 
-#: content/post-nav.php:33
+#: content/post-nav.php:18
 msgid "Next Post"
 msgstr ""
 
-#: content/post-nav.php:35
-msgid "The Next Post"
-msgstr ""
-
-#: content/post-nav.php:42
+#: content/post-nav.php:21
 msgid "No Newer Posts"
 msgstr ""
 
@@ -212,7 +204,7 @@ msgstr ""
 msgid "Press \"Enter\" to skip to content"
 msgstr ""
 
-#: header.php:30 inc/scripts.php:10
+#: header.php:23 inc/scripts.php:10
 msgid "open menu"
 msgstr ""
 
@@ -404,6 +396,10 @@ msgstr ""
 
 #: searchform.php:5
 msgid "Search for..."
+msgstr ""
+
+#: sidebar-primary.php:3
+msgid "Sidebar"
 msgstr ""
 
 #: theme-options.php:4 theme-options.php:19
