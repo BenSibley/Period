@@ -933,9 +933,6 @@ li.pingback.bypostauthor > article {
 .toggle-navigation:hover {
   cursor: pointer;
 }
-.toggle-navigation:focus {
-  outline: none;
-}
 
 .menu-primary-container {
   position: relative;

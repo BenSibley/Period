@@ -105,8 +105,17 @@ jQuery(document).ready(function($){
         customSelector: 'iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="animoto.com"], iframe[src*="blip.tv"], iframe[src*="funnyordie.com"], iframe[src*="hulu.com"], iframe[src*="ted.com"], iframe[src*="wordpress.tv"]'
     });
 
+    if ( window.innerWidth < 900 ) {
+        skipMenuLinks(true);
+    }
+
     $(window).resize(function(){
         objectFitAdjustment();
+        if ( window.innerWidth < 900 ) {
+            skipMenuLinks(true);
+        } else {
+            skipMenuLinks(false);
+        }
     });
 
     // Jetpack infinite scroll event that reloads posts.
@@ -127,6 +136,7 @@ jQuery(document).ready(function($){
 
             // change aria text
             $(this).attr('aria-expanded', 'false');
+            skipMenuLinks(true)
 
         } else {
             menuPrimaryContainer.addClass('open');
@@ -140,6 +150,9 @@ jQuery(document).ready(function($){
 
             // change aria text
             $(this).attr('aria-expanded', 'true');
+            skipMenuLinks(false);
+            $('#menu-primary-container').find('.sub-menu').find('a').attr('tabindex', -1);
+            $('#menu-primary-container').find('.sub-menu').find('button').attr('tabindex', -1);
         }
     }
 
@@ -164,6 +177,9 @@ jQuery(document).ready(function($){
 
                 // change aria text
                 $(this).attr('aria-expanded', 'false');
+
+                menuItem.children('.sub-menu').find('a').attr('tabindex', -1);
+                menuItem.children('.sub-menu').find('button').attr('tabindex', -1);
             } else {
 
                 // add class to open the menu
@@ -186,6 +202,8 @@ jQuery(document).ready(function($){
 
                 // change aria text
                 $(this).attr('aria-expanded', 'true');
+                menuItem.children('.sub-menu').children('li').children('a').attr('tabindex', 0);
+                menuItem.children('.sub-menu').children('li').children('button').attr('tabindex', 0);
             }
         }
     }
@@ -270,6 +288,16 @@ jQuery(document).ready(function($){
                     }
                 }
             });
+        }
+    }
+
+    function skipMenuLinks(skip) {
+        if ( skip ) {
+            $('#menu-primary-container').find('a').attr('tabindex', -1);
+            $('#menu-primary-container').find('button').attr('tabindex', -1);
+        } else {
+            $('#menu-primary-container').find('a').attr('tabindex', 0);
+            $('#menu-primary-container').find('button').attr('tabindex', 0);
         }
     }
 
