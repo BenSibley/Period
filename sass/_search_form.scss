@@ -82,6 +82,7 @@
       &:focus {
         background: white !important;
         outline: solid 1px $color-gray-93 !important;
+        animation: pulse 1s infinite;
       }
     }
   }
@@ -116,5 +117,17 @@
       padding-top: 0;
       right: 0;
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    outline-color: $color-gray-20
+  }
+  50% {
+    outline-color: $color-gray-93;
+  }
+  100% {
+    outline-color: $color-gray-20
   }
 }

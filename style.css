@@ -1431,6 +1431,8 @@ li.pingback.bypostauthor > article {
 .site-header .search-form-container .search-field:focus {
   background: white !important;
   outline: solid 1px #EDEDED !important;
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
 }
 
 @media all and (min-width: 56.25em) {
@@ -1456,6 +1458,28 @@ li.pingback.bypostauthor > article {
   .site-header .search-form-container form {
     padding-top: 0;
     right: 0;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    outline-color: #333333;
+  }
+  50% {
+    outline-color: #EDEDED;
+  }
+  100% {
+    outline-color: #333333;
+  }
+}
+@keyframes pulse {
+  0% {
+    outline-color: #333333;
+  }
+  50% {
+    outline-color: #EDEDED;
+  }
+  100% {
+    outline-color: #333333;
   }
 }
 .search-bottom p {
