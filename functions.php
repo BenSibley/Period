@@ -98,21 +98,21 @@ if ( ! function_exists( 'ct_period_update_fields' ) ) {
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . __( "Name", "period" ) . $label . '</label>
-	            <input id="author" name="author" type="text" placeholder="' . __( "Jane Doe", "period" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+	            <label for="author">' . esc_attr__( "Name", "period" ) . $label . '</label>
+	            <input id="author" name="author" type="text" placeholder="' . esc_attr__( "Jane Doe", "period" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . __( "Email", "period" ) . $label . '</label>
-	            <input id="email" name="email" type="email" placeholder="' . __( "name@email.com", "period" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
+	            <label for="email">' . esc_attr__( "Email", "period" ) . $label . '</label>
+	            <input id="email" name="email" type="email" placeholder="' . esc_attr__( "name@email.com", "period" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['url'] =
 			'<p class="comment-form-url">
-	            <label for="url">' . __( "Website", "period" ) . '</label>
+	            <label for="url">' . esc_attr__( "Website", "period" ) . '</label>
 	            <input id="url" name="url" type="url" placeholder="http://google.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
 	            </p>';
@@ -127,7 +127,7 @@ if ( ! function_exists( 'ct_period_update_comment_field' ) ) {
 
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . __( "Comment", "period" ) . '</label>
+	            <label for="comment">' . esc_attr__( "Comment", "period" ) . '</label>
 	            <textarea required id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
