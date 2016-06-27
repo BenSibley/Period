@@ -8,10 +8,6 @@
   &:hover {
     cursor: pointer;
   }
-  //&:focus {
-  //  outline: none;
-  //}
-
 }
 .menu-primary-container {
   position: relative;
@@ -21,7 +17,7 @@
 }
 .menu-primary {
   color: white;
-  margin: $baseline-height 0 $baseline-height / 2;
+  margin: $baseline-height 0 $baseline-height * 1.5;
 
   ul {
     margin: 0;
