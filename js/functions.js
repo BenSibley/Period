@@ -168,7 +168,7 @@ jQuery(document).ready(function($){
 
             $('.featured-image').each(function () {
 
-                if ( !$(this).parent().parent('.post').hasClass('ratio-natural') ) {
+                if ( !$(this).parent().parent('.entry').hasClass('ratio-natural') ) {
 
                     var image = $(this).children('img').add($(this).children('a').children('img'));
 
