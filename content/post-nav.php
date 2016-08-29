@@ -2,26 +2,30 @@
 
 global $post;
 
-// gets the previous post if it exists
-$previous_post = get_adjacent_post(false,'',true);
-$previous_text = __('Previous Post', 'period');
+$previous_post = get_adjacent_post( false, '', true );
+$previous_text = __( 'Previous Post', 'period' );
 
 if ( $previous_post == '' ) {
-	$previous_text = __('No Older Posts', 'period');
-	$previous_title = __('Return to Blog', 'period');
-	$previous_url = home_url();
-	$previous_link = '<a href="' . esc_url( $previous_url ) . '">' . esc_html( $previous_title ) . '</a>';
+	$previous_text  = __( 'No Older Posts', 'period' );
+	if ( get_option( 'show_on_front' ) == 'page' ) {
+		$previous_url = get_permalink( get_option( 'page_for_posts' ) );
+	} else {
+		$previous_url = get_home_url();
+	}
+	$previous_link = '<a href="' . esc_url( $previous_url ) . '">' . esc_html__( 'Return to Blog', 'period' ) . '</a>';
 }
 
-// gets the next post if it exists
-$next_post = get_adjacent_post(false,'',false);
-$next_text = __('Next Post', 'period');
+$next_post  = get_adjacent_post( false, '', false );
+$next_text  = __( 'Next Post', 'period' );
 
-if( $next_post == '' ) {
-	$next_text = __('No Newer Posts', 'period');
-	$next_title = __('Return to Blog', 'period');
-	$next_url = home_url();
-	$next_link = '<a href="' . esc_url( $next_url ) . '">' . esc_html( $next_title ) . '</a>';
+if ( $next_post == '' ) {
+	$next_text  = __( 'No Newer Posts', 'period' );
+	if ( get_option( 'show_on_front' ) == 'page' ) {
+		$next_url = get_permalink( get_option( 'page_for_posts' ) );
+	} else {
+		$next_url = get_home_url();
+	}
+	$next_link = '<a href="' . esc_url( $next_url ) . '">' . esc_html__( 'Return to Blog', 'period' ) . '</a>';
 }
 
 ?>
