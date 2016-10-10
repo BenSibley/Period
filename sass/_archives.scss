@@ -90,6 +90,9 @@
     @extend %twelve-pixels;
   }
 }
+.search .entry.sticky {
+  display: none;
+}
 
 @media all and (min-width: $eleven-hundred) {
 

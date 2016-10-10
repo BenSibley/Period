@@ -552,6 +552,10 @@ a img {
   font-weight: 400;
 }
 
+.search .entry.sticky {
+  display: none;
+}
+
 @media all and (min-width: 68.75em) {
   .entry.sticky .post-title {
     margin-top: -12px;
