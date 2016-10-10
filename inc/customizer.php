@@ -7,7 +7,7 @@ function ct_period_add_customizer_content( $wp_customize ) {
 
 	/***** Reorder default sections *****/
 
-	$wp_customize->get_section( 'title_tagline' )->priority = 1;
+	$wp_customize->get_section( 'title_tagline' )->priority = 2;
 
 	// check if exists in case user has no pages
 	if ( is_object( $wp_customize->get_section( 'static_front_page' ) ) ) {
@@ -20,6 +20,45 @@ function ct_period_add_customizer_content( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
+	/***** Period Pro Control *****/
+
+	class ct_period_pro_ad extends WP_Customize_Control {
+		public function render_content() {
+			$link = 'https://www.competethemes.com/period-pro/';
+			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Period Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'period'), $link) . "</p>";
+			echo "<ul>
+					<li>" . __('Custom Colors', 'period') . "</li>
+					<li>" . __('6 New Layouts', 'period') . "</li>
+					<li>" . __('Flexible Header Image', 'period') . "</li>
+					<li>" . __('+ 9 more features', 'period') . "</li>
+				  </ul>";
+			echo "<p>" . __('View our gallery of screenshots and videos now to see if Period Pro is right for your site.', 'period') . "</p>";
+			echo "<p class='button-wrapper'><a target=\"_blank\" class='period-pro-button' href='" . $link . "'>" . __('View Period Pro', 'period') . "</a></p>";
+		}
+	}
+
+	/***** Period Pro Section *****/
+
+	// don't add if Period Pro is active
+	if ( !function_exists( 'ct_period_pro_init' ) ) {
+		// section
+		$wp_customize->add_section( 'ct_period_pro', array(
+			'title'    => __( 'Period Pro', 'period' ),
+			'priority' => 1
+		) );
+		// Upload - setting
+		$wp_customize->add_setting( 'period_pro', array(
+			'sanitize_callback' => 'absint'
+		) );
+		// Upload - control
+		$wp_customize->add_control( new ct_period_pro_ad(
+			$wp_customize, 'period_pro', array(
+				'section'  => 'ct_period_pro',
+				'settings' => 'period_pro'
+			)
+		) );
+	}
+	
 	/***** Logo Upload *****/
 
 	// section
@@ -394,13 +433,3 @@ function ct_period_sanitize_layout_settings( $input ) {
 
 	return array_key_exists( $input, $valid ) ? $input : '';
 }
-
-/***** Helper Functions *****/
-
-function ct_period_customize_preview_js() {
-
-	$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"https://www.competethemes.com/period-pro/\" target=\"_blank\">" . __( 'View the Period Pro Plugin', 'period' ) . " <span>&rarr;</span></a></div>')</script>";
-	echo apply_filters( 'ct_period_customizer_ad', $content );
-}
-
-add_action( 'customize_controls_print_footer_scripts', 'ct_period_customize_preview_js' );

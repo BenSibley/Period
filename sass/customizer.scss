@@ -1,37 +1,62 @@
 @import "variables";
 
-.upgrades-ad {
-  text-align: center;
-  border-bottom: solid 1px #eee;
+// Period Pro section
+#accordion-section-ct_period_pro {
 
-  a {
-    display: block;
-    padding: 9px 0;
-    color: white;
+  .accordion-section-title {
+    color: #fff;
     background: #43b3c4;
-    transition: background 0.15s ease-in-out;
 
-    &:link,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus  {
-      color: white;
+    &:after {
+      color: #fff;
     }
+
     &:hover,
     &:active,
     &:focus {
-      background: #3ea5b3;
+      background: #3EA7B8 !important;
+      color: #fff !important;
 
-      span {
-        right: -3px;
+      &:after {
+        color: #fff !important;
       }
     }
   }
-  span {
-    position: relative;
-    right: 0;
-    transition: right 0.15s ease-in-out;
+}
+#customize-control-period_pro {
+  background: white;
+  border: solid 1px $color-gray-83;
+  padding: 6px 24px;
+  box-sizing: border-box;
+
+  ul {
+    list-style: disc;
+    padding-left: 15px;
+  }
+  .bold {
+    font-weight: 600;
+  }
+  .button-wrapper {
+    text-align: center;
+  }
+  .period-pro-button {
+    display: inline-block;
+    font-size: 14px;
+    padding: 12px 24px;
+    margin: 12px auto;
+    background: #F4923A;
+    color: #fff;
+    border-radius: 3px;
+    border-left: solid 2px #CC8437;
+    border-right: solid 2px #CC8437;
+    border-bottom: solid 4px #CC8437;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #ff9233;
+    }
   }
 }
 
