@@ -3,7 +3,13 @@
 // Front-end scripts
 function ct_period_load_scripts_styles() {
 
-	wp_enqueue_style( 'ct-period-google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,300italic,400,700' );
+	$font_args = array(
+		'family' => urlencode( 'Roboto:300,300italic,400,700' ),
+		'subset' => urlencode( 'latin,latin-ext' )
+	);
+	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+	
+	wp_enqueue_style( 'ct-period-google-fonts', $fonts_url );
 
 	wp_enqueue_script( 'ct-period-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-period-js', 'ct_period_objectL10n', array(
