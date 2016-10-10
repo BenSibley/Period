@@ -13,10 +13,10 @@
 				<div class="attachment-container">
 					<?php echo $image; ?>
 					<span class="attachment-caption">
-						<?php echo $image_meta['caption']; ?>
+						<?php echo esc_html( $image_meta['caption'] ); ?>
 					</span>
 				</div>
-				<?php echo wpautop( $image_meta['description'] ); ?>
+				<?php echo wpautop( esc_html( $image_meta['description'] ) ); ?>
 				<div class="post-meta">
 					<?php get_template_part( 'content/post-nav-attachment' ); ?>
 				</div>

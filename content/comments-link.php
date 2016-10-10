@@ -1,5 +1,5 @@
 <span class="comments-link">
-	<i class="fa fa-comment" title="<?php _e( 'comment icon', 'period' ); ?>"></i>
+	<i class="fa fa-comment" title="<?php esc_attr_e( 'comment icon', 'period' ); ?>"></i>
 	<?php
 	if ( ! comments_open() && get_comments_number() < 1 ) :
 		comments_number( __( 'Comments closed', 'period' ), __( '1 Comment', 'period' ), __( '% Comments', 'period' ) );
