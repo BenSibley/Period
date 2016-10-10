@@ -14,7 +14,7 @@
   color: white;
   background: #43b3c4;
   -webkit-transition: background 0.15s ease-in-out;
-  transition: background 0.15s ease-in-out;
+          transition: background 0.15s ease-in-out;
 }
 .upgrades-ad a:link, .upgrades-ad a:visited, .upgrades-ad a:hover, .upgrades-ad a:active, .upgrades-ad a:focus {
   color: white;
@@ -29,7 +29,7 @@
   position: relative;
   right: 0;
   -webkit-transition: right 0.15s ease-in-out;
-  transition: right 0.15s ease-in-out;
+          transition: right 0.15s ease-in-out;
 }
 
 #customize-control-layout .customize-control-title {
@@ -44,7 +44,7 @@
   height: 72px;
   background-size: cover;
   -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+          transition: opacity 0.2s ease;
   color: transparent;
 }
 #customize-control-layout label:nth-child(even) {
