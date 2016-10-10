@@ -1,8 +1,13 @@
 <?php
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 891;
+if ( ! function_exists( ( 'ct_period_set_content_width' ) ) ) {
+	function ct_period_set_content_width() {
+		if ( ! isset( $content_width ) ) {
+			$content_width = 891;
+		}
+	}
 }
+add_action( 'after_setup_theme', 'ct_period_set_content_width', 0 );
 
 if ( ! function_exists( ( 'ct_period_theme_setup' ) ) ) {
 	function ct_period_theme_setup() {
