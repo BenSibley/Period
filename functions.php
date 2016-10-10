@@ -105,21 +105,21 @@ if ( ! function_exists( 'ct_period_update_fields' ) ) {
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . esc_attr__( "Name", "period" ) . $label . '</label>
+	            <label for="author">' . esc_html__( "Name", "period" ) . $label . '</label>
 	            <input id="author" name="author" type="text" placeholder="' . esc_attr__( "Jane Doe", "period" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . esc_attr__( "Email", "period" ) . $label . '</label>
+	            <label for="email">' . esc_html__( "Email", "period" ) . $label . '</label>
 	            <input id="email" name="email" type="email" placeholder="' . esc_attr__( "name@email.com", "period" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['url'] =
 			'<p class="comment-form-url">
-	            <label for="url">' . esc_attr__( "Website", "period" ) . '</label>
+	            <label for="url">' . esc_html__( "Website", "period" ) . '</label>
 	            <input id="url" name="url" type="url" placeholder="http://google.com" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			'" size="30" />
 	            </p>';
@@ -134,7 +134,7 @@ if ( ! function_exists( 'ct_period_update_comment_field' ) ) {
 
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . esc_attr__( "Comment", "period" ) . '</label>
+	            <label for="comment">' . esc_html__( "Comment", "period" ) . '</label>
 	            <textarea required id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
@@ -334,21 +334,21 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
 						<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'period' ); ?>"></i>
-						<span class="screen-reader-text"><?php esc_attr_e('email', 'period'); ?></span>
+						<span class="screen-reader-text"><?php esc_html_e('email', 'period'); ?></span>
 					</a>
 				<?php } elseif ( $active_site == 'skype' ) { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
+						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 				<?php } else { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
 					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_attr( $active_site );  ?></span>
+						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 					<?php
 				}
