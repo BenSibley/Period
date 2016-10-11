@@ -6,9 +6,9 @@
             $total_results = $wp_query->found_posts;
             $s             = htmlentities( $s );
             if ( $total_results ) {
-                printf( esc_html( _n( '%d search result for "%s"', '%d search results for <span class="query">"%s"</span>', $total_results, 'period' ) ), $total_results, $s );
+                printf( esc_html( _n( '%d search result for "%s"', '%d search results for "%s"', $total_results, 'period' ) ), $total_results, $s );
             } else {
-                printf( esc_html__( 'No search results for <span class="query">"%s"</span>', 'period' ), $s );
+                printf( esc_html__( 'No search results for "%s"', 'period' ), $s );
             }
             ?>
         </h1>
