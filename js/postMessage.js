@@ -60,6 +60,10 @@
     // add custom CSS to its own style element
     body.append('<style id="style-inline-custom-css" type="text/css">' + customCSS + '</style>');
 
+    var setting = 'custom_css';
+    if ( panel.find('#sub-accordion-section-custom_css').length ) {
+        setting = 'custom_css[period]';
+    }
     // Custom CSS
     wp.customize( 'custom_css', function( value ) {
         value.bind( function( to ) {
