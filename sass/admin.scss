@@ -13,7 +13,8 @@
     border: solid 1px #e5e5e5;
     background: white;
 
-    .button-primary {
+    .button-primary,
+    #delete {
       margin: 12px 0;
     }
     ul {
@@ -31,18 +32,16 @@
     .content {
       width: 39%;
       float: left;
+      margin-right: 2%;
+      min-height: 211px;
 
       p {
         min-height: 57px;
       }
     }
-    .content-review {
-      min-height: 192px;
-    }
-    .content-customization,
     .content-premium-upgrade,
-    .content-review {
-      margin-right: 2%;
+    .content-delete-settings {
+      margin-right: 0;
     }
   }
 }
@@ -53,19 +52,12 @@
   #period-dashboard-wrap {
 
     .content {
-      width: 27%;
+      width: 26.5%;
     }
-    .content-resources {
-      clear: left;
-    }
-    .content-customization,
     .content-support,
-    .content-resources,
+    .content-premium-upgrade,
     .content-review {
       margin-right: 1%;
-    }
-    .content-premium-upgrade {
-      margin-right: 0;
     }
   }
 }

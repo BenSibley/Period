@@ -9,7 +9,8 @@
   border: solid 1px #e5e5e5;
   background: white;
 }
-#period-dashboard-wrap .content .button-primary {
+#period-dashboard-wrap .content .button-primary,
+#period-dashboard-wrap .content #delete {
   margin: 12px 0;
 }
 #period-dashboard-wrap .content ul {
@@ -22,34 +23,25 @@
   #period-dashboard-wrap .content {
     width: 39%;
     float: left;
+    margin-right: 2%;
+    min-height: 211px;
   }
   #period-dashboard-wrap .content p {
     min-height: 57px;
   }
-  #period-dashboard-wrap .content-review {
-    min-height: 192px;
-  }
-  #period-dashboard-wrap .content-customization,
   #period-dashboard-wrap .content-premium-upgrade,
-  #period-dashboard-wrap .content-review {
-    margin-right: 2%;
+  #period-dashboard-wrap .content-delete-settings {
+    margin-right: 0;
   }
 }
 /* 1100px */
 @media all and (min-width: 68.75em) {
   #period-dashboard-wrap .content {
-    width: 27%;
+    width: 26.5%;
   }
-  #period-dashboard-wrap .content-resources {
-    clear: left;
-  }
-  #period-dashboard-wrap .content-customization,
   #period-dashboard-wrap .content-support,
-  #period-dashboard-wrap .content-resources,
+  #period-dashboard-wrap .content-premium-upgrade,
   #period-dashboard-wrap .content-review {
     margin-right: 1%;
-  }
-  #period-dashboard-wrap .content-premium-upgrade {
-    margin-right: 0;
   }
 }
