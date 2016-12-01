@@ -25,14 +25,15 @@ function ct_period_add_customizer_content( $wp_customize ) {
 	class ct_period_pro_ad extends WP_Customize_Control {
 		public function render_content() {
 			$link = 'https://www.competethemes.com/period-pro/';
+			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/period-pro.png' srcset='" . get_template_directory_uri() . "/assets/images/period-pro-2x.png 2x' /></a>";
 			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%s">Period Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'period'), $link) . "</p>";
+			echo "<p>" . __('Period Pro adds the following features to Period:', 'period') . "</p>";
 			echo "<ul>
-					<li>" . __('Custom Colors', 'period') . "</li>
-					<li>" . __('6 New Layouts', 'period') . "</li>
-					<li>" . __('Flexible Header Image', 'period') . "</li>
-					<li>" . __('+ 9 more features', 'period') . "</li>
+					<li>" . __('6 new layouts', 'period') . "</li>
+					<li>" . __('Custom colors', 'period') . "</li>
+					<li>" . __('New fonts', 'period') . "</li>
+					<li>" . __('+ 10 more features', 'period') . "</li>
 				  </ul>";
-			echo "<p>" . __('View our gallery of screenshots and videos now to see if Period Pro is right for your site.', 'period') . "</p>";
 			echo "<p class='button-wrapper'><a target=\"_blank\" class='period-pro-button' href='" . $link . "'>" . __('View Period Pro', 'period') . "</a></p>";
 		}
 	}
