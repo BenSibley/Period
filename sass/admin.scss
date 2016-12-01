@@ -8,6 +8,7 @@
     margin-bottom: 24px;
   }
   .content {
+    box-sizing: border-box;
     margin-top: 12px;
     padding: 12px 24px 24px;
     border: solid 1px #e5e5e5;
@@ -30,18 +31,17 @@
   #period-dashboard-wrap {
 
     .content {
-      width: 39%;
+      width: 49%;
       float: left;
       margin-right: 2%;
-      min-height: 211px;
+      min-height: 250px;
 
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
       p {
         min-height: 57px;
       }
-    }
-    .content-premium-upgrade,
-    .content-delete-settings {
-      margin-right: 0;
     }
   }
 }
@@ -52,12 +52,17 @@
   #period-dashboard-wrap {
 
     .content {
-      width: 26.5%;
-    }
-    .content-support,
-    .content-premium-upgrade,
-    .content-review {
-      margin-right: 1%;
+      width: 32%;
+
+      &:nth-child(2n) {
+        margin-right: 2%;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(4n) {
+        clear: left;
+      }
     }
   }
 }
