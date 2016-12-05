@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Period 1.05\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-10-11 11:29:28+00:00\n"
+"POT-Creation-Date: 2016-12-05 13:06:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -184,20 +184,24 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:336 functions.php:337
+#: functions.php:344 functions.php:345
 msgid "email"
 msgstr ""
 
-#: functions.php:382 inc/scripts.php:18
+#: functions.php:390 inc/scripts.php:18
 msgid "open dropdown menu"
 msgstr ""
 
-#: functions.php:395
+#: functions.php:403
 msgid "Featured"
 msgstr ""
 
-#: functions.php:457
-msgid "Customizer settings deleted"
+#: functions.php:467
+msgid "Customizer settings deleted."
+msgstr ""
+
+#: functions.php:473
+msgid "Period successfully activated!"
 msgstr ""
 
 #: header.php:11
@@ -212,187 +216,185 @@ msgstr ""
 msgid "Front Page"
 msgstr ""
 
-#: inc/customizer.php:28
+#: inc/customizer.php:29
 msgid ""
 "<a target=\"_blank\" href=\"%s\">Period Pro</a> is the plugin that makes "
 "advanced customization simple - and fun too!"
 msgstr ""
 
 #: inc/customizer.php:30
-msgid "Custom Colors"
-msgstr ""
-
-#: inc/customizer.php:31
-msgid "6 New Layouts"
+msgid "Period Pro adds the following features to Period:"
 msgstr ""
 
 #: inc/customizer.php:32
-msgid "Flexible Header Image"
+msgid "6 new layouts"
 msgstr ""
 
 #: inc/customizer.php:33
-msgid "+ 9 more features"
+msgid "Custom colors"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "New fonts"
 msgstr ""
 
 #: inc/customizer.php:35
-msgid ""
-"View our gallery of screenshots and videos now to see if Period Pro is "
-"right for your site."
+msgid "+ 10 more features"
 msgstr ""
 
-#: inc/customizer.php:36
+#: inc/customizer.php:37
 msgid "View Period Pro"
 msgstr ""
 
-#: inc/customizer.php:46 theme-options.php:38
+#: inc/customizer.php:47 theme-options.php:32
 msgid "Period Pro"
 msgstr ""
 
-#: inc/customizer.php:66
+#: inc/customizer.php:67
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:76
+#: inc/customizer.php:77
 msgid "Upload a logo"
 msgstr ""
 
-#: inc/customizer.php:89
+#: inc/customizer.php:90
 msgid "Adjust the size of the logo"
 msgstr ""
 
-#: inc/customizer.php:110
+#: inc/customizer.php:111
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:112
+#: inc/customizer.php:113
 msgid "Add the URL for each of your social profiles."
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:126
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:175
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
 "more</a>)"
 msgstr ""
 
-#: inc/customizer.php:200
+#: inc/customizer.php:201
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:211
+#: inc/customizer.php:212
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:215 inc/customizer.php:314 inc/customizer.php:330
-#: inc/customizer.php:365 inc/customizer.php:409
+#: inc/customizer.php:216 inc/customizer.php:315 inc/customizer.php:331
+#: inc/customizer.php:379 inc/customizer.php:423
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:216 inc/customizer.php:315 inc/customizer.php:331
-#: inc/customizer.php:366 inc/customizer.php:410
+#: inc/customizer.php:217 inc/customizer.php:316 inc/customizer.php:332
+#: inc/customizer.php:380 inc/customizer.php:424
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:224
+#: inc/customizer.php:225
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:226
+#: inc/customizer.php:227
 msgid ""
 "Want more layouts? Check out the <a target=\"_blank\" href=\"%s\">Period "
 "Pro plugin</a>."
 msgstr ""
 
-#: inc/customizer.php:236
+#: inc/customizer.php:237
 msgid "Choose your layout"
 msgstr ""
 
-#: inc/customizer.php:241 inc/customizer.php:424
+#: inc/customizer.php:242 inc/customizer.php:438
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:242 inc/customizer.php:425
+#: inc/customizer.php:243 inc/customizer.php:439
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:250
+#: inc/customizer.php:251
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:260
+#: inc/customizer.php:261
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:265 inc/customizer.php:384
+#: inc/customizer.php:266 inc/customizer.php:398
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:266 inc/customizer.php:385
+#: inc/customizer.php:267 inc/customizer.php:399
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:276
+#: inc/customizer.php:277
 msgid "Excerpt word count"
 msgstr ""
 
-#: inc/customizer.php:283
+#: inc/customizer.php:284
 msgid "Continue Reading"
 msgstr ""
 
-#: inc/customizer.php:288
+#: inc/customizer.php:289
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:298
+#: inc/customizer.php:299
 msgid "Display Controls"
 msgstr ""
 
-#: inc/customizer.php:300
+#: inc/customizer.php:301
 msgid ""
 "Want more options like these? Check out the <a target=\"_blank\" "
 "href=\"%s\"> Period Pro plugin</a>."
 msgstr ""
 
-#: inc/customizer.php:310
+#: inc/customizer.php:311
 msgid "Post author name in byline"
 msgstr ""
 
-#: inc/customizer.php:326
+#: inc/customizer.php:327
 msgid "Post date in byline"
 msgstr ""
 
-#: inc/customizer.php:339
+#: inc/customizer.php:352
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:350
+#: inc/customizer.php:363
 msgid "Add Custom CSS Here"
 msgstr ""
 
-#: inc/customizer.php:426
+#: inc/customizer.php:440
 msgid "No sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:427
+#: inc/customizer.php:441
 msgid "No sidebar - Wide"
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:442
 msgid "Two column - Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:429
+#: inc/customizer.php:443
 msgid "Two column - Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:430
+#: inc/customizer.php:444
 msgid "Two column - No Sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:431
+#: inc/customizer.php:445
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
@@ -413,8 +415,8 @@ msgid "Next"
 msgstr ""
 
 #: search.php:9
-msgid "%d search result for \"%s\""
-msgid_plural "%d search results for \"%s\""
+msgid "%1$d search result for \"%2$s\""
+msgid_plural "%1$d search results for \"%2$s\""
 msgstr[0] ""
 msgstr[1] ""
 
@@ -438,71 +440,43 @@ msgstr ""
 msgid "Period Dashboard"
 msgstr ""
 
-#: theme-options.php:22
-msgid "Customization"
-msgstr ""
-
 #: theme-options.php:23
+msgid "Get Started"
+msgstr ""
+
+#: theme-options.php:24
 msgid ""
-"Click the \"Customize\" link in your menu, or use the button below to get "
-"started customizing Period"
+"Not sure where to start? The Period Support Center is filled with tutorials "
+"that will take you step-by-step through every feature in Period."
 msgstr ""
 
-#: theme-options.php:26
-msgid "Use Customizer"
-msgstr ""
-
-#: theme-options.php:30
-msgid "Support"
-msgstr ""
-
-#: theme-options.php:31
-msgid ""
-"You can find the knowledgebase, changelog, support forum, and more in the "
-"Period Support Center"
-msgstr ""
-
-#: theme-options.php:34
+#: theme-options.php:27
 msgid "Visit Support Center"
 msgstr ""
 
-#: theme-options.php:39
+#: theme-options.php:33
 msgid ""
 "Download the Period Pro plugin and unlock custom colors, new layouts, "
 "sliders, and more"
 msgstr ""
 
-#: theme-options.php:42
+#: theme-options.php:36
 msgid "See Full Feature List"
 msgstr ""
 
-#: theme-options.php:46
-msgid "WordPress Resources"
-msgstr ""
-
-#: theme-options.php:47
-msgid ""
-"Save time and money searching for WordPress products by following our "
-"recommendations"
-msgstr ""
-
-#: theme-options.php:50
-msgid "View Resources"
-msgstr ""
-
-#: theme-options.php:54 theme-options.php:56
+#: theme-options.php:41 theme-options.php:43
 msgid "Leave a Review"
 msgstr ""
 
-#: theme-options.php:55
+#: theme-options.php:42
 msgid "Help others find Period by leaving a review on wordpress.org."
 msgstr ""
 
-#: theme-options.php:59 theme-options.php:67
+#: theme-options.php:46 theme-options.php:54
 msgid "Reset Customizer Settings"
 msgstr ""
 
-#: theme-options.php:61
+#: theme-options.php:48
 msgid ""
 "<strong>Warning:</strong> Clicking this button will erase the Period "
 "theme's current settings in the <a href='%s'>Customizer</a>."
@@ -513,7 +487,8 @@ msgid ""
 "Period displays your content beautifully across phones, widescreen "
 "monitors, and everything in between. With special attention to typography, "
 "accessibility, and space, Period is a design you can trust for displaying "
-"your content."
+"your content. Preview on desktop, tablets, and mobile with our interactive "
+"live demo: https://www.competethemes.com/demos/?theme=period"
 msgstr ""
 
 #: content/post-byline.php:14
