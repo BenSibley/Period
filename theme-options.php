@@ -40,7 +40,7 @@ function ct_period_options_content() {
 			<div class="content content-review">
 				<h3><?php _e( 'Leave a Review', 'period' ); ?></h3>
 				<p><?php _e( 'Help others find Period by leaving a review on wordpress.org.', 'period' ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/view/theme-reviews/period"><?php _e( 'Leave a Review', 'period' ); ?></a>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/period/reviews/"><?php _e( 'Leave a Review', 'period' ); ?></a>
 			</div>
 			<div class="content content-delete-settings">
 				<h3><?php _e( 'Reset Customizer Settings', 'period' ); ?></h3>
