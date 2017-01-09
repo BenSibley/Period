@@ -1657,6 +1657,10 @@ li.pingback.bypostauthor > article {
   display: block;
 }
 
+.rtl .featured-image > a > img, .rtl .featured-image > img {
+  left: initial;
+}
+
 /*
 
 ATTENTION:
