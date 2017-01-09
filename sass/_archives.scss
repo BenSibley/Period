@@ -23,6 +23,9 @@
     background: $color-gray-20;
   }
 }
+.more-link-wrapper {
+  display: inline-block;
+}
 .comments-link {
   transition: all 0.2s; // so color control in Period Pro makes icon transition at the same speed
 
@@ -36,27 +39,6 @@
   }
   i {
     margin-right: 1px;
-  }
-}
-.archive,
-.blog,
-.search {
-
-  &:not(.full-post) {
-
-    &.archive,
-    &.blog,
-    &.search {
-
-      .post-content {
-
-        p:last-of-type {
-          display: inline-block;
-          margin: $baseline-height * 0.25 0 $baseline-height / 2;
-          line-height: 0;
-        }
-      }
-    }
   }
 }
 .entry.sticky {

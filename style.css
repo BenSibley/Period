@@ -506,6 +506,10 @@ a img {
   background: #333333;
 }
 
+.more-link-wrapper {
+  display: inline-block;
+}
+
 .comments-link {
   -webkit-transition: all 0.2s;
           transition: all 0.2s;
@@ -515,18 +519,6 @@ a img {
 }
 .comments-link i {
   margin-right: 1px;
-}
-
-.archive:not(.full-post).archive .post-content p:last-of-type, .archive:not(.full-post).blog .post-content p:last-of-type, .archive:not(.full-post).search .post-content p:last-of-type,
-.blog:not(.full-post).archive .post-content p:last-of-type,
-.blog:not(.full-post).blog .post-content p:last-of-type,
-.blog:not(.full-post).search .post-content p:last-of-type,
-.search:not(.full-post).archive .post-content p:last-of-type,
-.search:not(.full-post).blog .post-content p:last-of-type,
-.search:not(.full-post).search .post-content p:last-of-type {
-  display: inline-block;
-  margin: 0.375em 0 0.75em;
-  line-height: 0;
 }
 
 .entry.sticky .post-title {
