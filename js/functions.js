@@ -242,3 +242,59 @@ window.addEventListener("hashchange", function(event) {
     }
 
 }, false);
+
+// wait to see if a touch event is fired
+var hasTouch;
+window.addEventListener('touchstart', setHasTouch, false );
+
+// require a double-click on parent dropdown items
+function setHasTouch() {
+
+    hasTouch = true;
+
+    // Remove event listener once fired
+    window.removeEventListener('touchstart', setHasTouch);
+
+    // get the width of the window
+    var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+
+    // don't require double clicks for the toggle menu
+    if (x > 899) {
+        enableTouchDropdown();
+    }
+}
+
+// require a second click to visit parent navigation items
+function enableTouchDropdown(){
+
+    // get all the parent menu items
+    var menuParents = document.getElementsByClassName('menu-item-has-children');
+
+    // add a 'closed' class to each and add an event listener to them
+    for (i = 0; i < menuParents.length; i++) {
+        menuParents[i].className = menuParents[i].className + " closed";
+        menuParents[i].addEventListener('click', openDropdown);
+    }
+}
+
+// check if an element has a class
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+// open the dropdown without visiting parent link
+function openDropdown(e){
+
+    // if has 'closed' class...
+    if(hasClass(this, 'closed')){
+        // prevent link from being visited
+        e.preventDefault();
+        // remove 'closed' class to enable link
+        this.className = this.className.replace('closed', '');
+    }
+}
