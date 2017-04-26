@@ -48,7 +48,7 @@ Period Pro: https://www.competethemes.com/period-pro/
     Licenses:
 -------------------------------------------------------
 
-Period WordPress Theme, Copyright 2016 Compete Themes
+Period WordPress Theme, Copyright 2017 Compete Themes
 Period is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
@@ -56,10 +56,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Period also uses:
 
-* Fitvids, by Chris Coyier & Dave Rupert, https://github.com/davatron5000/FitVids.js/, licensed under the WTFPL license.
-* Google Fonts, http://google.com/fonts, licensed under open source licenses, see: https://developers.google.com/fonts/faq#Any_Page_OK.
-* Font Awesome by Dave Gandy, licensed under open source licenses, see: http://fortawesome.github.io/Font-Awesome/license/.
-* HTML5shiv by Alexander Farkas, Jonathan Neal, Paul Irish, John-David Dalton, and Remy Sharp, licensed under MIT/GPL2, see: https://github.com/aFarkas/html5shiv
-* Respond.js by Scott Jehl, licensed under MIT, see: https://github.com/scottjehl/Respond
-* Wave image in screenshot.png by Cameron Kirby, http://unsplash.com, licensed under Public Domain
-* Mountain image in screenshot.png by Sven Scheuermeier, http://unsplash.com, licensed under Public Domain
+* Fitvids, https://github.com/davatron5000/FitVids.js/, Copyright 2011, Chris Coyier & Dave Rupert, WTFPL license, http://www.wtfpl.net/.
+* Google Fonts, http://google.com/fonts, Copyright 2010, Google, open source licenses, see: https://developers.google.com/fonts/faq#Any_Page_OK.
+* Font Awesome, http://fontawesome.io/, Copyright 2011, Dave Gandy, MIT license, https://opensource.org/licenses/mit-license.html
+* Wave image in screenshot.png : CC0 by Cameron Kirby, https://unsplash.com/photos/n3t4fIuVzLA, licensed under Public Domain
+* Mountain image in screenshot.png : CC0 by Sven Scheuermeier, http://unsplash.com, licensed under Public Domain
