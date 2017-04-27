@@ -469,7 +469,7 @@ if ( ! function_exists( ( 'ct_period_delete_settings_notice' ) ) ) {
 			} else if ( $_GET['period_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Period successfully activated!', 'period' ); ?></p>
+					<p><?php printf( __( '%s successfully activated!', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}
