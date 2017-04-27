@@ -83,12 +83,12 @@ if ( ! function_exists( ( 'ct_period_customize_comments' ) ) ) {
 			</div>
 			<div class="comment-footer">
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => __( 'Reply', 'period' ),
+					'reply_text' => _x( 'Reply', 'verb: reply to this comment', 'period' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth'],
 					'before'     => '<i class="fa fa-reply"></i>'
 				) ) ); ?>
-				<?php edit_comment_link( __( 'Edit', 'period' ), '<i class="fa fa-pencil"></i>' ); ?>
+				<?php edit_comment_link( _x( 'Edit', 'verb: edit this comment', 'period' ), '<i class="fa fa-pencil"></i>' ); ?>
 			</div>
 		</article>
 		<?php
@@ -105,14 +105,14 @@ if ( ! function_exists( 'ct_period_update_fields' ) ) {
 
 		$fields['author'] =
 			'<p class="comment-form-author">
-	            <label for="author">' . esc_html__( "Name", "period" ) . $label . '</label>
+	            <label for="author">' . esc_html_x( "Name", "noun", "period" ) . $label . '</label>
 	            <input id="author" name="author" type="text" placeholder="' . esc_attr__( "Jane Doe", "period" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
 
 		$fields['email'] =
 			'<p class="comment-form-email">
-	            <label for="email">' . esc_html__( "Email", "period" ) . $label . '</label>
+	            <label for="email">' . esc_html_x( "Email", "noun", "period" ) . $label . '</label>
 	            <input id="email" name="email" type="email" placeholder="' . esc_attr__( "name@email.com", "period" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30" ' . $aria_req . ' />
 	        </p>';
@@ -134,7 +134,7 @@ if ( ! function_exists( 'ct_period_update_comment_field' ) ) {
 
 		$comment_field =
 			'<p class="comment-form-comment">
-	            <label for="comment">' . esc_html__( "Comment", "period" ) . '</label>
+	            <label for="comment">' . esc_html_x( "Comment", "noun", "period" ) . '</label>
 	            <textarea required id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
 	        </p>';
 
@@ -336,8 +336,8 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 				if ( $active_site == 'email' ) { ?>
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
-						<i class="fa fa-envelope" title="<?php esc_attr_e( 'email', 'period' ); ?>"></i>
-						<span class="screen-reader-text"><?php esc_html_e('email', 'period'); ?></span>
+						<i class="fa fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'period' ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_html_x('email', 'noun', 'period'); ?></span>
 					</a>
 				<?php } elseif ( $active_site == 'skype' ) { ?>
 					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
@@ -382,7 +382,7 @@ if ( ! function_exists( ( 'ct_period_nav_dropdown_buttons' ) ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . __( "open dropdown menu", "period" ) . '</span><span class="arrow"></span></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . _x( "open dropdown menu", "verb: open the dropdown menu", "period" ) . '</span><span class="arrow"></span></button>', $item_output );
 			}
 		}
 

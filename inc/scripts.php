@@ -13,10 +13,10 @@ function ct_period_load_scripts_styles() {
 
 	wp_enqueue_script( 'ct-period-js', get_template_directory_uri() . '/js/build/production.min.js', array( 'jquery' ), '', true );
 	wp_localize_script( 'ct-period-js', 'ct_period_objectL10n', array(
-		'openMenu'       => esc_html__( 'open menu', 'period' ),
-		'closeMenu'      => esc_html__( 'close menu', 'period' ),
-		'openChildMenu'  => esc_html__( 'open dropdown menu', 'period' ),
-		'closeChildMenu' => esc_html__( 'close dropdown menu', 'period' )
+		'openMenu'       => esc_html_x( 'open menu', 'verb: open the menu', 'period' ),
+		'closeMenu'      => esc_html_x( 'close menu', 'verb: close the menu', 'period' ),
+		'openChildMenu'  => esc_html_x( 'open dropdown menu', 'verb: open the dropdown menu', 'period' ),
+		'closeChildMenu' => esc_html_x( 'close dropdown menu', 'verb: close the dropdown menu', 'period' )
 	) );
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );

@@ -248,7 +248,7 @@ function ct_period_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'period_blog', array(
-		'title'    => __( 'Blog', 'period' ),
+		'title'    => _x( 'Blog', 'noun: blog section', 'period' ),
 		'priority' => 45
 	) );
 	// setting
