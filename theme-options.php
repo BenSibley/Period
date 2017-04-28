@@ -21,7 +21,7 @@ function ct_period_options_content() {
 		<div class="content-boxes">
 			<div class="content content-support">
 				<h3><?php _e( 'Get Started', 'period' ); ?></h3>
-				<p><?php printf( __( 'Not sure where to start? The %1$s Support Center is filled with tutorials that will take you step-by-step through every feature in %2$s.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
+				<p><?php printf( __( 'Not sure where to start? The %1$s Support Center is filled with tutorials that will take you step-by-step through every feature in %1$s.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				<p>
 					<a target="_blank" class="button-primary"
 					   href="https://www.competethemes.com/documentation/period-support-center/"><?php _e( 'Visit Support Center', 'period' ); ?></a>
@@ -45,7 +45,7 @@ function ct_period_options_content() {
 			<div class="content content-delete-settings">
 				<h3><?php _e( 'Reset Customizer Settings', 'period' ); ?></h3>
 				<p>
-					<?php printf( __( "<strong>Warning:</strong> Clicking this button will erase the %2$s theme's current settings in the <a href='%1$s'>Customizer</a>.", 'period' ), esc_url( $customizer_url ), wp_get_theme( get_template() ) ); ?>
+					<?php printf( __( '<strong>Warning:</strong> Clicking this button will erase the %2$s theme\'s current settings in the <a href="%1$s">Customizer</a>.', 'period' ), esc_url( $customizer_url ), wp_get_theme( get_template() ) ); ?>
 				</p>
 				<form method="post">
 					<input type="hidden" name="period_reset_customizer" value="period_reset_customizer_settings"/>
