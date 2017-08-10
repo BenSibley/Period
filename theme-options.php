@@ -42,6 +42,11 @@ function ct_period_options_content() {
 				<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/period/reviews/"><?php _e( 'Leave a Review', 'period' ); ?></a>
 			</div>
+			<div class="content content-presspad">
+				<h3><?php esc_html_e( 'Turn Period into a Mobile App', 'period' ); ?></h3>
+				<p><?php printf( esc_html__( '%s can be converted into a mobile app and listed on the App Store with the help of PressPad News. Read our tutorial to learn more.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
+				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-period/"><?php esc_html_e( 'Read Tutorial', 'period' ); ?></a>
+			</div>
 			<div class="content content-delete-settings">
 				<h3><?php _e( 'Reset Customizer Settings', 'period' ); ?></h3>
 				<p>
