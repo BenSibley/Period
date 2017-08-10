@@ -1,15 +1,15 @@
 === Period ===
 Contributors: bensibley
-Tags: blog, education, entertainment, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
 Requires at least: 4.5
 Tested up to: 4.8
 Stable tag: 1.08
 
-Period is a clean and responsive blog theme.
+Period is a dark, clean, and SEO-optimized blogging theme.
 
 == Description ==
 
-Period displays your content beautifully across phones, widescreen monitors, and everything in between. With special attention to typography, accessibility, and space, Period is a design you can trust for displaying your content. Preview on desktop, tablets, and mobile with our interactive live demo: https://www.competethemes.com/demos/?theme=period
+Period is a dark, clean, and SEO-optimized blogging theme. As a responsive theme, it displays your content beautifully across phones, widescreen monitors, and everything in between. With special attention to typography, accessibility, and minimalism, Period has a design you can trust for presenting your content. Now with WooCommerce support, you can include an eCommerce shop right on your website (for free). Use Period to blog about the news, music, travel, business, gaming, you name it! It’s equally well-suited for a corporate blog or personal podcast.
 
 **Live Demo**
 
