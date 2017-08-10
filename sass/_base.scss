@@ -337,6 +337,14 @@ a img {
     float: left;
     margin-right: $column * 1.125;
   }
+  .page-template-full-width {
+
+    .main {
+      width: 100%;
+      float: none;
+      margin-right: 0;
+    }
+  }
   .left-sidebar {
 
     .main {
