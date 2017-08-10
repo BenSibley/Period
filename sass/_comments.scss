@@ -1,7 +1,8 @@
 .comments-number,
 li.comment > article,
 li.pingback > article,
-.comment-respond {
+.comment-respond,
+#disqus_thread {
   @extend %white-box;
 }
 .comments-number {

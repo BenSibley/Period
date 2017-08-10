@@ -65,7 +65,8 @@ textarea, input[type="submit"], .sticky-status span, .comment-author .comment-da
 .comments-number,
 li.comment > article,
 li.pingback > article,
-.comment-respond, .comments-closed, .comment-pagination, .pagination, .search-bottom, .sidebar-primary .widget {
+.comment-respond,
+#disqus_thread, .comments-closed, .comment-pagination, .pagination, .search-bottom, .sidebar-primary .widget {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
   padding: 1.5em 4.68754%;
@@ -75,7 +76,8 @@ li.pingback > article,
   .comments-number,
   li.comment > article,
   li.pingback > article,
-  .comment-respond, .comments-closed, .comment-pagination, .pagination, .search-bottom, .sidebar-primary .widget {
+  .comment-respond,
+  #disqus_thread, .comments-closed, .comment-pagination, .pagination, .search-bottom, .sidebar-primary .widget {
     background: white;
     box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
     padding: 1.5em 7.50006%;
