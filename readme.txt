@@ -3,7 +3,7 @@ Contributors: bensibley
 Tags: two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 1.08
+Stable tag: 1.09
 
 Period is a dark, clean, and SEO-optimized blogging theme.
 
