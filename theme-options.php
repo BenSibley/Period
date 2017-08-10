@@ -20,7 +20,7 @@ function ct_period_options_content() {
 		<?php do_action( 'theme_options_before' ); ?>
 		<div class="content-boxes">
 			<div class="content content-support">
-				<h3><?php _e( 'Get Started', 'period' ); ?></h3>
+				<h3><?php esc_html_e( 'Get Started', 'period' ); ?></h3>
 				<p><?php printf( __( 'Not sure where to start? The %1$s Support Center is filled with tutorials that will take you step-by-step through every feature in %1$s.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				<p>
 					<a target="_blank" class="button-primary"
@@ -29,7 +29,7 @@ function ct_period_options_content() {
 			</div>
 			<?php if ( !function_exists( 'ct_period_pro_init' ) ) : ?>
 				<div class="content content-premium-upgrade">
-					<h3><?php _e( 'Period Pro', 'period' ); ?></h3>
+					<h3><?php esc_html_e( 'Period Pro', 'period' ); ?></h3>
 					<p><?php printf( __( 'Download the %s Pro plugin and unlock custom colors, new layouts, sliders, and more', 'period' ), wp_get_theme( get_template() ) ); ?>...</p>
 					<p>
 						<a target="_blank" class="button-primary"
@@ -38,17 +38,17 @@ function ct_period_options_content() {
 				</div>
 			<?php endif; ?>
 			<div class="content content-review">
-				<h3><?php _e( 'Leave a Review', 'period' ); ?></h3>
+				<h3><?php esc_html_e( 'Leave a Review', 'period' ); ?></h3>
 				<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/period/reviews/"><?php _e( 'Leave a Review', 'period' ); ?></a>
 			</div>
 			<div class="content content-presspad">
 				<h3><?php esc_html_e( 'Turn Period into a Mobile App', 'period' ); ?></h3>
-				<p><?php printf( esc_html__( '%s can be converted into a mobile app and listed on the App Store with the help of PressPad News. Read our tutorial to learn more.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
+				<p><?php printf( esc_html__( '%s can be converted into a mobile app and listed on the App Store and Google Play Store with the help of PressPad News. Read our tutorial to learn more.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				<a target="_blank" class="button-primary" href="https://www.competethemes.com/help/convert-mobile-app-period/"><?php esc_html_e( 'Read Tutorial', 'period' ); ?></a>
 			</div>
 			<div class="content content-delete-settings">
-				<h3><?php _e( 'Reset Customizer Settings', 'period' ); ?></h3>
+				<h3><?php esc_html_e( 'Reset Customizer Settings', 'period' ); ?></h3>
 				<p>
 					<?php printf( __( '<strong>Warning:</strong> Clicking this button will erase the %2$s theme\'s current settings in the <a href="%1$s">Customizer</a>.', 'period' ), esc_url( $customizer_url ), wp_get_theme( get_template() ) ); ?>
 				</p>
