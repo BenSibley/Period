@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Period 1.07\n"
+"Project-Id-Version: Period 1.08\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-04-28 15:31:04+00:00\n"
+"POT-Creation-Date: 2017-08-10 17:43:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
-#: content-page.php:12 content.php:13
+#: content-page.php:12 content.php:13 templates/full-width.php:22
 msgid "Pages:"
 msgstr ""
 
@@ -109,53 +109,60 @@ msgstr ""
 msgid "<a href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes."
 msgstr ""
 
-#: functions.php:37
+#: functions.php:12
+msgid ""
+"Hey! Sorry to interrupt, but you've been using Period for a little while "
+"now. If you're happy with this theme, could you take a minute to leave a "
+"review? <i>You won't see this notice again after closing it.</i>"
+msgstr ""
+
+#: functions.php:45
 msgid "Primary"
 msgstr ""
 
-#: functions.php:49
+#: functions.php:57
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:59
 msgid ""
 "Widgets in this area will be shown in the sidebar next to the main post "
 "content"
 msgstr ""
 
-#: functions.php:79
+#: functions.php:87
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:103
+#: functions.php:111
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:117
 msgid "Jane Doe"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:124
 msgid "name@email.com"
 msgstr ""
 
-#: functions.php:122
+#: functions.php:130
 msgid "Website"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:177 functions.php:241
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:402
+#: functions.php:422
 msgid "Featured"
 msgstr ""
 
-#: functions.php:466
+#: functions.php:486
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:472
+#: functions.php:492
 msgid "%s successfully activated!"
 msgstr ""
 
@@ -345,6 +352,10 @@ msgstr ""
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
+#: inc/review.php:113
+msgid "Click here to leave your review"
+msgstr ""
+
 #: index.php:21
 msgid "Previous"
 msgstr ""
@@ -371,7 +382,7 @@ msgstr ""
 msgid "Search for..."
 msgstr ""
 
-#: sidebar-primary.php:3
+#: sidebar-primary.php:7
 msgid "Sidebar"
 msgstr ""
 
@@ -415,11 +426,26 @@ msgstr ""
 msgid "Help others find %s by leaving a review on wordpress.org."
 msgstr ""
 
-#: theme-options.php:46 theme-options.php:54
-msgid "Reset Customizer Settings"
+#: theme-options.php:46
+msgid "Turn Period into a Mobile App"
+msgstr ""
+
+#: theme-options.php:47
+msgid ""
+"%s can be converted into a mobile app and listed on the App Store and "
+"Google Play Store with the help of PressPad News. Read our tutorial to "
+"learn more."
 msgstr ""
 
 #: theme-options.php:48
+msgid "Read Tutorial"
+msgstr ""
+
+#: theme-options.php:51 theme-options.php:59
+msgid "Reset Customizer Settings"
+msgstr ""
+
+#: theme-options.php:53
 msgid ""
 "<strong>Warning:</strong> Clicking this button will erase the %2$s theme's "
 "current settings in the <a href=\"%1$s\">Customizer</a>."
@@ -427,11 +453,20 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Period displays your content beautifully across phones, widescreen "
+"Period is a dark, clean, and SEO-optimized blogging theme. As a responsive "
+"theme, it displays your content beautifully across phones, widescreen "
 "monitors, and everything in between. With special attention to typography, "
-"accessibility, and space, Period is a design you can trust for displaying "
-"your content. Preview on desktop, tablets, and mobile with our interactive "
-"live demo: https://www.competethemes.com/demos/?theme=period"
+"accessibility, and minimalism, Period has a design you can trust for "
+"presenting your content. Now with WooCommerce support, you can include an "
+"eCommerce shop right on your website (for free). Use Period to blog about "
+"the news, music, travel, business, gaming, you name it! It’s equally "
+"well-suited for a corporate blog or personal podcast. Preview Period on "
+"desktop, tablets, and mobile devices with the interactive live demo: "
+"https://www.competethemes.com/demos/?theme=period"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width"
 msgstr ""
 
 #: comments.php:12 comments.php:32 comments.php:54 content/comments-link.php:5
@@ -475,37 +510,37 @@ msgctxt "View all posts in post category"
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:94
 msgctxt "verb: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:99
 msgctxt "verb: edit this comment"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:116
 msgctxt "noun"
 msgid "Name"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:123
 msgctxt "noun"
 msgid "Email"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:145
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:343 functions.php:344
+#: functions.php:363 functions.php:364
 msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: functions.php:389 inc/scripts.php:18
+#: functions.php:409 inc/scripts.php:18
 msgctxt "verb: open the dropdown menu"
 msgid "open dropdown menu"
 msgstr ""
