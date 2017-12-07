@@ -74,8 +74,10 @@
 #customize-control-layout .customize-control-title {
   margin-bottom: 12px;
 }
-#customize-control-layout .customize-control-title {
-  margin-bottom: 12px;
+#customize-control-layout .customize-inside-control-row {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 #customize-control-layout label {
   display: inline-block;
