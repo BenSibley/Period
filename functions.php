@@ -675,3 +675,18 @@ if ( ! function_exists( 'ct_period_modify_archive_descriptions' ) ) {
 	}
 }
 add_filter( 'get_the_archive_description', 'ct_period_modify_archive_descriptions' );
+
+//----------------------------------------------------------------------------------
+// So existing users don't have certain templates revert to the left sidebar
+//----------------------------------------------------------------------------------
+function ct_period_set_default_layouts() {
+
+	if ( empty( get_option( 'period_layouts_set' ) ) ) {
+		$current_layout = get_theme_mod( 'layout' );
+		set_theme_mod( 'layout_pages', $current_layout );
+		set_theme_mod( 'layout_blog', $current_layout );
+		set_theme_mod( 'layout_archives', $current_layout );
+		update_option( 'period_layouts_set', 'yes' );
+	}
+}
+add_action( 'after_setup_theme', 'ct_period_set_default_layouts'  );
