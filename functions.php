@@ -502,14 +502,26 @@ if ( ! function_exists( ( 'ct_period_body_class' ) ) ) {
 	function ct_period_body_class( $classes ) {
 
 		global $post;
-		$full_post = get_theme_mod( 'full_post' );
-		$layout    = get_theme_mod( 'layout' );
+		$full_post 					= get_theme_mod( 'full_post' );
+		$post_layout    		= get_theme_mod( 'layout' );
+		$page_layout    		= get_theme_mod( 'layout_pages' );
+		$blog_layout    		= get_theme_mod( 'layout_blog' );
+		$archives_layout    = get_theme_mod( 'layout_archives' );
 
 		if ( $full_post == 'yes' ) {
 			$classes[] = 'full-post';
 		}
-		if ( $layout == 'left' ) {
-			$classes[] = 'left-sidebar';
+		if ( !empty( $post_layout ) && is_singular( 'post' ) ) {
+			$classes[] = $post_layout . '-sidebar';
+		} 
+		if ( !empty( $page_layout ) && is_singular( 'page' ) ) {
+			$classes[] = $page_layout . '-sidebar';
+		}
+		if ( !empty( $blog_layout ) && is_home() ) {
+			$classes[] = $blog_layout . '-sidebar';
+		}
+		if ( !empty( $archives_layout ) && is_archive() ) {
+			$classes[] = $archives_layout . '-sidebar';
 		}
 
 		return $classes;
