@@ -41,14 +41,15 @@
                 || layout == 'layout_pages' && body.hasClass('page') 
                 || layout == 'layout_blog' && body.hasClass('blog') 
                 || layout == 'layout_archives' && body.hasClass('archive') 
-            )
-            value.bind( function( to ) {
-                if ( to == 'left' ) {
-                    body.addClass('left-sidebar');
-                } else {
-                    body.removeClass('left-sidebar');
-                }
-            } );
+            ) {
+                value.bind( function( to ) {
+                    if ( to == 'left' ) {
+                        body.addClass('left-sidebar');
+                    } else {
+                        body.removeClass('left-sidebar');
+                    }
+                } );
+            }
         } );
     });
     
