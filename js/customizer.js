@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
     function addLayoutThumbnails() {
 
         // get layout inputs
-        var layoutInputs = panel.find('#customize-control-layout').find('input');
+        var layoutInputs = panel.find('#customize-control-layout, #customize-control-layout_pages, #customize-control-layout_blog, #customize-control-layout_archives').find('input');
 
         // add the appropriate image to each label
         layoutInputs.each( function() {

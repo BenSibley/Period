@@ -70,7 +70,7 @@ li.pingback > article,
 #disqus_thread, .comments-closed, .comment-pagination, .pagination, .search-bottom, .sidebar-primary .widget {
   background: white;
   box-shadow: 0 0 2px 0 rgba(58, 58, 58, 0.2);
-  padding: 1.5em 4.68754%;
+  padding: 1.5em 4.6875375%;
 }
 
 @media all and (min-width: 56.25em) {
@@ -272,7 +272,7 @@ img,
 
 .wp-caption-text,
 .gallery-caption {
-  margin: 0 0 1.84502em;
+  margin: 0 0 1.8450184502em;
 }
 
 /* Form styles */
@@ -430,7 +430,7 @@ a img {
   .main {
     width: 62.5005%;
     float: right;
-    margin-left: 3.12503%;
+    margin-left: 3.125025%;
   }
 
   .page-template-full-width .main {
@@ -442,7 +442,7 @@ a img {
   .left-sidebar .main {
     float: left;
     margin-left: 0;
-    margin-right: 3.12503%;
+    margin-right: 3.125025%;
   }
 }
 @media all and (min-width: 68.75em) {
@@ -650,7 +650,7 @@ li.pingback.bypostauthor > article {
 .comment-footer {
   position: absolute;
   top: 1.5em;
-  left: 4.68754%;
+  left: 4.6875375%;
 }
 .comment-footer a,
 .comment-footer i {
@@ -1193,7 +1193,7 @@ li.pingback.bypostauthor > article {
 }
 
 .post-container {
-  padding: 1.5em 4.68754%;
+  padding: 1.5em 4.6875375%;
   margin-bottom: 0.75em;
 }
 
@@ -1525,7 +1525,7 @@ li.pingback.bypostauthor > article {
 
 @media all and (min-width: 56.25em) {
   .sidebar-primary {
-    width: 34.37528%;
+    width: 34.375275%;
     float: right;
     margin-top: 3em;
   }

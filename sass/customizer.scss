@@ -76,7 +76,10 @@
 }
 
 // layout picture controls
-#customize-control-layout {
+#customize-control-layout,
+#customize-control-layout_pages,
+#customize-control-layout_blog,
+#customize-control-layout_archives {
 
   input {
     display: none;

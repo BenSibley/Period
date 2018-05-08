@@ -59,6 +59,18 @@ function ct_period_add_customizer_content( $wp_customize ) {
 			)
 		) );
 	}
+
+	/********** Add Panels **********/
+
+	// Add panel for colors
+	if ( method_exists( 'WP_Customize_Manager', 'add_panel' ) ) {
+
+		$wp_customize->add_panel( 'ct_period_layout_panel', array(
+			'priority'    => 40,
+			'title'       => __( 'Layout', 'period' ),
+			'description' => __( 'Change your layouts across the site', 'period' )
+		) );
+	}
 	
 	/***** Logo Upload *****/
 
@@ -224,9 +236,10 @@ function ct_period_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'period_layout', array(
-		'title'       => __( 'Layout', 'period' ),
-		'priority'    => 40,
-		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%1$s">%2$s Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/', wp_get_theme( get_template() ) )
+		'title'       => __( 'Posts', 'period' ),
+		'priority'    => 1,
+		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%1$s">%2$s Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/', wp_get_theme( get_template() ) ),
+		'panel'				=> 'ct_period_layout_panel'
 	) );
 	// setting
 	$wp_customize->add_setting( 'layout', array(
@@ -239,6 +252,78 @@ function ct_period_add_customizer_content( $wp_customize ) {
 		'label'    => __( 'Choose your layout', 'period' ),
 		'section'  => 'period_layout',
 		'settings' => 'layout',
+		'type'     => 'radio',
+		'choices'  => array(
+			'right' => __( 'Right sidebar', 'period' ),
+			'left'  => __( 'Left sidebar', 'period' )
+		)
+	) );
+	// section
+	$wp_customize->add_section( 'period_layout_pages', array(
+		'title'       => __( 'Pages', 'period' ),
+		'priority'    => 2,
+		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%1$s">%2$s Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/', wp_get_theme( get_template() ) ),
+		'panel'				=> 'ct_period_layout_panel'
+	) );
+	// setting
+	$wp_customize->add_setting( 'layout_pages', array(
+		'default'           => 'right',
+		'sanitize_callback' => 'ct_period_sanitize_layout_settings',
+		'transport'         => 'postMessage'
+	) );
+	// control
+	$wp_customize->add_control( 'layout_pages', array(
+		'label'    => __( 'Choose your layout', 'period' ),
+		'section'  => 'period_layout_pages',
+		'settings' => 'layout_pages',
+		'type'     => 'radio',
+		'choices'  => array(
+			'right' => __( 'Right sidebar', 'period' ),
+			'left'  => __( 'Left sidebar', 'period' )
+		)
+	) );
+	// section
+	$wp_customize->add_section( 'period_layout_blog', array(
+		'title'       => __( 'Blog', 'period' ),
+		'priority'    => 3,
+		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%1$s">%2$s Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/', wp_get_theme( get_template() ) ),
+		'panel'				=> 'ct_period_layout_panel'
+	) );
+	// setting
+	$wp_customize->add_setting( 'layout_blog', array(
+		'default'           => 'right',
+		'sanitize_callback' => 'ct_period_sanitize_layout_settings',
+		'transport'         => 'postMessage'
+	) );
+	// control
+	$wp_customize->add_control( 'layout_blog', array(
+		'label'    => __( 'Choose your layout', 'period' ),
+		'section'  => 'period_layout_blog',
+		'settings' => 'layout_blog',
+		'type'     => 'radio',
+		'choices'  => array(
+			'right' => __( 'Right sidebar', 'period' ),
+			'left'  => __( 'Left sidebar', 'period' )
+		)
+	) );
+	// section
+	$wp_customize->add_section( 'period_layout_archives', array(
+		'title'       => __( 'Archives', 'period' ),
+		'priority'    => 4,
+		'description' => sprintf( __( 'Want more layouts? Check out the <a target="_blank" href="%1$s">%2$s Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/', wp_get_theme( get_template() ) ),
+		'panel'				=> 'ct_period_layout_panel'
+	) );
+	// setting
+	$wp_customize->add_setting( 'layout_archives', array(
+		'default'           => 'right',
+		'sanitize_callback' => 'ct_period_sanitize_layout_settings',
+		'transport'         => 'postMessage'
+	) );
+	// control
+	$wp_customize->add_control( 'layout_archives', array(
+		'label'    => __( 'Choose your layout', 'period' ),
+		'section'  => 'period_layout_archives',
+		'settings' => 'layout_archives',
 		'type'     => 'radio',
 		'choices'  => array(
 			'right' => __( 'Right sidebar', 'period' ),
