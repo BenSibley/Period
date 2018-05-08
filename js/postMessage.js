@@ -33,16 +33,25 @@
         } );
     } );
 
-    wp.customize( 'layout', function( value ) {
-        value.bind( function( to ) {
-            if ( to == 'left' ) {
-                body.addClass('left-sidebar');
-            } else {
-                body.removeClass('left-sidebar');
-            }
+    const layouts = ['layout', 'layout_pages', 'layout_blog', 'layout_archives'];
+    layouts.forEach(function(layout) {
+        wp.customize( layout, function( value ) {
+            if ( 
+                layout == 'layout' && body.hasClass('single-post') 
+                || layout == 'layout_pages' && body.hasClass('page') 
+                || layout == 'layout_blog' && body.hasClass('blog') 
+                || layout == 'layout_archives' && body.hasClass('archive') 
+            )
+            value.bind( function( to ) {
+                if ( to == 'left' ) {
+                    body.addClass('left-sidebar');
+                } else {
+                    body.removeClass('left-sidebar');
+                }
+            } );
         } );
-    } );
-
+    });
+    
     // Custom CSS
 
     // get current Custom CSS

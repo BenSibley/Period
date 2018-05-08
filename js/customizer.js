@@ -25,7 +25,7 @@ jQuery(document).ready(function($){
         });
 
         // watch for change of inputs (layouts)
-        panel.on('click', '#customize-control-layout input', function () {
+        panel.on('click', '#customize-control-layout input, #customize-control-layout_pages input, #customize-control-layout_blog input, #customize-control-layout_archives input', function () {
             addSelectedLayoutClass(layoutInputs, $(this));
         });
     }
@@ -34,7 +34,8 @@ jQuery(document).ready(function($){
     function addSelectedLayoutClass(inputs, target) {
 
         // remove 'selected' class from all labels
-        inputs.next().removeClass('selected');
+        // inputs.next().removeClass('selected');
+        target.parent().parent().find('span').find('label').removeClass('selected');
 
         // apply 'selected' class to :checked input
         if (target.prop('checked')) {
