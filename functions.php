@@ -684,7 +684,7 @@ add_filter( 'get_the_archive_description', 'ct_period_modify_archive_description
 //----------------------------------------------------------------------------------
 function ct_period_set_default_layouts() {
 
-	if ( empty( get_option( 'period_layouts_set' ) ) ) {
+	if ( get_option( 'period_layouts_set' ) == '' ) {
 		$current_layout = get_theme_mod( 'layout' );
 		set_theme_mod( 'layout_pages', $current_layout );
 		set_theme_mod( 'layout_blog', $current_layout );
