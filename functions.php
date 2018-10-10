@@ -301,6 +301,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'bitbucket'     => 'period_bitbucket_profile',
 			'codepen'       => 'period_codepen_profile',
 			'delicious'     => 'period_delicious_profile',
+			'stack-overflow' => 'period_stack_overflow_profile',
 			'stumbleupon'   => 'period_stumbleupon_profile',
 			'deviantart'    => 'period_deviantart_profile',
 			'digg'          => 'period_digg_profile',
