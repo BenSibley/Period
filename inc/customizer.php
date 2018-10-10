@@ -173,6 +173,8 @@ function ct_period_add_customizer_content( $wp_customize ) {
 				$label = __('Tencent Weibo', 'period');
 			} elseif ( $social_site == 'paypal' ) {
 				$label = __('PayPal', 'period');
+			} elseif ( $social_site == 'ok-ru' ) {
+				$label = __('OK.ru', 'period');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'period');
 			}
