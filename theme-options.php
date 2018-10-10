@@ -1,7 +1,7 @@
 <?php
 
 function ct_period_register_theme_page() {
-	add_theme_page( sprintf( __( '%s Dashboard', 'period' ), wp_get_theme( get_template() ) ), sprintf( __( '%s Dashboard', 'period' ), wp_get_theme( get_template() ) ), 'edit_theme_options', 'period-options', 'ct_period_options_content', 'ct_period_options_content' );
+	add_theme_page( sprintf( esc_html__( '%s Dashboard', 'period' ), wp_get_theme( get_template() ) ), sprintf( esc_html__( '%s Dashboard', 'period' ), wp_get_theme( get_template() ) ), 'edit_theme_options', 'period-options', 'ct_period_options_content', 'ct_period_options_content' );
 }
 add_action( 'admin_menu', 'ct_period_register_theme_page' );
 
@@ -16,7 +16,7 @@ function ct_period_options_content() {
 	);
 	?>
 	<div id="period-dashboard-wrap" class="wrap">
-		<h2><?php printf( __( '%s Dashboard', 'period' ), wp_get_theme( get_template() ) ); ?></h2>
+		<h2><?php printf( esc_html__( '%s Dashboard', 'period' ), wp_get_theme( get_template() ) ); ?></h2>
 		<?php do_action( 'theme_options_before' ); ?>
 		<div class="content-boxes">
 			<div class="content content-support">
@@ -24,23 +24,23 @@ function ct_period_options_content() {
 				<p><?php printf( __( 'Not sure where to start? The <strong>%1$s Getting Started Guide</strong> will take you step-by-step through every feature in %1$s.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				<p>
 					<a target="_blank" class="button-primary"
-					   href="https://www.competethemes.com/help/getting-started-period/"><?php _e( 'View Guide', 'period' ); ?></a>
+					   href="https://www.competethemes.com/help/getting-started-period/"><?php esc_html_e( 'View Guide', 'period' ); ?></a>
 				</p>
 			</div>
 			<?php if ( !function_exists( 'ct_period_pro_init' ) ) : ?>
 				<div class="content content-premium-upgrade">
 					<h3><?php esc_html_e( 'Period Pro', 'period' ); ?></h3>
-					<p><?php printf( __( 'Download the %s Pro plugin and unlock custom colors, new layouts, sliders, and more', 'period' ), wp_get_theme( get_template() ) ); ?>...</p>
+					<p><?php printf( esc_html__( 'Download the %s Pro plugin and unlock custom colors, new layouts, sliders, and more', 'period' ), wp_get_theme( get_template() ) ); ?>...</p>
 					<p>
 						<a target="_blank" class="button-primary"
-						   href="https://www.competethemes.com/period-pro/"><?php _e( 'See Full Feature List', 'period' ); ?></a>
+						   href="https://www.competethemes.com/period-pro/"><?php esc_html_e( 'See Full Feature List', 'period' ); ?></a>
 					</p>
 				</div>
 			<?php endif; ?>
 			<div class="content content-review">
 				<h3><?php esc_html_e( 'Leave a Review', 'period' ); ?></h3>
-				<p><?php printf( __( 'Help others find %s by leaving a review on wordpress.org.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
-				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/period/reviews/"><?php _e( 'Leave a Review', 'period' ); ?></a>
+				<p><?php printf( esc_html__( 'Help others find %s by leaving a review on wordpress.org.', 'period' ), wp_get_theme( get_template() ) ); ?></p>
+				<a target="_blank" class="button-primary" href="https://wordpress.org/support/theme/period/reviews/"><?php esc_html_e( 'Leave a Review', 'period' ); ?></a>
 			</div>
 			<div class="content content-presspad">
 				<h3><?php esc_html_e( 'Turn Period into a Mobile App', 'period' ); ?></h3>
@@ -56,7 +56,7 @@ function ct_period_options_content() {
 					<input type="hidden" name="period_reset_customizer" value="period_reset_customizer_settings"/>
 					<p>
 						<?php wp_nonce_field( 'period_reset_customizer_nonce', 'period_reset_customizer_nonce' ); ?>
-						<?php submit_button( __( 'Reset Customizer Settings', 'period' ), 'delete', 'delete', false ); ?>
+						<?php submit_button( esc_html__( 'Reset Customizer Settings', 'period' ), 'delete', 'delete', false ); ?>
 					</p>
 				</form>
 			</div>

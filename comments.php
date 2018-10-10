@@ -9,7 +9,7 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h2>
-                <?php comments_number( __( 'Be First to Comment', 'period' ), __( 'One Comment', 'period' ), _x( '% Comments', 'noun: 5 comments', 'period' ) ); ?>
+                <?php comments_number( esc_html__( 'Be First to Comment', 'period' ), esc_html__( 'One Comment', 'period' ), esc_html_x( '% Comments', 'noun: 5 comments', 'period' ) ); ?>
             </h2>
         </div>
         <ol class="comment-list">
@@ -29,7 +29,7 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h2>
-                <?php comments_number( __( 'Be First to Comment', 'period' ), __( 'One Comment', 'period' ), _x( '% Comments', 'noun: 5 comments', 'period' ) ); ?>
+                <?php comments_number( esc_html__( 'Be First to Comment', 'period' ), esc_html__( 'One Comment', 'period' ), esc_html_x( '% Comments', 'noun: 5 comments', 'period' ) ); ?>
             </h2>
         </div>
         <ol class="comment-list">
@@ -51,7 +51,7 @@ if ( comments_open() ) { ?>
     <section id="comments" class="comments">
         <div class="comments-number">
             <h2>
-                <?php comments_number( __( 'Be First to Comment', 'period' ), __( 'One Comment', 'period' ), _x( '% Comments', 'noun: 5 comments', 'period' ) ); ?>
+                <?php comments_number( esc_html__( 'Be First to Comment', 'period' ), esc_html__( 'One Comment', 'period' ), esc_html_x( '% Comments', 'noun: 5 comments', 'period' ) ); ?>
             </h2>
         </div>
         <ol class="comment-list">
@@ -65,14 +65,14 @@ if ( comments_open() ) { ?>
             </nav>
         <?php } ?>
         <p class="comments-closed">
-            <?php _e( 'Comments are closed.', 'period' ); ?>
+            <?php esc_html_e( 'Comments are closed.', 'period' ); ?>
         </p>
     </section>
     <?php
 } else { ?>
     <section id="comments" class="comments">
         <p class="comments-closed">
-            <?php _e( 'Comments are closed.', 'period' ); ?>
+            <?php esc_html_e( 'Comments are closed.', 'period' ); ?>
         </p>
     </section>
 <?php }

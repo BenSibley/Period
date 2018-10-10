@@ -84,19 +84,19 @@ if ( ! function_exists( ( 'ct_period_customize_comments' ) ) ) {
 			</div>
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', 'period' ) ?></em>
+					<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'period' ) ?></em>
 					<br/>
 				<?php endif; ?>
 				<?php comment_text(); ?>
 			</div>
 			<div class="comment-footer">
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => _x( 'Reply', 'verb: reply to this comment', 'period' ),
+					'reply_text' => esc_html_x( 'Reply', 'verb: reply to this comment', 'period' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth'],
 					'before'     => '<i class="fa fa-reply"></i>'
 				) ) ); ?>
-				<?php edit_comment_link( _x( 'Edit', 'verb: edit this comment', 'period' ), '<i class="fa fa-pencil"></i>' ); ?>
+				<?php edit_comment_link( esc_html_x( 'Edit', 'verb: edit this comment', 'period' ), '<i class="fa fa-pencil"></i>' ); ?>
 			</div>
 		</article>
 		<?php
@@ -108,7 +108,7 @@ if ( ! function_exists( 'ct_period_update_fields' ) ) {
 
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
-		$label     = $req ? '*' : ' ' . __( '(optional)', 'period' );
+		$label     = $req ? '*' : ' ' . esc_html__( '(optional)', 'period' );
 		$aria_req  = $req ? "aria-required='true'" : '';
 
 		$fields['author'] =
@@ -174,7 +174,7 @@ if ( ! function_exists( 'ct_period_filter_read_more_link' ) ) {
 		}
 		// Because i18n text cannot be stored in a variable
 		if ( empty( $read_more_text ) ) {
-			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . __( 'Continue reading', 'period' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
+			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue reading', 'period' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		} else {
 			$output .= '<div class="more-link-wrapper"><a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html( $read_more_text ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></div>';
 		}
@@ -238,7 +238,7 @@ add_filter( 'the_content_more_link', 'ct_period_remove_more_link_scroll' );
 function ct_period_update_yoast_og_description( $ogdesc ) {
 	$read_more_text = get_theme_mod( 'read_more_text' );
 	if ( empty( $read_more_text ) ) {
-		$read_more_text = __( 'Continue reading', 'period' );
+		$read_more_text = esc_html__( 'Continue reading', 'period' );
 	}
 	$ogdesc = substr( $ogdesc, 0, strpos( $ogdesc, $read_more_text ) );
 
@@ -406,7 +406,7 @@ if ( ! function_exists( ( 'ct_period_nav_dropdown_buttons' ) ) ) {
 		if ( $args->theme_location == 'primary' ) {
 
 			if ( in_array( 'menu-item-has-children', $item->classes ) || in_array( 'page_item_has_children', $item->classes ) ) {
-				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . _x( "open dropdown menu", "verb: open the dropdown menu", "period" ) . '</span><span class="arrow"></span></button>', $item_output );
+				$item_output = str_replace( $args->link_after . '</a>', $args->link_after . '</a><button class="toggle-dropdown" aria-expanded="false" name="toggle-dropdown"><span class="screen-reader-text">' . esc_html_x( "open dropdown menu", "verb: open the dropdown menu", "period" ) . '</span><span class="arrow"></span></button>', $item_output );
 			}
 		}
 
@@ -419,7 +419,7 @@ if ( ! function_exists( ( 'ct_period_sticky_post_marker' ) ) ) {
 	function ct_period_sticky_post_marker() {
 
 		if ( is_sticky() && !is_archive() && !is_search() ) {
-			echo '<div class="sticky-status"><span>' . __( "Featured", "period" ) . '</span></div>';
+			echo '<div class="sticky-status"><span>' . esc_html__( "Featured", "period" ) . '</span></div>';
 		}
 	}
 }
@@ -486,13 +486,13 @@ if ( ! function_exists( ( 'ct_period_delete_settings_notice' ) ) ) {
 			if ( $_GET['period_status'] == 'deleted' ) {
 				?>
 				<div class="updated">
-					<p><?php _e( 'Customizer settings deleted.', 'period' ); ?></p>
+					<p><?php esc_html_e( 'Customizer settings deleted.', 'period' ); ?></p>
 				</div>
 				<?php
 			} else if ( $_GET['period_status'] == 'activated' ) {
 				?>
 				<div class="updated">
-					<p><?php printf( __( '%s successfully activated!', 'period' ), wp_get_theme( get_template() ) ); ?></p>
+					<p><?php printf( esc_html__( '%s successfully activated!', 'period' ), wp_get_theme( get_template() ) ); ?></p>
 				</div>
 				<?php
 			}

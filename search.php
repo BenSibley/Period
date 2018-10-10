@@ -31,7 +31,7 @@ $total_results = $wp_query->found_posts;
 if ( $total_results ) {
     ?>
     <div class="search-bottom">
-        <p><?php _e( "Can't find what you're looking for?  Try refining your search:", "period" ); ?></p>
+        <p><?php esc_html_e( "Can't find what you're looking for?  Try refining your search:", "period" ); ?></p>
         <?php get_search_form(); ?>
     </div>
 <?php }

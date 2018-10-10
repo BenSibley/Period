@@ -18,8 +18,8 @@
 <?php
 
 the_posts_pagination( array(
-    'prev_text' => __( 'Previous', 'period' ),
-    'next_text' => __( 'Next', 'period' )
+    'prev_text' => esc_html__( 'Previous', 'period' ),
+    'next_text' => esc_html__( 'Next', 'period' )
 ) );
 
 get_footer();
