@@ -291,6 +291,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'vine'          => 'period_vine_profile',
 			'yahoo'         => 'period_yahoo_profile',
 			'behance'       => 'period_behance_profile',
+			'bitbucket'     => 'period_bitbucket_profile',
 			'codepen'       => 'period_codepen_profile',
 			'delicious'     => 'period_delicious_profile',
 			'stumbleupon'   => 'period_stumbleupon_profile',
