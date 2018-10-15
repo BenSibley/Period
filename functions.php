@@ -719,3 +719,15 @@ function ct_period_set_default_layouts() {
 	}
 }
 add_action( 'after_setup_theme', 'ct_period_set_default_layouts'  );
+
+//----------------------------------------------------------------------------------
+// Output the markup for the optional scroll-to-top arrow 
+//----------------------------------------------------------------------------------
+function ct_period_scroll_to_top_arrow() {
+	$setting = get_theme_mod('scroll_to_top');
+	
+	if ( $setting == 'yes' ) {
+		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. esc_html__('Scroll to the top', 'period') .'</span><i class="fa fa-arrow-up"></i></button>';
+	}
+}
+add_action( 'body_bottom', 'ct_period_scroll_to_top_arrow');

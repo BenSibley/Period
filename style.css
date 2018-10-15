@@ -737,6 +737,37 @@ li.pingback.bypostauthor > article {
   margin-top: 1.875em;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: -45px;
+  right: 0;
+  z-index: 9;
+  background: #242424;
+  border: none;
+  color: #fff;
+  padding: 9px 0;
+  width: 60px;
+  -webkit-transition: background 0.2s, -webkit-transform 0.3s;
+          transition: background 0.2s, transform 0.3s;
+}
+.scroll-to-top.visible {
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+}
+.scroll-to-top:hover {
+  cursor: pointer;
+  background: #666666;
+}
+.scroll-to-top:hover i {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+.scroll-to-top i {
+  font-size: 21px;
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+
 /**
  * 14.2 Galleries
  */
