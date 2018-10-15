@@ -4,6 +4,12 @@
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
+#sub-accordion-section-ct_period_social_media_icons #customize-control-email-form {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: solid 1px #d5d5d5;
+}
+
 #accordion-section-ct_period_pro .accordion-section-title {
   color: #fff;
   background: #05B0E7;
