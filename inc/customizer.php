@@ -139,6 +139,18 @@ function ct_period_add_customizer_content( $wp_customize ) {
 				'section'  => 'ct_period_social_media_icons',
 				'priority' => $priority
 			) );
+		} else if ( $social_site == 'phone' ) {
+			// setting
+			$wp_customize->add_setting( $social_site, array(
+				'sanitize_callback' => 'ct_period_sanitize_phone'
+			) );
+			// control
+			$wp_customize->add_control( $social_site, array(
+				'label'    => __( 'Phone', 'period' ),
+				'section'     => 'ct_period_social_media_icons',
+				'priority'    => $priority,
+				'type'        => 'text'
+			) );
 		} else {
 
 			$label = ucfirst( $social_site );
@@ -561,4 +573,12 @@ function ct_period_sanitize_layout_settings( $input ) {
 	);
 
 	return array_key_exists( $input, $valid ) ? $input : '';
+}
+
+function ct_period_sanitize_phone( $input ) {
+	if ( $input != '' ) {
+		return esc_url_raw( 'tel:' . $input, array( 'tel' ) );
+	} else {
+		return '';
+	}
 }

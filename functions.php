@@ -349,6 +349,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'xing'          => 'period_xing_profile',
 			'paypal'        => 'period_paypal_profile',
 			'email'         => 'period_email_profile',
+			'phone'					=> 'period_phone_profile',
 			'email-form'    => 'period_email_form_profile'
 		);
 
@@ -402,6 +403,12 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 					   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
 						<i class="<?php echo esc_attr( $class ); ?>"
 						   title="<?php echo esc_attr( $active_site ); ?>"></i>
+						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
+					</a>
+				<?php } elseif ( $active_site == 'phone' ) { ?>
+					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
+							href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
+						<i class="<?php echo esc_attr( $class ); ?>"></i>
 						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
 					</a>
 				<?php } else { ?>
