@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Period 1.10\n"
+"Project-Id-Version: Period 1.210\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-05-09 12:28:37+00:00\n"
+"POT-Creation-Date: 2018-10-15 18:53:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,7 +37,7 @@ msgid ""
 "post\">trackbacks</a> and pingbacks are open."
 msgstr ""
 
-#: comments.php:68 comments.php:75
+#: comments.php:68 comments.php:85
 msgid "Comments are closed."
 msgstr ""
 
@@ -109,61 +109,65 @@ msgstr ""
 msgid "<a href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes."
 msgstr ""
 
-#: functions.php:12
+#: functions.php:19
 msgid ""
 "Hey! Sorry to interrupt, but you've been using Period for a little while "
 "now. If you're happy with this theme, could you take a minute to leave a "
 "review? <i>You won't see this notice again after closing it.</i>"
 msgstr ""
 
-#: functions.php:45
+#: functions.php:52
 msgid "Primary"
 msgstr ""
 
-#: functions.php:57
+#: functions.php:71
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:59
+#: functions.php:73
 msgid ""
 "Widgets in this area will be shown in the sidebar next to the main post "
 "content"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:101
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:111
+#: functions.php:125
 msgid "(optional)"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:131
 msgid "Jane Doe"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:138
 msgid "name@email.com"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:144
 msgid "Website"
 msgstr ""
 
-#: functions.php:177 functions.php:241
+#: functions.php:198 functions.php:262
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:422
+#: functions.php:466
 msgid "Featured"
 msgstr ""
 
-#: functions.php:489
+#: functions.php:533
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:495
+#: functions.php:539
 msgid "%s successfully activated!"
+msgstr ""
+
+#: functions.php:748
+msgid "Scroll to the top"
 msgstr ""
 
 #: header.php:11
@@ -240,139 +244,223 @@ msgstr ""
 msgid "Email Address"
 msgstr ""
 
+#: inc/customizer.php:149
+msgid "Phone"
+msgstr ""
+
+#: inc/customizer.php:159
+msgid "Google Plus"
+msgstr ""
+
+#: inc/customizer.php:161
+msgid "RSS"
+msgstr ""
+
+#: inc/customizer.php:163
+msgid "SoundCloud"
+msgstr ""
+
+#: inc/customizer.php:165
+msgid "SlideShare"
+msgstr ""
+
+#: inc/customizer.php:167
+msgid "CodePen"
+msgstr ""
+
+#: inc/customizer.php:169
+msgid "StumbleUpon"
+msgstr ""
+
+#: inc/customizer.php:171
+msgid "DeviantArt"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Hacker News"
+msgstr ""
+
+#: inc/customizer.php:175
+msgid "Google Wallet"
+msgstr ""
+
+#: inc/customizer.php:177
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "QQ"
+msgstr ""
+
+#: inc/customizer.php:181
+msgid "VK"
+msgstr ""
+
+#: inc/customizer.php:183
+msgid "WeChat"
+msgstr ""
+
+#: inc/customizer.php:185
+msgid "Tencent Weibo"
+msgstr ""
+
+#: inc/customizer.php:187
+msgid "PayPal"
+msgstr ""
+
 #: inc/customizer.php:189
+msgid "OK.ru"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Stack Overflow"
+msgstr ""
+
+#: inc/customizer.php:193
+msgid "Contact Form"
+msgstr ""
+
+#: inc/customizer.php:205
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
 "more</a>)"
 msgstr ""
 
-#: inc/customizer.php:215
+#: inc/customizer.php:231
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:226
+#: inc/customizer.php:242
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:230 inc/customizer.php:402 inc/customizer.php:418
-#: inc/customizer.php:466 inc/customizer.php:510
+#: inc/customizer.php:246 inc/customizer.php:418 inc/customizer.php:434
+#: inc/customizer.php:506 inc/customizer.php:550
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:231 inc/customizer.php:403 inc/customizer.php:419
-#: inc/customizer.php:467 inc/customizer.php:511
+#: inc/customizer.php:247 inc/customizer.php:419 inc/customizer.php:435
+#: inc/customizer.php:507 inc/customizer.php:551
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:239
+#: inc/customizer.php:255
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:241 inc/customizer.php:265 inc/customizer.php:289
-#: inc/customizer.php:313
+#: inc/customizer.php:257 inc/customizer.php:281 inc/customizer.php:305
+#: inc/customizer.php:329
 msgid ""
 "Want more layouts? Check out the <a target=\"_blank\" href=\"%1$s\">%2$s "
 "Pro plugin</a>."
 msgstr ""
 
-#: inc/customizer.php:252 inc/customizer.php:276 inc/customizer.php:300
-#: inc/customizer.php:324
+#: inc/customizer.php:268 inc/customizer.php:292 inc/customizer.php:316
+#: inc/customizer.php:340
 msgid "Choose your layout"
 msgstr ""
 
-#: inc/customizer.php:257 inc/customizer.php:281 inc/customizer.php:305
-#: inc/customizer.php:329 inc/customizer.php:525
+#: inc/customizer.php:273 inc/customizer.php:297 inc/customizer.php:321
+#: inc/customizer.php:345 inc/customizer.php:565
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:258 inc/customizer.php:282 inc/customizer.php:306
-#: inc/customizer.php:330 inc/customizer.php:526
+#: inc/customizer.php:274 inc/customizer.php:298 inc/customizer.php:322
+#: inc/customizer.php:346 inc/customizer.php:566
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:263
+#: inc/customizer.php:279
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:287
+#: inc/customizer.php:303
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:311
+#: inc/customizer.php:327
 msgid "Archives"
 msgstr ""
 
-#: inc/customizer.php:348
+#: inc/customizer.php:364
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:353 inc/customizer.php:485
+#: inc/customizer.php:369 inc/customizer.php:458 inc/customizer.php:525
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:354 inc/customizer.php:486
+#: inc/customizer.php:370 inc/customizer.php:459 inc/customizer.php:526
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:364
+#: inc/customizer.php:380
 msgid "Excerpt word count"
 msgstr ""
 
-#: inc/customizer.php:371
+#: inc/customizer.php:387
 msgid "Continue Reading"
 msgstr ""
 
-#: inc/customizer.php:376
+#: inc/customizer.php:392
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:386
+#: inc/customizer.php:402
 msgid "Display Controls"
 msgstr ""
 
-#: inc/customizer.php:388
+#: inc/customizer.php:404
 msgid ""
 "Want more options like these? Check out the <a target=\"_blank\" "
 "href=\"%1$s\">%2$s Pro plugin</a>."
 msgstr ""
 
-#: inc/customizer.php:398
+#: inc/customizer.php:414
 msgid "Post author name in byline"
 msgstr ""
 
-#: inc/customizer.php:414
+#: inc/customizer.php:430
 msgid "Post date in byline"
 msgstr ""
 
-#: inc/customizer.php:439
+#: inc/customizer.php:443
+msgid "Scroll-to-Top Arrow"
+msgstr ""
+
+#: inc/customizer.php:453
+msgid "Display Scroll-to-top arrow?"
+msgstr ""
+
+#: inc/customizer.php:479
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:450
+#: inc/customizer.php:490
 msgid "Add Custom CSS Here"
 msgstr ""
 
-#: inc/customizer.php:527
+#: inc/customizer.php:567
 msgid "No sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:528
+#: inc/customizer.php:568
 msgid "No sidebar - Wide"
 msgstr ""
 
-#: inc/customizer.php:529
+#: inc/customizer.php:569
 msgid "Two column - Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:530
+#: inc/customizer.php:570
 msgid "Two column - Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:531
+#: inc/customizer.php:571
 msgid "Two column - No Sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:532
+#: inc/customizer.php:572
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
@@ -406,7 +494,7 @@ msgstr ""
 msgid "Search for..."
 msgstr ""
 
-#: sidebar-primary.php:7
+#: sidebar-primary.php:12
 msgid "Sidebar"
 msgstr ""
 
@@ -534,37 +622,37 @@ msgctxt "View all posts in post category"
 msgid "View all posts in %s"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:108
 msgctxt "verb: reply to this comment"
 msgid "Reply"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:113
 msgctxt "verb: edit this comment"
 msgid "Edit"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:130
 msgctxt "noun"
 msgid "Name"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:137
 msgctxt "noun"
 msgid "Email"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:166
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:363 functions.php:364
+#: functions.php:401 functions.php:402
 msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: functions.php:409 inc/scripts.php:18
+#: functions.php:453 inc/scripts.php:18
 msgctxt "verb: open the dropdown menu"
 msgid "open dropdown menu"
 msgstr ""
@@ -574,7 +662,7 @@ msgctxt "verb: open the menu"
 msgid "open menu"
 msgstr ""
 
-#: inc/customizer.php:338
+#: inc/customizer.php:354
 msgctxt "noun: blog section"
 msgid "Blog"
 msgstr ""
