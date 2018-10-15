@@ -331,6 +331,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'quora'         => 'period_quora_profile',
 			'ravelry'       => 'period_ravelry_profile',
 			'meetup'        => 'period_meetup_profile',
+			'mixcloud'      => 'period_mixcloud_profile',
 			'ok-ru'         => 'period_ok_ru_profile',
 			'telegram'      => 'period_telegram_profile',
 			'podcast'       => 'period_podcast_profile',
