@@ -119,7 +119,7 @@ module.exports = function(grunt) {
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/period || true',
                     'rm -R /Users/bensibley/Documents/compete-themes/dist/period.zip || true',
                     // copy folder without any project/meta files
-                    'rsync -r /Applications/MAMP/htdocs/wordpress/wp-content/themes/period /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Local Sites/period/app/public/wp-content/themes/period" /Users/bensibley/Documents/compete-themes/dist/ <%= excludeFiles %>',
                     // open dist
                     'cd /Users/bensibley/Documents/compete-themes/dist/',
                     // zip the period folder
