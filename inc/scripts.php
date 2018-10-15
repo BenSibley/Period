@@ -19,7 +19,7 @@ function ct_period_load_scripts_styles() {
 		'closeChildMenu' => esc_html_x( 'close dropdown menu', 'verb: close the dropdown menu', 'period' )
 	) );
 
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'ct-period-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/all.min.css' );
 
 	wp_enqueue_style( 'ct-period-style', get_stylesheet_uri() );
 

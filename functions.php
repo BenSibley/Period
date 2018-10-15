@@ -108,9 +108,9 @@ if ( ! function_exists( ( 'ct_period_customize_comments' ) ) ) {
 					'reply_text' => esc_html_x( 'Reply', 'verb: reply to this comment', 'period' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth'],
-					'before'     => '<i class="fa fa-reply"></i>'
+					'before'     => '<i class="fas fa-reply"></i>'
 				) ) ); ?>
-				<?php edit_comment_link( esc_html_x( 'Edit', 'verb: edit this comment', 'period' ), '<i class="fa fa-pencil"></i>' ); ?>
+				<?php edit_comment_link( esc_html_x( 'Edit', 'verb: edit this comment', 'period' ), '<i class="fas fa-edit"></i>' ); ?>
 			</div>
 		</article>
 		<?php
@@ -374,19 +374,27 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 
 			foreach ( $active_sites as $key => $active_site ) {
 
-				if ( $active_site == 'email-form' ) {
-					$class = 'fa fa-envelope-o';
+				if ( $active_site == 'rss' ) {
+					$class = 'fas fa-rss';
+				} elseif ( $active_site == 'email-form' ) {
+					$class = 'far fa-envelope';
+				} elseif ( $active_site == 'podcast' ) {
+					$class = 'fas fa-podcast';
 				} elseif ( $active_site == 'ok-ru' ) {
-					$class = 'fa fa-odnoklassniki';
+					$class = 'fab fa-odnoklassniki';
+				} elseif ( $active_site == 'wechat' ) {
+					$class = 'fab fa-weixin';
+				} elseif ( $active_site == 'phone' ) {
+					$class = 'fas fa-phone';
 				} else {
-					$class = 'fa fa-' . $active_site;
+					$class = 'fab fa-' . $active_site;
 				}
 
 				echo '<li>';
 				if ( $active_site == 'email' ) { ?>
 					<a class="email" target="_blank"
 					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
-						<i class="fa fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'period' ); ?>"></i>
+						<i class="fas fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'period' ); ?>"></i>
 						<span class="screen-reader-text"><?php echo esc_html_x('email', 'noun', 'period'); ?></span>
 					</a>
 				<?php } elseif ( $active_site == 'skype' ) { ?>
@@ -727,7 +735,7 @@ function ct_period_scroll_to_top_arrow() {
 	$setting = get_theme_mod('scroll_to_top');
 	
 	if ( $setting == 'yes' ) {
-		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. esc_html__('Scroll to the top', 'period') .'</span><i class="fa fa-arrow-up"></i></button>';
+		echo '<button id="scroll-to-top" class="scroll-to-top"><span class="screen-reader-text">'. esc_html__('Scroll to the top', 'period') .'</span><i class="fas fa-arrow-up"></i></button>';
 	}
 }
 add_action( 'body_bottom', 'ct_period_scroll_to_top_arrow');
