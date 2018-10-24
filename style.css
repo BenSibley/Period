@@ -1065,8 +1065,9 @@ li.pingback.bypostauthor > article {
   display: inline-block;
 }
 .menu-primary .toggle-dropdown .arrow:after {
-  font-family: FontAwesome;
   content: '\f107';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 .menu-primary .open > ul {
   max-height: 999px;
@@ -1164,10 +1165,11 @@ li.pingback.bypostauthor > article {
     top: 2px;
   }
   .menu-primary li.menu-item-has-children > a:after {
+    content: '\f107';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     position: relative;
     top: 0;
-    font-family: FontAwesome;
-    content: '\f107';
     margin-left: 4px;
     -webkit-transition: top 0.2s ease;
             transition: top 0.2s ease;
