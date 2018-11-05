@@ -325,6 +325,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'meetup'        => 'period_meetup_profile',
 			'mixcloud'      => 'period_mixcloud_profile',
 			'ok-ru'         => 'period_ok_ru_profile',
+			'patreon'       => 'period_patreon_profile',
 			'paypal'        => 'period_paypal_profile',
 			'podcast'       => 'period_podcast_profile',
 			'qq'            => 'period_qq_profile',
