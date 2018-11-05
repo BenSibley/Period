@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Period 1.210\n"
+"Project-Id-Version: Period 1.220\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-10-24 12:04:45+00:00\n"
+"POT-Creation-Date: 2018-11-05 14:35:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,19 +154,19 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: functions.php:466
+#: functions.php:467
 msgid "Featured"
 msgstr ""
 
-#: functions.php:533
+#: functions.php:534
 msgid "Customizer settings deleted."
 msgstr ""
 
-#: functions.php:539
+#: functions.php:540
 msgid "%s successfully activated!"
 msgstr ""
 
-#: functions.php:748
+#: functions.php:749
 msgid "Scroll to the top"
 msgstr ""
 
@@ -178,289 +178,255 @@ msgstr ""
 msgid "Front Page"
 msgstr ""
 
-#: inc/customizer.php:29
-msgid ""
-"<a target=\"_blank\" href=\"%1$s\">%2$s Pro</a> is the plugin that makes "
-"advanced customization simple - and fun too!"
-msgstr ""
-
 #: inc/customizer.php:30
-msgid "%1$s Pro adds the following features to %1$s:"
-msgstr ""
-
-#: inc/customizer.php:32
-msgid "6 new layouts"
-msgstr ""
-
-#: inc/customizer.php:33
-msgid "Custom colors"
-msgstr ""
-
-#: inc/customizer.php:34
-msgid "New fonts"
-msgstr ""
-
-#: inc/customizer.php:35
-msgid "+ 10 more features"
-msgstr ""
-
-#: inc/customizer.php:37
-msgid "View %s Pro"
-msgstr ""
-
-#: inc/customizer.php:47
-msgid "%s Pro"
-msgstr ""
-
-#: inc/customizer.php:70
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:71
+#: inc/customizer.php:31
 msgid "Change your layouts across the site"
 msgstr ""
 
-#: inc/customizer.php:79
+#: inc/customizer.php:39
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:89
+#: inc/customizer.php:49
 msgid "Upload a logo"
 msgstr ""
 
-#: inc/customizer.php:102
+#: inc/customizer.php:62
 msgid "Adjust the size of the logo"
 msgstr ""
 
-#: inc/customizer.php:123
+#: inc/customizer.php:83
 msgid "Social Media Icons"
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:85
 msgid "Add the URL for each of your social profiles."
 msgstr ""
 
-#: inc/customizer.php:138
+#: inc/customizer.php:98
 msgid "Email Address"
 msgstr ""
 
-#: inc/customizer.php:149
+#: inc/customizer.php:109
 msgid "Phone"
 msgstr ""
 
-#: inc/customizer.php:159
+#: inc/customizer.php:119
 msgid "Google Plus"
 msgstr ""
 
-#: inc/customizer.php:161
+#: inc/customizer.php:121
 msgid "RSS"
 msgstr ""
 
-#: inc/customizer.php:163
+#: inc/customizer.php:123
 msgid "SoundCloud"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:125
 msgid "SlideShare"
 msgstr ""
 
-#: inc/customizer.php:167
+#: inc/customizer.php:127
 msgid "CodePen"
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer.php:129
 msgid "StumbleUpon"
 msgstr ""
 
-#: inc/customizer.php:171
+#: inc/customizer.php:131
 msgid "DeviantArt"
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:133
 msgid "Hacker News"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:135
 msgid "Google Wallet"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:137
 msgid "WhatsApp"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer.php:139
 msgid "QQ"
 msgstr ""
 
-#: inc/customizer.php:181
+#: inc/customizer.php:141
 msgid "VK"
 msgstr ""
 
-#: inc/customizer.php:183
+#: inc/customizer.php:143
 msgid "WeChat"
 msgstr ""
 
-#: inc/customizer.php:185
+#: inc/customizer.php:145
 msgid "Tencent Weibo"
 msgstr ""
 
-#: inc/customizer.php:187
+#: inc/customizer.php:147
 msgid "PayPal"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:149
 msgid "OK.ru"
 msgstr ""
 
-#: inc/customizer.php:191
+#: inc/customizer.php:151
 msgid "Stack Overflow"
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:153
 msgid "Contact Form"
 msgstr ""
 
-#: inc/customizer.php:205
+#: inc/customizer.php:165
 msgid ""
 "Accepts Skype link protocol (<a href=\"%s\" target=\"_blank\">learn "
 "more</a>)"
 msgstr ""
 
-#: inc/customizer.php:231
+#: inc/customizer.php:191
 msgid "Search Bar"
 msgstr ""
 
-#: inc/customizer.php:242
+#: inc/customizer.php:202
 msgid "Show search bar at top of site?"
 msgstr ""
 
-#: inc/customizer.php:246 inc/customizer.php:418 inc/customizer.php:434
-#: inc/customizer.php:506 inc/customizer.php:550
+#: inc/customizer.php:206 inc/customizer.php:378 inc/customizer.php:394
+#: inc/customizer.php:466 inc/customizer.php:510
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:247 inc/customizer.php:419 inc/customizer.php:435
-#: inc/customizer.php:507 inc/customizer.php:551
+#: inc/customizer.php:207 inc/customizer.php:379 inc/customizer.php:395
+#: inc/customizer.php:467 inc/customizer.php:511
 msgid "Hide"
 msgstr ""
 
-#: inc/customizer.php:255
+#: inc/customizer.php:215
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:257 inc/customizer.php:281 inc/customizer.php:305
-#: inc/customizer.php:329
+#: inc/customizer.php:217 inc/customizer.php:241 inc/customizer.php:265
+#: inc/customizer.php:289
 msgid ""
 "Want more layouts? Check out the <a target=\"_blank\" href=\"%1$s\">%2$s "
 "Pro plugin</a>."
 msgstr ""
 
-#: inc/customizer.php:268 inc/customizer.php:292 inc/customizer.php:316
-#: inc/customizer.php:340
+#: inc/customizer.php:228 inc/customizer.php:252 inc/customizer.php:276
+#: inc/customizer.php:300
 msgid "Choose your layout"
 msgstr ""
 
-#: inc/customizer.php:273 inc/customizer.php:297 inc/customizer.php:321
-#: inc/customizer.php:345 inc/customizer.php:565
+#: inc/customizer.php:233 inc/customizer.php:257 inc/customizer.php:281
+#: inc/customizer.php:305 inc/customizer.php:525
 msgid "Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:274 inc/customizer.php:298 inc/customizer.php:322
-#: inc/customizer.php:346 inc/customizer.php:566
+#: inc/customizer.php:234 inc/customizer.php:258 inc/customizer.php:282
+#: inc/customizer.php:306 inc/customizer.php:526
 msgid "Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:279
+#: inc/customizer.php:239
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:303
+#: inc/customizer.php:263
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:287
 msgid "Archives"
 msgstr ""
 
-#: inc/customizer.php:364
+#: inc/customizer.php:324
 msgid "Show full posts on blog?"
 msgstr ""
 
-#: inc/customizer.php:369 inc/customizer.php:458 inc/customizer.php:525
+#: inc/customizer.php:329 inc/customizer.php:418 inc/customizer.php:485
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:370 inc/customizer.php:459 inc/customizer.php:526
+#: inc/customizer.php:330 inc/customizer.php:419 inc/customizer.php:486
 msgid "No"
 msgstr ""
 
-#: inc/customizer.php:380
+#: inc/customizer.php:340
 msgid "Excerpt word count"
 msgstr ""
 
-#: inc/customizer.php:387
+#: inc/customizer.php:347
 msgid "Continue Reading"
 msgstr ""
 
-#: inc/customizer.php:392
+#: inc/customizer.php:352
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:402
+#: inc/customizer.php:362
 msgid "Display Controls"
 msgstr ""
 
-#: inc/customizer.php:404
+#: inc/customizer.php:364
 msgid ""
 "Want more options like these? Check out the <a target=\"_blank\" "
 "href=\"%1$s\">%2$s Pro plugin</a>."
 msgstr ""
 
-#: inc/customizer.php:414
+#: inc/customizer.php:374
 msgid "Post author name in byline"
 msgstr ""
 
-#: inc/customizer.php:430
+#: inc/customizer.php:390
 msgid "Post date in byline"
 msgstr ""
 
-#: inc/customizer.php:443
+#: inc/customizer.php:403
 msgid "Scroll-to-Top Arrow"
 msgstr ""
 
-#: inc/customizer.php:453
+#: inc/customizer.php:413
 msgid "Display Scroll-to-top arrow?"
 msgstr ""
 
-#: inc/customizer.php:479
+#: inc/customizer.php:439
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:490
+#: inc/customizer.php:450
 msgid "Add Custom CSS Here"
 msgstr ""
 
-#: inc/customizer.php:567
+#: inc/customizer.php:527
 msgid "No sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:568
+#: inc/customizer.php:528
 msgid "No sidebar - Wide"
 msgstr ""
 
-#: inc/customizer.php:569
+#: inc/customizer.php:529
 msgid "Two column - Right sidebar"
 msgstr ""
 
-#: inc/customizer.php:570
+#: inc/customizer.php:530
 msgid "Two column - Left sidebar"
 msgstr ""
 
-#: inc/customizer.php:571
+#: inc/customizer.php:531
 msgid "Two column - No Sidebar - Narrow"
 msgstr ""
 
-#: inc/customizer.php:572
+#: inc/customizer.php:532
 msgid "Two column - No Sidebar - Wide"
 msgstr ""
 
@@ -498,69 +464,8 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: theme-options.php:4 theme-options.php:19
+#: theme-options.php:4 theme-options.php:20
 msgid "%s Dashboard"
-msgstr ""
-
-#: theme-options.php:23
-msgid "Get Started"
-msgstr ""
-
-#: theme-options.php:24
-msgid ""
-"Not sure where to start? The <strong>%1$s Getting Started Guide</strong> "
-"will take you step-by-step through every feature in %1$s."
-msgstr ""
-
-#: theme-options.php:27
-msgid "View Guide"
-msgstr ""
-
-#: theme-options.php:32
-msgid "Period Pro"
-msgstr ""
-
-#: theme-options.php:33
-msgid ""
-"Download the %s Pro plugin and unlock custom colors, new layouts, sliders, "
-"and more"
-msgstr ""
-
-#: theme-options.php:36
-msgid "See Full Feature List"
-msgstr ""
-
-#: theme-options.php:41 theme-options.php:43
-msgid "Leave a Review"
-msgstr ""
-
-#: theme-options.php:42
-msgid "Help others find %s by leaving a review on wordpress.org."
-msgstr ""
-
-#: theme-options.php:46
-msgid "Turn Period into a Mobile App"
-msgstr ""
-
-#: theme-options.php:47
-msgid ""
-"%s can be converted into a mobile app and listed on the App Store and "
-"Google Play Store with the help of PressPad News. Read our tutorial to "
-"learn more."
-msgstr ""
-
-#: theme-options.php:48
-msgid "Read Tutorial"
-msgstr ""
-
-#: theme-options.php:51 theme-options.php:59
-msgid "Reset Customizer Settings"
-msgstr ""
-
-#: theme-options.php:53
-msgid ""
-"<strong>Warning:</strong> Clicking this button will erase the %2$s theme's "
-"current settings in the <a href=\"%1$s\">Customizer</a>."
 msgstr ""
 
 #. Description of the plugin/theme
@@ -647,12 +552,12 @@ msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:401 functions.php:402
+#: functions.php:402 functions.php:403
 msgctxt "noun"
 msgid "email"
 msgstr ""
 
-#: functions.php:453 inc/scripts.php:18
+#: functions.php:454 inc/scripts.php:18
 msgctxt "verb: open the dropdown menu"
 msgid "open dropdown menu"
 msgstr ""
@@ -662,7 +567,7 @@ msgctxt "verb: open the menu"
 msgid "open menu"
 msgstr ""
 
-#: inc/customizer.php:354
+#: inc/customizer.php:314
 msgctxt "noun: blog section"
 msgid "Blog"
 msgstr ""
