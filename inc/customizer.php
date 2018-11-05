@@ -20,46 +20,6 @@ function ct_period_add_customizer_content( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
-	/***** Period Pro Control *****/
-
-	class ct_period_pro_ad extends WP_Customize_Control {
-		public function render_content() {
-			$link = 'https://www.competethemes.com/period-pro/';
-			echo "<a href='" . $link . "' target='_blank'><img src='" . get_template_directory_uri() . "/assets/images/period-pro.gif' /></a>";
-			echo "<p class='bold'>" . sprintf( __('<a target="_blank" href="%1$s">%2$s Pro</a> is the plugin that makes advanced customization simple - and fun too!', 'period'), $link, wp_get_theme( get_template() ) ) . "</p>";
-			echo "<p>" . sprintf( __('%1$s Pro adds the following features to %1$s:', 'period'), wp_get_theme( get_template() ) ) . "</p>";
-			echo "<ul>
-					<li>" . __('6 new layouts', 'period') . "</li>
-					<li>" . __('Custom colors', 'period') . "</li>
-					<li>" . __('New fonts', 'period') . "</li>
-					<li>" . __('+ 10 more features', 'period') . "</li>
-				  </ul>";
-			echo "<p class='button-wrapper'><a target=\"_blank\" class='period-pro-button' href='" . $link . "'>" . sprintf( __('View %s Pro', 'period'), wp_get_theme( get_template() ) ) . "</a></p>";
-		}
-	}
-
-	/***** Period Pro Section *****/
-
-	// don't add if Period Pro is active
-	if ( !function_exists( 'ct_period_pro_init' ) ) {
-		// section
-		$wp_customize->add_section( 'ct_period_pro', array(
-			'title'    => sprintf( __( '%s Pro', 'period' ), wp_get_theme( get_template() ) ),
-			'priority' => 1
-		) );
-		// Upload - setting
-		$wp_customize->add_setting( 'period_pro', array(
-			'sanitize_callback' => 'absint'
-		) );
-		// Upload - control
-		$wp_customize->add_control( new ct_period_pro_ad(
-			$wp_customize, 'period_pro', array(
-				'section'  => 'ct_period_pro',
-				'settings' => 'period_pro'
-			)
-		) );
-	}
-
 	/********** Add Panels **********/
 
 	// Add panel for colors
@@ -582,3 +542,13 @@ function ct_period_sanitize_phone( $input ) {
 		return '';
 	}
 }
+
+
+function ct_period_customize_preview_js() {
+	if ( !function_exists( 'ct_period_pro_init' ) ) {
+		$url = 'https://www.competethemes.com/period-pro/?utm_source=wp-dashboard&utm_medium=Customizer&utm_campaign=Period%20Pro%20-%20Customizer';
+		$content = "<script>jQuery('#customize-info').prepend('<div class=\"upgrades-ad\"><a href=\"". $url ."\" target=\"_blank\">Get New Layouts with Period Pro <span>&rarr;</span></a></div>')</script>";
+		echo apply_filters('ct_period_customizer_ad', $content);
+	}
+}
+add_action('customize_controls_print_footer_scripts', 'ct_period_customize_preview_js');
