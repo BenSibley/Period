@@ -55,6 +55,34 @@ if ( ! function_exists( ( 'ct_period_theme_setup' ) ) ) {
 		// Gutenberg - add support for editor styles
 		add_theme_support('editor-styles');
 
+		// Gutenberg - modify the font sizes
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+					'name' => __( 'small', 'period' ),
+					'shortName' => __( 'S', 'period' ),
+					'size' => 12,
+					'slug' => 'small'
+			),
+			array(
+					'name' => __( 'regular', 'period' ),
+					'shortName' => __( 'M', 'period' ),
+					'size' => 16,
+					'slug' => 'regular'
+			),
+			array(
+					'name' => __( 'large', 'period' ),
+					'shortName' => __( 'L', 'period' ),
+					'size' => 21,
+					'slug' => 'large'
+			),
+			array(
+					'name' => __( 'larger', 'period' ),
+					'shortName' => __( 'XL', 'period' ),
+					'size' => 28,
+					'slug' => 'larger'
+			)
+	) );
+
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'period' )
 		) );
