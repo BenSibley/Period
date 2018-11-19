@@ -36,6 +36,16 @@ function ct_period_enqueue_admin_styles( $hook ) {
 	if ( $hook == 'appearance_page_period-options' ) {
 		wp_enqueue_style( 'ct-period-admin-styles', get_template_directory_uri() . '/styles/admin.min.css' );
 	}
+	if ( $hook == 'post.php' || $hook == 'post-new.php' ) {
+
+		$font_args = array(
+			'family' => urlencode( 'Roboto:300,300i,400,700' ),
+			'subset' => urlencode( 'latin,latin-ext' )
+		);
+		$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+	
+		wp_enqueue_style( 'ct-period-google-fonts', $fonts_url );
+	}
 }
 add_action( 'admin_enqueue_scripts', 'ct_period_enqueue_admin_styles' );
 
