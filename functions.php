@@ -48,6 +48,13 @@ if ( ! function_exists( ( 'ct_period_theme_setup' ) ) ) {
 			'render'    => 'ct_period_infinite_scroll_render'
 		) );
 
+		// Gutenberg - wide & full images
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'align-full' );
+
+		// Gutenberg - add support for editor styles
+		add_theme_support('editor-styles');
+
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'period' )
 		) );

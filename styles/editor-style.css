@@ -4,7 +4,7 @@
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-h1 {
+h1, .editor-post-title textarea {
   font-size: 1.125em;
   /* 18px / 16px */
   line-height: 1.333;
@@ -122,7 +122,7 @@ a:hover, a:active, a:focus {
   color: #757575;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .editor-post-title textarea, h2, h3, h4, h5, h6 {
   font-family: "Roboto", "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -381,7 +381,7 @@ a img {
 }
 
 @media all and (min-width: 37.5em) {
-  h1 {
+  h1, .editor-post-title textarea {
     font-size: 1.3125em;
     /* 21px / 16px */
     line-height: 1.333;
@@ -415,7 +415,7 @@ a img {
   }
 }
 @media all and (min-width: 68.75em) {
-  h1 {
+  h1, .editor-post-title textarea {
     font-size: 1.75em;
     /* 28px / 16px */
     line-height: 1.357;
@@ -444,5 +444,54 @@ a img {
   -webkit-font-smoothing: subpixel-antialiased !important;
   background: #fff;
   font-family: "Roboto", "Open Sans", sans-serif;
-  max-width: 670px;
+  max-width: 738px;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+}
+body:before {
+  display: none;
+}
+
+.wp-block {
+  max-width: 718px;
+}
+
+.editor-post-title textarea {
+  color: #333333;
+  outline: none;
+  padding: 19px;
+}
+
+.wp-block[data-align="wide"],
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.wp-block-quote.is-large {
+  padding-left: 0;
+  border-left: none;
+}
+
+.wp-block-embed {
+  margin: 1.5em 0;
+}
+
+.has-small-font-size {
+  font-size: 12px;
+}
+
+.has-regular-font-size {
+  font-size: 16px;
+}
+
+.has-large-font-size {
+  font-size: 21px;
+}
+
+.has-extra-large-font-size {
+  font-size: 37px;
 }
