@@ -362,6 +362,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'flickr'        => 'period_flickr_profile',
 			'foursquare'    => 'period_foursquare_profile',
 			'github'        => 'period_github_profile',
+			'goodreads'			=> 'period_goodreads_profile',
 			'google-plus'   => 'period_googleplus_profile',
 			'google-wallet' => 'period_google_wallet_profile',
 			'hacker-news'   => 'period_hacker-news_profile',
