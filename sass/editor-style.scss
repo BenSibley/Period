@@ -13,6 +13,10 @@
   background: #fff;
   font-family: $primary-font-stack;
   max-width: 738px;
+
+  &.page-template-full-width {
+    max-width: none;
+  }
 }
 
 //------------------------------------------------------

@@ -29,6 +29,9 @@ h1, .editor-post-title textarea {
   font-family: "Roboto", "Open Sans", sans-serif;
   max-width: 738px;
 }
+.mce-content-body.wp-editor.page-template-full-width {
+  max-width: none;
+}
 
 body {
   font-size: 16px;
