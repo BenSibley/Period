@@ -85,5 +85,5 @@ if ( comments_open() ) { ?>
 				<?php esc_html_e( 'Comments are closed.', 'period' ); ?>
 			</p>
 		</section>
-	<?php }
+    <?php }
 }
