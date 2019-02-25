@@ -7,7 +7,7 @@ if ( $author_display == 'hide' && $date_display == 'hide' ) {
 }
 
 $author = "<a class='author' href='" . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . "'>" . get_the_author() . "</a>";
-$date   = "<a class='date' href='" . esc_url( get_month_link( get_the_date( 'Y' ), get_the_date( 'n' ) ) ) . "'>" . date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'r' ) ) ) . "</a>";
+$date   = "<a class='date' href='" . esc_url( get_month_link( get_the_date( 'Y' ), get_the_date( 'n' ) ) ) . "'>" . date_i18n( get_option( 'date_format' ), strtotime( get_the_date( 'c' ) ) ) . "</a>";
 
 echo '<div class="post-byline">';
 	if ( $author_display == 'hide' ) {
