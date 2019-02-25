@@ -396,6 +396,30 @@ function ct_period_add_customizer_content( $wp_customize ) {
 		)
 	) );
 
+	/***** Additional Options  *****/
+
+	// section
+	$wp_customize->add_section( 'ct_period_additional_options', array(
+		'title'    => __( 'Additional Options', 'period' ),
+		'priority' => 70
+	) );
+	// setting - last updated
+	$wp_customize->add_setting( 'last_updated', array(
+		'default'           => 'no',
+		'sanitize_callback' => 'ct_period_sanitize_yes_no_settings'
+	) );
+	// control - last updated
+	$wp_customize->add_control( 'last_updated', array(
+		'label'    => __( 'Display the date each post was last updated?', 'period' ),
+		'section'  => 'ct_period_additional_options',
+		'settings' => 'last_updated',
+		'type'     => 'radio',
+		'choices'  => array(
+			'yes' => __( 'Yes', 'period' ),
+			'no'  => __( 'No', 'period' )
+		)
+	) );
+
 	/***** Scroll-to-stop Arrow  *****/
 
 	// section

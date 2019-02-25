@@ -8,6 +8,7 @@
 				<?php get_template_part( 'content/post-byline' ); ?>
 			</div>
 			<div class="post-content">
+				<?php ct_period_output_last_updated_date(); ?>
 				<?php the_content(); ?>
 				<?php wp_link_pages( array(
 					'before' => '<p class="singular-pagination">' . esc_html__( 'Pages:', 'period' ),

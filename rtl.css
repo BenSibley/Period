@@ -1404,6 +1404,10 @@ li.pingback.bypostauthor > article {
   text-decoration: none;
 }
 
+.last-updated {
+  font-style: italic;
+}
+
 .wp-block-image.alignfull,
 .wp-block-cover {
   position: relative;
