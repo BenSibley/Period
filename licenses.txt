@@ -1,4 +1,4 @@
-Period WordPress Theme, Copyright 2018 Compete Themes
+Period WordPress Theme, Copyright 2019 Compete Themes
 Period is distributed under the terms of the GNU GPL
 
 License: GNU General Public License v2 or later
