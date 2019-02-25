@@ -403,6 +403,22 @@ function ct_period_add_customizer_content( $wp_customize ) {
 		'title'    => __( 'Additional Options', 'period' ),
 		'priority' => 70
 	) );
+	// setting - scroll-to-top arrow
+	$wp_customize->add_setting( 'scroll_to_top', array(
+		'default'           => 'no',
+		'sanitize_callback' => 'ct_period_sanitize_yes_no_settings'
+	) );
+	// control - scroll-to-top arrow
+	$wp_customize->add_control( 'scroll_to_top', array(
+		'label'    => __( 'Display Scroll-to-top arrow?', 'period' ),
+		'section'  => 'ct_period_additional_options',
+		'settings' => 'scroll_to_top',
+		'type'     => 'radio',
+		'choices'  => array(
+			'yes' => __( 'Yes', 'period' ),
+			'no'  => __( 'No', 'period' )
+		)
+	) );
 	// setting - last updated
 	$wp_customize->add_setting( 'last_updated', array(
 		'default'           => 'no',
@@ -413,30 +429,6 @@ function ct_period_add_customizer_content( $wp_customize ) {
 		'label'    => __( 'Display the date each post was last updated?', 'period' ),
 		'section'  => 'ct_period_additional_options',
 		'settings' => 'last_updated',
-		'type'     => 'radio',
-		'choices'  => array(
-			'yes' => __( 'Yes', 'period' ),
-			'no'  => __( 'No', 'period' )
-		)
-	) );
-
-	/***** Scroll-to-stop Arrow  *****/
-
-	// section
-	$wp_customize->add_section( 'ct_period_scroll_to_stop', array(
-		'title'    => __( 'Scroll-to-Top Arrow', 'period' ),
-		'priority' => 70
-	) );
-	// setting - scroll-to-top arrow
-	$wp_customize->add_setting( 'scroll_to_top', array(
-		'default'           => 'no',
-		'sanitize_callback' => 'ct_period_sanitize_yes_no_settings'
-	) );
-	// control - scroll-to-top arrow
-	$wp_customize->add_control( 'scroll_to_top', array(
-		'label'    => __( 'Display Scroll-to-top arrow?', 'period' ),
-		'section'  => 'ct_period_scroll_to_stop',
-		'settings' => 'scroll_to_top',
 		'type'     => 'radio',
 		'choices'  => array(
 			'yes' => __( 'Yes', 'period' ),
