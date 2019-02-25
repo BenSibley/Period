@@ -543,6 +543,7 @@ if ( ! function_exists( ( 'ct_period_reset_customizer_options' ) ) ) {
 			'read_more_text',
 			'display_post_author',
 			'display_post_date',
+			'last_updated',
 			'custom_css'
 		);
 
