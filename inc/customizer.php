@@ -359,7 +359,7 @@ function ct_period_add_customizer_content( $wp_customize ) {
 
 	// section
 	$wp_customize->add_section( 'period_display', array(
-		'title'       => __( 'Display Controls', 'period' ),
+		'title'       => __( 'Show/Hide Elements', 'period' ),
 		'priority'    => 55,
 		'description' => sprintf( __( 'Want more options like these? Check out the <a target="_blank" href="%1$s">%2$s Pro plugin</a>.', 'period' ), 'https://www.competethemes.com/period-pro/', wp_get_theme( get_template() ) )
 	) );
