@@ -43,7 +43,7 @@ h1, .post-title {
   /* 24px */
 }
 
-.wp-caption-text,
+.wp-block-image figcaption, .wp-caption-text,
 .gallery-caption, input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -242,6 +242,28 @@ th {
 }
 
 /* Images */
+img,
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-block-image {
+  margin: 1.5em 0;
+}
+.wp-block-image figcaption {
+  margin: 0 0 1.8450184502em;
+  text-align: center;
+}
+
 .alignleft {
   float: right;
   margin: 0 0 1.5em 1.5em;
@@ -260,20 +282,6 @@ th {
 
 .alignnone {
   margin: 1.5em 0;
-}
-
-img,
-.alignright,
-.alignleft,
-.aligncenter,
-.alignnone,
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-  max-width: 100%;
-  height: auto;
 }
 
 .wp-caption-text,

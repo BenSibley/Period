@@ -121,6 +121,27 @@ th {
 
 /* Images */
 
+img,
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+.wp-block-image {
+  margin: $baseline-height 0;
+
+  figcaption {
+    @extend %twelve-pixels;
+    margin: 0 0 $baseline-height / 0.813;
+  }
+}
 .alignleft {
   float: left;
   margin: 0 $baseline-height $baseline-height 0;
@@ -136,18 +157,6 @@ th {
 }
 .alignnone {
   margin: $baseline-height 0;
-}
-.alignright,
-.alignleft,
-.aligncenter,
-.alignnone,
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-  max-width: 100%;
-  height: auto;
 }
 .wp-caption-text,
 .gallery-caption {

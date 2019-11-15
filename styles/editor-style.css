@@ -11,7 +11,7 @@ h1, .editor-post-title textarea {
   /* 24px */
 }
 
-.wp-caption-text,
+.wp-block-image figcaption, .wp-caption-text,
 .gallery-caption {
   font-size: 0.75em;
   /* 12px / 16px */
@@ -133,6 +133,27 @@ th {
 }
 
 /* Images */
+img,
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-block-image {
+  margin: 1.5em 0;
+}
+.wp-block-image figcaption {
+  margin: 0 0 1.8450184502em;
+}
+
 .alignleft {
   float: left;
   margin: 0 1.5em 1.5em 0;
@@ -151,19 +172,6 @@ th {
 
 .alignnone {
   margin: 1.5em 0;
-}
-
-.alignright,
-.alignleft,
-.aligncenter,
-.alignnone,
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-  max-width: 100%;
-  height: auto;
 }
 
 .wp-caption-text,
