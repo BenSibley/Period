@@ -168,14 +168,14 @@ a:hover, a:active, a:focus {
   color: #757575;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, .comment-respond .comment-reply-title, h4, h5, h6 {
   font-family: "Roboto", "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   font-weight: 700;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, .comment-respond .comment-reply-title, h4, h5, h6 {
   font-size: 1em;
   line-height: 1.5;
 }
@@ -478,7 +478,7 @@ a img {
     /* 28px */
   }
 
-  h3 {
+  h3, .comment-respond .comment-reply-title {
     font-size: 1.125em;
     /* 18px / 16px */
     line-height: 1.333;
@@ -1815,12 +1815,20 @@ li.pingback.bypostauthor > article {
 }
 .woocommerce-cart h2,
 .woocommerce-cart h3,
+.woocommerce-cart .comment-respond .comment-reply-title,
+.comment-respond .woocommerce-cart .comment-reply-title,
 .woocommerce-checkout h2,
 .woocommerce-checkout h3,
+.woocommerce-checkout .comment-respond .comment-reply-title,
+.comment-respond .woocommerce-checkout .comment-reply-title,
 .woocommerce-account h2,
 .woocommerce-account h3,
+.woocommerce-account .comment-respond .comment-reply-title,
+.comment-respond .woocommerce-account .comment-reply-title,
 .woocommerce-page h2,
-.woocommerce-page h3 {
+.woocommerce-page h3,
+.woocommerce-page .comment-respond .comment-reply-title,
+.comment-respond .woocommerce-page .comment-reply-title {
   margin-bottom: 24px;
 }
 .woocommerce-cart input,

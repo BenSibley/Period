@@ -1,5 +1,8 @@
 .comment-respond {
 
+  .comment-reply-title {
+    @extend h3;
+  }
   label {
     @extend %fourteen-pixels;
     display: block;
