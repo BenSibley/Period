@@ -456,6 +456,21 @@ a img {
   margin-top: 0;
 }
 
+.page-template-landing-page .primary-container {
+  padding: 0;
+}
+.page-template-landing-page .max-width {
+  max-width: none;
+}
+.page-template-landing-page .main {
+  width: 100%;
+  float: none;
+  margin: 0 auto;
+}
+.page-template-landing-page .post-container {
+  padding: 0;
+}
+
 @media all and (min-width: 37.5em) {
   h1 {
     font-size: 1.3125em;

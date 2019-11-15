@@ -354,6 +354,24 @@ a img {
   }
 }
 
+.page-template-landing-page {
+
+  .primary-container {
+    padding: 0;
+  }
+  .max-width {
+    max-width: none;
+  }
+  .main {
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+  }
+  .post-container {
+    padding: 0;
+  }
+}
+
 @media all and (min-width: $six-hundred) {
 
   h1 {
