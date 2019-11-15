@@ -1317,6 +1317,14 @@ li.pingback.bypostauthor > article {
   padding: 4px 4px 4px 12px;
   font-size: 13px;
 }
+.featured-image .ccfic a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+.featured-image .ccfic a:link, .featured-image .ccfic a:visited {
+  color: #fff;
+}
 
 .post-header {
   margin: 0 0 1.5em 0;

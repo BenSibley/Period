@@ -76,6 +76,17 @@
     color: white;
     padding: 4px 4px 4px 12px;
     font-size: 13px;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 4px;
+
+      &:link,
+      &:visited {
+        color: #fff;
+      }
+    }
   }
 }
 .post-header {
