@@ -373,6 +373,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'ok-ru'         => 'period_ok_ru_profile',
 			'patreon'       => 'period_patreon_profile',
 			'paypal'        => 'period_paypal_profile',
+			'pocket'        => 'period_pocket_profile',
 			'podcast'       => 'period_podcast_profile',
 			'qq'            => 'period_qq_profile',
 			'quora'         => 'period_quora_profile',
@@ -435,6 +436,8 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 					$class = 'fab fa-odnoklassniki';
 				} elseif ( $active_site == 'wechat' ) {
 					$class = 'fab fa-weixin';
+				} elseif ( $active_site == 'pocket' ) {
+					$class = 'fab fa-get-pocket';
 				} elseif ( $active_site == 'phone' ) {
 					$class = 'fas fa-phone';
 				} else {
