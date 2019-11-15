@@ -724,6 +724,13 @@ if ( ! function_exists( ( 'ct_period_infinite_scroll_render' ) ) ) {
 if ( ! function_exists( 'ct_period_get_content_template' ) ) {
 	function ct_period_get_content_template() {
 
+		// Get bbpress.php for all bbpress pages
+		if ( function_exists( 'is_bbpress' ) ) {
+			if ( is_bbpress() ) {
+				get_template_part( 'content/bbpress' );
+				return;
+			} 
+		}
 		if ( is_home() || is_archive() ) {
 			get_template_part( 'content-archive', get_post_type() );
 		} else {
@@ -815,4 +822,31 @@ function ct_period_output_last_updated_date() {
 				echo '<p class="last-updated">'. esc_html__("Last updated on", "period") . ' ' . get_the_modified_date() . ' </p>';
 			}
 	}
+}
+
+//----------------------------------------------------------------------------------
+// Output standard post pagination
+//----------------------------------------------------------------------------------
+if ( ! function_exists( ( 'ct_period_pagination' ) ) ) {
+  function ct_period_pagination() {
+
+    // Never output pagination on bbpress pages
+    if ( function_exists( 'is_bbpress' ) ) {
+      if ( is_bbpress() ) {
+        return;
+      } 
+    }
+    // Output pagination if Jetpack not installed, otherwise check if infinite scroll is active before outputting
+    if ( !class_exists( 'Jetpack' ) ) {
+      the_posts_pagination( array(
+        'prev_text' => esc_html__( 'Previous', 'period' ),
+        'next_text' => esc_html__( 'Next', 'period' )
+      ) );
+    } elseif ( !Jetpack::is_module_active( 'infinite-scroll' ) ) {
+      the_posts_pagination( array(
+        'prev_text' => esc_html__( 'Previous', 'period' ),
+        'next_text' => esc_html__( 'Next', 'period' )
+      ) );
+    }
+  }
 }
