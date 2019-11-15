@@ -1456,6 +1456,13 @@ li.pingback.bypostauthor > article {
   max-width: none;
 }
 
+.wp-block-image.alignwide {
+  position: relative;
+  left: -2.6%;
+  width: 105.2%;
+  max-width: none;
+}
+
 .wp-block-quote.is-large {
   padding-left: 0;
   border-left: none;
@@ -1503,10 +1510,13 @@ li.pingback.bypostauthor > article {
 
   .wp-block-image.alignfull,
   .wp-block-cover {
-    position: relative;
     left: -8.8%;
     width: 117.6%;
-    max-width: none;
+  }
+
+  .wp-block-image.alignwide {
+    left: -4.4%;
+    width: 108.8%;
   }
 }
 @media all and (min-width: 68.75em) {
