@@ -132,6 +132,25 @@ th {
   border: solid 1px #333333;
 }
 
+.wp-block-table {
+  margin: 0;
+}
+.wp-block-table thead {
+  background: #F7F7F7;
+}
+.wp-block-table td,
+.wp-block-table th {
+  border-color: #EDEDED;
+}
+
+.wp-block-table.is-style-stripes thead {
+  background: none;
+}
+.wp-block-table.is-style-stripes td,
+.wp-block-table.is-style-stripes th {
+  border-color: #EDEDED;
+}
+
 /* Images */
 img,
 .alignright,
