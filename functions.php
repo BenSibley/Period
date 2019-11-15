@@ -350,6 +350,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'phone'					=> 'period_phone_profile',
 			'email-form'    => 'period_email_form_profile',
 			'amazon'        => 'period_amazon_profile',
+			'artstation'    => 'period_artstation_profile',
 			'bandcamp'      => 'period_bandcamp_profile',
 			'behance'       => 'period_behance_profile',
 			'bitbucket'     => 'period_bitbucket_profile',
