@@ -584,12 +584,6 @@ if ( ! function_exists( ( 'ct_period_delete_settings_notice' ) ) ) {
 					<p><?php esc_html_e( 'Customizer settings deleted.', 'period' ); ?></p>
 				</div>
 				<?php
-			} else if ( $_GET['period_status'] == 'activated' ) {
-				?>
-				<div class="updated">
-					<p><?php printf( esc_html__( '%s successfully activated!', 'period' ), wp_get_theme( get_template() ) ); ?></p>
-				</div>
-				<?php
 			}
 		}
 	}
@@ -751,20 +745,6 @@ if ( ! function_exists( ( 'ct_period_allow_skype_protocol' ) ) ) {
 	}
 }
 add_filter( 'kses_allowed_protocols' , 'ct_period_allow_skype_protocol' );
-
-// trigger theme switch on link click and send to Appearance menu
-function ct_period_welcome_redirect() {
-
-	$welcome_url = add_query_arg(
-		array(
-			'page'          => 'period-options',
-			'period_status' => 'activated'
-		),
-		admin_url( 'themes.php' )
-	);
-	wp_safe_redirect( esc_url_raw( $welcome_url ) );
-}
-add_action( 'after_switch_theme', 'ct_period_welcome_redirect' );
 
 //----------------------------------------------------------------------------------
 // Add paragraph tags for author bio displayed in content/archive-header.php.
