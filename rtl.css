@@ -1212,7 +1212,8 @@ li.pingback.bypostauthor > article {
   .rtl .menu-primary ul li.menu-item-has-children > a:before {
     position: relative;
     top: 0;
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     content: '\f107';
     margin-right: 4px;
     -webkit-transition: top 0.2s ease;
