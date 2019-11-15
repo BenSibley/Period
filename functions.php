@@ -409,72 +409,73 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 	}
 }
 
+//----------------------------------------------------------------------------------
+//	Output the social media icons
+//----------------------------------------------------------------------------------
 if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 	function ct_period_social_icons_output() {
 
-		$social_sites = ct_period_social_array();
+		// Get the social icons array
+    $social_sites = ct_period_social_array();
+    // Store only icons with URLs saved
+    $saved = array();
 
-		foreach ( $social_sites as $social_site => $profile ) {
-
-			if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
-				$active_sites[ $social_site ] = $social_site;
+		/* Store the site name and ID if saved
+		/* name: twitter
+		/* id: period_twitter_profile */
+		foreach ( $social_sites as $name => $id ) {
+			if ( strlen( get_theme_mod( $name ) ) > 0 ) {
+				$saved[ $name ] = $id;
 			}
 		}
 
-		if ( ! empty( $active_sites ) ) {
+		// If there are any social profiles saved
+		if ( !empty( $saved ) ) {
 
 			echo "<ul class='social-media-icons'>";
 
-			foreach ( $active_sites as $key => $active_site ) {
+			// Output list item for every saved profile
+			foreach ( $saved as $name => $id ) {
 
-				if ( $active_site == 'rss' ) {
+				if ( $name == 'rss' ) {
 					$class = 'fas fa-rss';
-				} elseif ( $active_site == 'email-form' ) {
+				} elseif ( $name == 'email-form' ) {
 					$class = 'far fa-envelope';
-				} elseif ( $active_site == 'podcast' ) {
+				} elseif ( $name == 'podcast' ) {
 					$class = 'fas fa-podcast';
-				} elseif ( $active_site == 'ok-ru' ) {
+				} elseif ( $name == 'ok-ru' ) {
 					$class = 'fab fa-odnoklassniki';
-				} elseif ( $active_site == 'wechat' ) {
+				} elseif ( $name == 'wechat' ) {
 					$class = 'fab fa-weixin';
-				} elseif ( $active_site == 'pocket' ) {
+				} elseif ( $name == 'pocket' ) {
 					$class = 'fab fa-get-pocket';
-				} elseif ( $active_site == 'phone' ) {
+				} elseif ( $name == 'phone' ) {
 					$class = 'fas fa-phone';
 				} else {
-					$class = 'fab fa-' . $active_site;
+					$class = 'fab fa-' . $name;
 				}
 
-				echo '<li>';
-				if ( $active_site == 'email' ) { ?>
-					<a class="email" target="_blank"
-					   href="mailto:<?php echo antispambot( is_email( get_theme_mod( $key ) ) ); ?>">
-						<i class="fas fa-envelope" title="<?php echo esc_attr_x( 'email', 'noun', 'period' ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_html_x('email', 'noun', 'period'); ?></span>
-					</a>
-				<?php } elseif ( $active_site == 'skype' ) { ?>
-					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
-					   href="<?php echo esc_url( get_theme_mod( $key ), array( 'http', 'https', 'skype' ) ); ?>">
-						<i class="<?php echo esc_attr( $class ); ?>"
-						   title="<?php echo esc_attr( $active_site ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
-					</a>
-				<?php } elseif ( $active_site == 'phone' ) { ?>
-					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
-							href="<?php echo esc_url( get_theme_mod( $active_site ), array( 'tel' ) ); ?>">
-						<i class="<?php echo esc_attr( $class ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
-					</a>
-				<?php } else { ?>
-					<a class="<?php echo esc_attr( $active_site ); ?>" target="_blank"
-					   href="<?php echo esc_url( get_theme_mod( $key ) ); ?>">
-						<i class="<?php echo esc_attr( $class ); ?>"
-						   title="<?php echo esc_attr( $active_site ); ?>"></i>
-						<span class="screen-reader-text"><?php echo esc_html( $active_site );  ?></span>
-					</a>
-					<?php
-				}
-				echo '</li>';
+				$url = get_theme_mod( $name );
+
+				// Escape the URL based on protocol being used
+        if ( $name == 'email' ) {
+          $href = 'mailto:' . antispambot( is_email( $url ) );
+        } elseif ( $name == 'skype' ) {
+          $href = esc_url( $url, array( 'http', 'https', 'skype' ) );
+        } elseif ( $name == 'phone' ) {
+          $href = esc_url( $url, array( 'tel' ) );
+        } else {
+          $href = esc_url( $url );
+        }
+				// Output the icon
+				?>
+				<li>
+				  <a class="<?php echo esc_attr( $name ); ?>" target="_blank" href="<?php echo $href; ?>">
+            <i class="<?php echo esc_attr( $class ); ?>" aria-hidden="true"></i>
+            <span class="screen-reader-text"><?php echo esc_html( $name );  ?></span>
+          </a>
+        </li>
+        <?php
 			}
 			echo "</ul>";
 		}
