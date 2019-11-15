@@ -25,7 +25,7 @@ function ct_period_last_updated_callback( $post ) {
 
   ?>
 	<p>
-		<select name="period-last-updated" id="period-last-updated" style="box-sizing: border-box; width: 100%">
+		<select name="period-last-updated" id="period-last-updated" style="box-sizing: border-box; width: 100%;">
 			<option value="default"><?php esc_html_e( 'Use Customizer setting', 'period' ); ?></option>
 			<option value="yes" <?php if ( $display == 'yes' ) {
 				echo 'selected';
