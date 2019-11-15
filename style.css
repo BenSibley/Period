@@ -589,6 +589,10 @@ a img {
   margin-bottom: 6px;
   font-weight: 700;
 }
+.comment-respond .comment-form-cookies-consent label {
+  display: inline-block;
+  font-weight: 400;
+}
 .comment-respond p {
   margin: 1.125em 0;
 }
