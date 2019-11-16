@@ -475,6 +475,13 @@ a img {
   padding: 0;
 }
 
+.elementor-location-header + .primary-container {
+  margin-top: 1.5em;
+}
+.elementor-location-header + .primary-container .sidebar-primary {
+  margin-top: 0;
+}
+
 @media all and (min-width: 37.5em) {
   h1 {
     font-size: 1.3125em;

@@ -372,6 +372,13 @@ a img {
     padding: 0;
   }
 }
+.elementor-location-header + .primary-container {
+  margin-top: $baseline-height;
+
+  .sidebar-primary {
+    margin-top: 0;
+  }
+}
 
 @media all and (min-width: $six-hundred) {
 

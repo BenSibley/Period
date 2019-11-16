@@ -5,6 +5,10 @@
 </div><!-- .max-width -->
 </div><!-- .primary-container -->
 
+<?php 
+// Elementor `footer` location
+if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) :
+?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
     <div class="max-width">
         <?php do_action( 'footer_top' ); ?>
@@ -19,6 +23,7 @@
         </span>
     </div>
 </footer>
+<?php endif; ?>
 </div><!-- .overflow-container -->
 
 <?php do_action( 'body_bottom' ); ?>
