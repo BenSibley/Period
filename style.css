@@ -456,18 +456,22 @@ a img {
   margin-top: 0;
 }
 
-.page-template-landing-page .primary-container {
+.page-template-landing-page .primary-container,
+.page-template-landing-page-header .primary-container {
   padding: 0;
 }
-.page-template-landing-page .max-width {
+.page-template-landing-page .max-width,
+.page-template-landing-page-header .max-width {
   max-width: none;
 }
-.page-template-landing-page .main {
+.page-template-landing-page .main,
+.page-template-landing-page-header .main {
   width: 100%;
   float: none;
   margin: 0 auto;
 }
-.page-template-landing-page .post-container {
+.page-template-landing-page .post-container,
+.page-template-landing-page-header .post-container {
   padding: 0;
 }
 
