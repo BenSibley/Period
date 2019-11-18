@@ -1506,6 +1506,10 @@ li.pingback.bypostauthor > article {
 .wp-block-button a {
   font-weight: 400;
   text-decoration: none;
+  color: #fff;
+}
+.wp-block-button a:link, .wp-block-button a:visited {
+  color: #fff;
 }
 
 @media all and (min-width: 37.5em) {

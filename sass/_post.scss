@@ -237,6 +237,12 @@
 .wp-block-button a {
   font-weight: 400;
   text-decoration: none;
+  color: #fff;
+
+  &:link,
+  &:visited {
+    color: #fff;
+  }
 }
 
 @media all and (min-width: $six-hundred) {
