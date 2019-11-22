@@ -13,13 +13,6 @@ add_action( 'admin_menu', 'ct_period_register_theme_page' );
 
 function ct_period_options_content() {
 
-	$customizer_url = add_query_arg(
-		array(
-			'url'    => get_home_url(),
-			'return' => add_query_arg( 'page', 'period-options', admin_url( 'themes.php' ) )
-		),
-		admin_url( 'customize.php' )
-	);
 	$pro_url = 'https://www.competethemes.com/period-pro/?utm_source=wp-dashboard&utm_medium=Dashboard&utm_campaign=Period%20Pro%20-%20Dashboard';
 	?>
 	<div id="period-dashboard-wrap" class="wrap period-dashboard-wrap">
