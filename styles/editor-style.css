@@ -11,7 +11,7 @@ h1, .editor-post-title textarea {
   /* 24px */
 }
 
-.wp-block-image figcaption, .wp-caption-text,
+.wp-block-table figcaption, .wp-block-image figcaption, .wp-caption-text,
 .gallery-caption {
   font-size: 0.75em;
   /* 12px / 16px */
@@ -141,6 +141,10 @@ th {
 .wp-block-table td,
 .wp-block-table th {
   border-color: #EDEDED;
+}
+.wp-block-table figcaption {
+  text-align: center;
+  margin-top: -18px;
 }
 
 .wp-block-table.is-style-stripes thead {

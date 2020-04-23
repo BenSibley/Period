@@ -1516,6 +1516,10 @@ li.pingback.bypostauthor > article {
   color: #fff;
 }
 
+.wp-block-social-links a {
+  color: #fff;
+}
+
 @media all and (min-width: 37.5em) {
   .post-title {
     font-size: 1.3125em;
