@@ -531,4 +531,4 @@ msgstr "Gepubliceerd door %s"
 #: content/post-byline.php:18
 msgctxt "This blog post was published on some date by some author"
 msgid "Published %1$s by %2$s"
-msgstr "Gebupliceerd op %1$s door %2$s"
+msgstr "Gepubliceerd op %1$s door %2$s"
