@@ -438,6 +438,8 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 
 				if ( $name == 'rss' ) {
 					$class = 'fas fa-rss';
+				} elseif ( $name == 'email' ) {
+					$class = 'fas fa-envelope';
 				} elseif ( $name == 'email-form' ) {
 					$class = 'far fa-envelope';
 				} elseif ( $name == 'podcast' ) {
@@ -455,14 +457,17 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 				}
 
 				$url = get_theme_mod( $name );
+				$title = $name;
 
 				// Escape the URL based on protocol being used
         if ( $name == 'email' ) {
-          $href = 'mailto:' . antispambot( is_email( $url ) );
+					$href = 'mailto:' . antispambot( is_email( $url ) );
+					$title = antispambot( is_email( $url ) );
         } elseif ( $name == 'skype' ) {
           $href = esc_url( $url, array( 'http', 'https', 'skype' ) );
         } elseif ( $name == 'phone' ) {
-          $href = esc_url( $url, array( 'tel' ) );
+					$href = esc_url( $url, array( 'tel' ) );
+					$title = esc_url( $url, array( 'tel' ) );
         } else {
           $href = esc_url( $url );
         }
@@ -470,7 +475,7 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 				?>
 				<li>
 				  <a class="<?php echo esc_attr( $name ); ?>" target="_blank" href="<?php echo $href; ?>">
-            <i class="<?php echo esc_attr( $class ); ?>" aria-hidden="true"></i>
+            <i class="<?php echo esc_attr( $class ); ?>" aria-hidden="true" title="<?php echo esc_attr( $title ); ?>"></i>
             <span class="screen-reader-text"><?php echo esc_html( $name );  ?></span>
           </a>
         </li>
