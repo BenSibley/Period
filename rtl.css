@@ -43,7 +43,7 @@ h1, .post-title {
   /* 24px */
 }
 
-.wp-block-image figcaption, .wp-caption-text,
+.wp-block-table figcaption, .wp-block-image figcaption, .wp-caption-text,
 .gallery-caption, input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -250,6 +250,10 @@ th {
 .wp-block-table td,
 .wp-block-table th {
   border-color: #EDEDED;
+}
+.wp-block-table figcaption {
+  text-align: center;
+  margin-top: -18px;
 }
 
 .wp-block-table.is-style-stripes thead {

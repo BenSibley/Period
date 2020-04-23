@@ -143,6 +143,11 @@ th {
   th {
     border-color: $color-gray-93;
   }
+  figcaption {
+    @extend %twelve-pixels;
+    text-align: center;
+    margin-top: -18px;
+  }
 }
 .wp-block-table.is-style-stripes {
 
