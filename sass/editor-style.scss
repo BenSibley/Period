@@ -164,7 +164,7 @@ img,
   height: auto;
 }
 .wp-block-image {
-  margin: $baseline-height 0;
+  margin: $baseline-height auto;
 
   figcaption {
     @extend %twelve-pixels;
