@@ -392,6 +392,7 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'tencent-weibo' => 'period_tencent_weibo_profile',
 			'tumblr'        => 'period_tumblr_profile',
 			'twitch'        => 'period_twitch_profile',
+			'untappd'       => 'period_untappd_profile',
 			'vimeo'         => 'period_vimeo_profile',
 			'vine'          => 'period_vine_profile',
 			'vk'            => 'period_vk_profile',
