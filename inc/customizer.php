@@ -116,6 +116,8 @@ function ct_period_add_customizer_content( $wp_customize ) {
 
 			if ( $social_site == 'rss' ) {
 				$label = __('RSS', 'period');
+			} elseif ( $social_site == 'researchgate' ) {
+				$label = __('ResearchGate', 'period');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'period');
 			} elseif ( $social_site == 'slideshare' ) {
