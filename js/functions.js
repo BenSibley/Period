@@ -59,7 +59,11 @@ jQuery(document).ready(function($){
             menuPrimaryContainer.addClass('open');
             $(this).addClass('open');
 
-            var newHeight = menuPrimary.outerHeight(true) + socialMediaIcons.outerHeight(true);
+
+            var newHeight = menuPrimary.outerHeight(true);
+            if ( socialMediaIcons.length ) {
+                newHeight += socialMediaIcons.outerHeight(true);
+            }
             menuPrimaryContainer.css('max-height', newHeight + 'px');
 
             // change screen reader text
