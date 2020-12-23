@@ -209,6 +209,13 @@ img,
   margin: 0 0 $baseline-height / 0.813;
 }
 
+.wp-block-group.alignwide,
+.wp-block-group .alignwide,
+.wp-block-group.alignfull,
+.wp-block-group .alignfull {
+  line-height: 1.5;
+}
+
 /* Form styles */
 
 input[type="text"],

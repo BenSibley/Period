@@ -318,6 +318,13 @@ img,
   margin: 0 0 1.8450184502em;
 }
 
+.wp-block-group.alignwide,
+.wp-block-group .alignwide,
+.wp-block-group.alignfull,
+.wp-block-group .alignfull {
+  line-height: 1.5;
+}
+
 /* Form styles */
 input[type=text],
 input[type=email],
