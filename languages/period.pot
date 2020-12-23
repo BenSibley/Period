@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Period 1.300\n"
+"Project-Id-Version: Period 1.400\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2020-12-16 16:41:19+00:00\n"
+"POT-Creation-Date: 2020-12-23 18:24:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,7 +107,9 @@ msgid "Pages:"
 msgstr ""
 
 #: footer.php:19
-msgid "<a href=\"%1$s\">%2$s WordPress Theme</a> by Compete Themes."
+msgid ""
+"<a href=\"%1$s\" rel=\"nofollow\">%2$s WordPress Theme</a> by Compete "
+"Themes."
 msgstr ""
 
 #: functions.php:20
