@@ -412,7 +412,10 @@ if ( ! function_exists( 'ct_period_social_array' ) ) {
 			'xing'          => 'period_xing_profile',
 			'yahoo'         => 'period_yahoo_profile',
 			'yelp'          => 'period_yelp_profile',
-			'500px'         => 'period_500px_profile'
+			'500px'         => 'period_500px_profile',
+			'social_icon_custom_1' => 'social_icon_custom_1_profile',
+			'social_icon_custom_2' => 'social_icon_custom_2_profile',
+			'social_icon_custom_3' => 'social_icon_custom_3_profile'
 		);
 
 		return apply_filters( 'ct_period_social_array_filter', $social_sites );
@@ -426,9 +429,9 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 	function ct_period_social_icons_output() {
 
 		// Get the social icons array
-    $social_sites = ct_period_social_array();
-    // Store only icons with URLs saved
-    $saved = array();
+		$social_sites = ct_period_social_array();
+		// Store only icons with URLs saved
+		$saved = array();
 
 		/* Store the site name and ID if saved
 		/* name: twitter
@@ -471,26 +474,35 @@ if ( ! function_exists( 'ct_period_social_icons_output' ) ) {
 				$title = $name;
 
 				// Escape the URL based on protocol being used
-        if ( $name == 'email' ) {
+				if ( $name == 'email' ) {
 					$href = 'mailto:' . antispambot( is_email( $url ) );
 					$title = antispambot( is_email( $url ) );
-        } elseif ( $name == 'skype' ) {
-          $href = esc_url( $url, array( 'http', 'https', 'skype' ) );
-        } elseif ( $name == 'phone' ) {
+				} elseif ( $name == 'skype' ) {
+					$href = esc_url( $url, array( 'http', 'https', 'skype' ) );
+				} elseif ( $name == 'phone' ) {
 					$href = esc_url( $url, array( 'tel' ) );
 					$title = esc_url( $url, array( 'tel' ) );
-        } else {
-          $href = esc_url( $url );
-        }
+				} else {
+					$href = esc_url( $url );
+				}
 				// Output the icon
-				?>
-				<li>
-				  <a class="<?php echo esc_attr( $name ); ?>" target="_blank" href="<?php echo $href; ?>">
-            <i class="<?php echo esc_attr( $class ); ?>" aria-hidden="true" title="<?php echo esc_attr( $title ); ?>"></i>
-            <span class="screen-reader-text"><?php echo esc_html( $name );  ?></span>
-          </a>
-        </li>
-        <?php
+				if ( $name == 'social_icon_custom_1' || $name == 'social_icon_custom_2' || $name == 'social_icon_custom_3' ) { ?>
+					<li>
+						<a class="custom-icon" target="_blank" href="<?php echo $href; ?>">
+							<img class="icon" src="<?php echo esc_url(get_theme_mod($name .'_image')); ?>" style="width: <?php echo absint(get_theme_mod($name . '_size')); ?>px;" />
+							<span class="screen-reader-text"><?php echo esc_html( get_theme_mod($name . '_name') );  ?></span>
+						</a>
+					</li>
+				<?php 
+				} else { ?>
+					<li>
+						<a class="<?php echo esc_attr( $name ); ?>" target="_blank" href="<?php echo $href; ?>">
+							<i class="<?php echo esc_attr( $class ); ?>" aria-hidden="true" title="<?php echo esc_attr( $title ); ?>"></i>
+							<span class="screen-reader-text"><?php echo esc_html( $title );  ?></span>
+						</a>
+					</li>
+				<?php
+				}
 			}
 			echo "</ul>";
 		}

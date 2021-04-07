@@ -961,10 +961,21 @@ li.pingback > article {
 .social-media-icons li:last-child {
   margin-right: 0;
 }
+.social-media-icons a {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+}
 .social-media-icons.fade {
   opacity: 0;
   -webkit-transform: translateX(4px);
           transform: translateX(4px);
+}
+.social-media-icons.custom-icon img {
+  line-height: 0;
+  margin: 0;
+  width: 20px;
+  height: auto;
 }
 
 @media all and (min-width: 56.25em) {
