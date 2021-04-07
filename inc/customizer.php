@@ -118,6 +118,10 @@ function ct_period_add_customizer_content( $wp_customize ) {
 				$label = __('RSS', 'period');
 			} elseif ( $social_site == 'researchgate' ) {
 				$label = __('ResearchGate', 'period');
+			} elseif ( $social_site == 'diaspora' ) {
+				$label = __('diaspora*', 'period');
+			} elseif ( $social_site == 'imdb' ) {
+				$label = __('IMDB', 'period');
 			} elseif ( $social_site == 'soundcloud' ) {
 				$label = __('SoundCloud', 'period');
 			} elseif ( $social_site == 'slideshare' ) {
