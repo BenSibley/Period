@@ -156,6 +156,8 @@ function ct_period_add_customizer_content( $wp_customize ) {
 				$label = __('ArtStation', 'period');
 			} elseif ( $social_site == 'email-form' ) {
 				$label = __('Contact Form', 'period');
+			} elseif ( $social_site == 'tiktok' ) {
+				$label = __('TikTok', 'period');
 			}
 
 			if ( $social_site == 'skype' ) {
