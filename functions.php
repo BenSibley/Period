@@ -496,8 +496,7 @@ if (! function_exists('ct_period_social_icons_output')) {
                 if ($name == 'social_icon_custom_1' || $name == 'social_icon_custom_2' || $name == 'social_icon_custom_3') { ?>
 					<li>
 						<a class="custom-icon" target="_blank" href="<?php echo $href; ?>">
-							<img class="icon" src="<?php echo esc_url(get_theme_mod($name .'_image')); ?>" style="width: <?php echo absint(get_theme_mod($name . '_size', '20')); ?>px;" />
-							<span class="screen-reader-text"><?php echo esc_html(get_theme_mod($name . '_name'));  ?></span>
+							<img class="icon" src="<?php echo esc_url(get_theme_mod($name .'_image')); ?>" style="width: <?php echo absint(get_theme_mod($name . '_size', '20')); ?>px;" alt="<?php echo esc_html(get_theme_mod($name . '_name'));  ?>" />
 						</a>
 					</li>
 				<?php
