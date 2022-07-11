@@ -8,6 +8,44 @@ require_once(trailingslashit(get_template_directory()) . 'inc/customizer.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/last-updated-meta-box.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/review.php');
 require_once(trailingslashit(get_template_directory()) . 'inc/scripts.php');
+// TGMP
+require_once(trailingslashit(get_template_directory()) . 'tgm/class-tgm-plugin-activation.php');
+
+function ct_period_register_required_plugins()
+{
+    $plugins = array(
+
+        array(
+            'name'      => 'Independent Analytics',
+            'slug'      => 'independent-analytics',
+            'required'  => false,
+        ),
+    );
+    
+    $config = array(
+        'id'           => 'ct-period',
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'has_notices'  => true,
+        'dismissable'  => true,
+        'dismiss_msg'  => '',
+        'is_automatic' => false,
+        'message'      => '',
+        'strings'      => array(
+            'page_title'                      => __('Install Recommended Plugins', 'period'),
+            'menu_title'                      => __('Recommended Plugins', 'period'),
+            'notice_can_install_recommended'     => _n_noop(
+                'The makers of the Period theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
+                'The makers of the Period theme now recommend installing Independent Analytics, their new plugin for visitor tracking: %1$s.',
+                'period'
+            ),
+        )
+    );
+
+    tgmpa($plugins, $config);
+}
+add_action('tgmpa_register', 'ct_period_register_required_plugins');
+
 
 //----------------------------------------------------------------------------------
 //	Include review request
