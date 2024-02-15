@@ -392,6 +392,7 @@ if (! function_exists('ct_period_social_array')) {
             'facebook'      => 'period_facebook_profile',
             'instagram'     => 'period_instagram_profile',
             'tiktok'     	=> 'period_tiktok_profile',
+            'threads'     	=> 'period_threads_profile',
             'linkedin'      => 'period_linkedin_profile',
             'pinterest'     => 'period_pinterest_profile',
             'youtube'       => 'period_youtube_profile',
