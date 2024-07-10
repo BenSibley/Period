@@ -116,7 +116,7 @@ module.exports = function(grunt) {
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/period" || true',
                     'rm -R "/Users/bensibley/Dropbox/Compete Themes/Distribution/period.zip" || true',
                     // copy folder without any project/meta files
-                    'rsync -r "/Users/bensibley/Sites/period/wp-content/themes/period" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
+                    'rsync -r "/Users/bensibley/Sites/Compete Themes/period/wp-content/themes/period" "/Users/bensibley/Dropbox/Compete Themes/Distribution/" <%= excludeFiles %>',
                     // open dist
                     'cd "/Users/bensibley/Dropbox/Compete Themes/Distribution/"',
                     // zip the period folder
