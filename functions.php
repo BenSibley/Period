@@ -460,7 +460,6 @@ if (! function_exists('ct_period_social_array')) {
 if (! function_exists('ct_period_social_icons_output')) {
     function ct_period_social_icons_output()
     {
-
         // Get the social icons array
         $social_sites = ct_period_social_array();
         // Store only icons with URLs saved
@@ -497,6 +496,8 @@ if (! function_exists('ct_period_social_icons_output')) {
                     $class = 'fab fa-get-pocket';
                 } elseif ($name == 'phone') {
                     $class = 'fas fa-phone';
+                } elseif ($name == 'twitter') {
+                    $class = 'fab fa-x-twitter';
                 } else {
                     $class = 'fab fa-' . $name;
                 }

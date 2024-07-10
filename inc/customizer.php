@@ -158,6 +158,8 @@ function ct_period_add_customizer_content( $wp_customize ) {
 				$label = __('Contact Form', 'period');
 			} elseif ( $social_site == 'tiktok' ) {
 				$label = __('TikTok', 'period');
+			} elseif ( $social_site == 'twitter' ) {
+				$label = __('X (Twitter)', 'period');
 			}
 
 			if ( $social_site == 'skype' ) {
