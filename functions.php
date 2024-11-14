@@ -527,7 +527,10 @@ if (! function_exists('ct_period_social_icons_output')) {
 				<?php
                 } else { ?>
 					<li>
-						<a class="<?php echo esc_attr($name); ?>" target="_blank" href="<?php echo $href; ?>">
+						<a class="<?php echo esc_attr($name); ?>" target="_blank" href="<?php echo $href; ?>"
+                            <?php if ($title == 'mastodon') {
+                                echo 'rel="me"';
+                            } ?>>
 							<i class="<?php echo esc_attr($class); ?>" aria-hidden="true" title="<?php echo esc_attr($title); ?>"></i>
 							<span class="screen-reader-text"><?php echo esc_html($title);  ?></span>
 						</a>
