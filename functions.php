@@ -16,14 +16,19 @@ function ct_period_register_recommended_plugins()
         'id'      => 'ct-period',
         'plugins' => array(
             array(
-                'name' => 'Independent Analytics',
-                'slug' => 'independent-analytics',
+                'name'        => 'Independent Analytics',
+                'slug'        => 'independent-analytics',
+                'description' => __('Simple, privacy-friendly visitor stats right in your WordPress dashboard. A Google Analytics alternative.', 'period'),
+            ),
+            array(
+                'name'        => 'Resolver',
+                'slug'        => 'resolver-ai-chatbot',
+                'description' => __('An AI chatbot that answers your visitors\' questions using your site\'s content.', 'period'),
             ),
         ),
-        'message' => __('The makers of the Period theme now recommend installing Independent Analytics, their new plugin for visitor tracking.', 'period'),
     ));
 }
-add_action('admin_init', 'ct_period_register_recommended_plugins');
+add_action('init', 'ct_period_register_recommended_plugins');
 
 if (! function_exists(('ct_period_set_content_width'))) {
     function ct_period_set_content_width()
