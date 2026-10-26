@@ -5,18 +5,14 @@
 /*===== Mixins =====*/
 /***** Silent Classes *****/
 h1, .editor-post-title textarea {
-  font-size: 1.125em;
-  /* 18px / 16px */
-  line-height: 1.333;
-  /* 24px */
+  font-size: 1.125em; /* 18px / 16px */
+  line-height: 1.333; /* 24px */
 }
 
 .wp-caption-text,
 .gallery-caption, .wp-block-image figcaption, .wp-block-table figcaption {
-  font-size: 0.75em;
-  /* 12px / 16px */
-  line-height: 1.5;
-  /* 18px */
+  font-size: 0.75em; /* 12px / 16px */
+  line-height: 1.5; /* 18px */
 }
 
 .mce-content-body.wp-editor {
@@ -208,39 +204,26 @@ img,
 
 @media all and (min-width: 37.5em) {
   h1, .editor-post-title textarea {
-    font-size: 1.3125em;
-    /* 21px / 16px */
-    line-height: 1.333;
-    /* 28px */
+    font-size: 1.3125em; /* 21px / 16px */
+    line-height: 1.333; /* 28px */
   }
-
   h2 {
-    font-size: 1.125em;
-    /* 18px / 16px */
-    line-height: 1.333;
-    /* 24px */
+    font-size: 1.125em; /* 18px / 16px */
+    line-height: 1.333; /* 24px */
   }
 }
 @media all and (min-width: 68.75em) {
   h1, .editor-post-title textarea {
-    font-size: 1.75em;
-    /* 28px / 16px */
-    line-height: 1.357;
-    /* 38px */
+    font-size: 1.75em; /* 28px / 16px */
+    line-height: 1.357; /* 38px */
   }
-
   h2 {
-    font-size: 1.3125em;
-    /* 21px / 16px */
-    line-height: 1.333;
-    /* 28px */
+    font-size: 1.3125em; /* 21px / 16px */
+    line-height: 1.333; /* 28px */
   }
-
   h3 {
-    font-size: 1.125em;
-    /* 18px / 16px */
-    line-height: 1.333;
-    /* 24px */
+    font-size: 1.125em; /* 18px / 16px */
+    line-height: 1.333; /* 24px */
   }
 }
 .wp-block {
@@ -282,5 +265,4 @@ img,
 .has-extra-large-font-size {
   font-size: 28px;
 }
-
 /*# sourceMappingURL=editor-style.css.map */
