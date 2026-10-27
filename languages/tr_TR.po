@@ -478,7 +478,7 @@ msgstr "Bir inceleme yaz"
 #: theme-options.php:43
 msgid "Help others find Shift by leaving a review on wordpress.org."
 msgstr ""
-"Wordpress.org'a bir inceleme girerek diğerlerinin Shift'i bulmasına yardımcı "
+"WordPress.org'a bir inceleme girerek diğerlerinin Shift'i bulmasına yardımcı "
 "olun."
 
 #: theme-options.php:47 theme-options.php:55
