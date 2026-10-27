@@ -130,7 +130,7 @@ msgstr "Pagina's:"
 
 #: footer.php:15
 msgid "<a href=\"%s\">Period WordPress Theme</a> by Compete Themes."
-msgstr "<a href=\"%s\">Period WordPRess Thema</a> door Compete Themes."
+msgstr "<a href=\"%s\">Period WordPress Thema</a> door Compete Themes."
 
 #: functions.php:32
 msgid "Primary"
